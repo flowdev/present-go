@@ -40,7 +40,7 @@ Engineering *owns* the technical solution. They can always say:
 ## Engineering vs. Sales
 ![Engineering vs. Sales](assets/SalesVsEng+Prod.jpg)
 
----?image=assets/gopher-berlin-trans.png&size=auto 90%
+---?image=assets/SalesVsEng+Prod.jpg&size=auto 100%
 
 ## Engineering vs. Sales
 
