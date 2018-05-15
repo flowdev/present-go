@@ -30,7 +30,7 @@ Sales *owns* the customer requirements. They can always say:
 Engineering wants to develop a clean solution.
 
 Engineering *owns* the technical solution. They can always say:
-- This feature will be **very** expensive to implement |
+- This feature will be very expensive to implement |
 - And maintenance cost will explode, too |
 - It is hard or impossible to challenge this |
 - So they want as few features as possible (that break their concepts) |
@@ -39,6 +39,10 @@ Engineering *owns* the technical solution. They can always say:
 
 ## Engineering vs. Sales
 ![Engineering vs. Sales](assets/SalesVsEng+Prod.jpg)
+
+---?image=assets/gopher-berlin-trans.png&size=auto 90%
+
+## Engineering vs. Sales
 
 ---
 
