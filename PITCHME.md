@@ -41,7 +41,17 @@ Engineering *owns* the technical solution. They can always say:
 
 ![Engineering vs. Sales](assets/SalesVsEng+Prod.jpg)
 
----?image=assets/SalesVsEng+Prod.jpg
+---
+
+## Product doesn't own anything
+
+![Product is weak](assets/ProdGetsHit.png)
+
+---
+
+## Product doesn't own anything 2
+
+![Product is weak](assets/ProdGetsHit2.png)
 
 ---
 
