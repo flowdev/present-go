@@ -61,11 +61,49 @@ Engineering *owns* the technical solution. They can always say:
 
 ---
 
-## Object Orientation
+## Empowering Product
 
-- It grew strong together with GUIs |
-- Classes encapsulate functionality and state |
-- Thus they decouple from other classes |
-- OOP works best for purely technical domains |
-- Inheritence creates a lot of coupling |
+With the right support product can *own* the product and thus:
+- prepare better stories |
+- better judge the impact of new features |
+- enhance the quality of the product |
+
++++
+
+## Flows Show Relationships
+
++++
+
+## Table Driven Tests
+
+---
+
+## Engineering Wins Too
+
+With empowered product engineering gets:
+- fewer but better stories |
+- clearer acceptance criteria |
+- acceptance tests for free |
+- decoupled components (implementation specific) |
+- minimal overhead design (implementation specific) |
+
++++
+
+## Decoupled Components
+
++++
+
+## Minimal Overhead Design
+
+---
+
+## Sales Learns To Focus
+
+With empowered product sales gets:
+- quick feedback for new features |
+- a partner to discuss features on a non-technical level |
+- less wasted/costly pitches |
+
+Note:
+Sales and product naturally speak almost the same language!
 
