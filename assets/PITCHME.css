@@ -1,4 +1,5 @@
-td {
+.reveal table th,
+.reveal table td {
 	border-right: 1px solid;
 	border-left: 1px solid;
 }
