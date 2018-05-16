@@ -1,16 +1,22 @@
 # Engineering vs. Sales
-<h2 class="fragment">A Problem For All Startups Interacting With Enterprises</h2>
+<h2 class="fragment">A Challenge Especially For Startups Negotiating With Enterprises</h2>
 
 ---
 
 ## Enterprises and Startups
 
-The business world is mostly owned by enterprises but digitization opens up many opportunities:
+The business world is mostly *owned* by enterprises but digitization opens up many opportunities:
 - Startups want to change the world |
 - Many startups have to negotiate with enterprises |
 - Enterprises are notoriously hard to negotiate with |
 - It takes many months and they have hard requirements |
 - This creates a lot of pressure on the sales people |
+
+Note:
+8 out of 10 starups fail
+
+I would say for the ones that negotiate with enterprises:
+Out of 10 only 1 truely succeeds and one becomes a consulting company.
 
 ---
 
@@ -43,15 +49,15 @@ Engineering *owns* the technical solution. They can always say:
 
 ---
 
-## Product doesn't own anything
+## Product is weak
 
 ![Product is weak](assets/ProdGetsHit.png)
 
 ---
 
-## Product doesn't own anything 2
+## Sales, Product & Engineering As A Team
 
-![Product is weak](assets/ProdGetsHit2.png)
+![Sales, Product & Engineering As A Team](assets/3boxers.jpg)
 
 ---
 
