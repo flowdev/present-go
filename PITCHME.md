@@ -74,10 +74,14 @@ With the right support product can *own* the product and thus:
 
 +++?code=assets/testtable.md&lang=markdown&title=Table Driven Tests
 
+Source code is turning into this:
+
 givenInput || expectedOutput
 ---------- || -------------
 "input 1"  || "output 1"
 "input 2"  || "output 2"
+
+This can be used to generate test cases.
 
 ---
 
