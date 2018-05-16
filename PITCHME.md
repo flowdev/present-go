@@ -72,8 +72,7 @@ With the right support product can *own* the product and thus:
 
 ## Flows Show Relationships
 
-+++?code=assets/testtable.md&lang=markdown
-## Table Driven Tests
++++?code=assets/testtable.md&lang=markdown&title=Table Driven Tests
 
 givenInput || expectedOutput
 ---------- || -------------
