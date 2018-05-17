@@ -72,6 +72,16 @@ With the right support product can *own* the product and thus:
 
 ## Flows Show Relationships
 
+![Flow shows relationships](assets/shopping.png)
+
+Details:
+- userInfo
+- ShowCatalog
+- shoppingCart
+- GatherPaymentData
+- orderData
+- Fulfillment
+
 +++?code=assets/testtable.md&lang=markdown&title=Table Driven Tests
 
 Source code is turning into this:
