@@ -1,8 +1,8 @@
-# Engineering vs. Sales
-Show the natural tension between engineering and sales and a way to work with it efficiently.
+# Presentation About the Pros and Cons of Event Sourcing
+Show the do's and don'ts of event sourcing and alternatives where appropriate.
 
-Present this repo using GitPitch with: [https://gitpitch.com/flowdev/present-engineering-vs-sales](https://gitpitch.com/flowdev/present-engineering-vs-sales) \
-Or including notes with: [https://gitpitch.com/flowdev/present-engineering-vs-sales?n=true](https://gitpitch.com/flowdev/present-engineering-vs-sales?n=true)
+Present this repo using GitPitch with: [https://gitpitch.com/flowdev/present-event-sourcing](https://gitpitch.com/flowdev/present-event-sourcing) \
+Or including notes with: [https://gitpitch.com/flowdev/present-event-sourcing?n=true](https://gitpitch.com/flowdev/present-event-sourcing?n=true)
 
 Fullscreen is available with `f` and the speakers window can be opened with `s`.
 
