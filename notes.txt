@@ -1,0 +1,28 @@
+
+Title
+=====
+
+- Who has experience with event-sourcing; CQRS?
+- Who knows about event-sourcing; CQRS?
+- Who is working for FAANG?
+- Who is working for a startup?
+- Who wants to move fast (and break things)?
+- Who works in a regulated environment?
+
+
+straight-jacket3
+================
+
+- More serious infringements go against the very principles of the right to
+  privacy and the right to be forgotten that are at the heart of the GDPR.
+- Fine of up to €20 million, or 4% of the firm’s worldwide annual revenue from
+  the preceding financial year, whichever amount is higher.
+- All really one downside that can be mitigated with enough tooling.
+
+
+event-sourcing-and-cqrs
+=======================
+
+- Split event store and message queue can be challenging to keep consistent
+- Extra processor (projector) for writing to the query store
+
