@@ -6,4 +6,12 @@ Install the present tool:
 - cd into the `present` subdirectory
 - Install `present` tool with `go install ./...`
 
-Start presentation with `present -notes`
+Start presentation:
+```
+present -base . -notes
+```
+
+Get rendered HTML of presentation:
+```
+curl http://127.0.0.1:3999/present.slide > present.html
+```
