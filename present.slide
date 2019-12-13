@@ -7,6 +7,8 @@ Ole Bulbuk
 Senior Go Engineer, solarisBank AG
 https://flowdev.github.io/
 @flowdev_org
+Attributions for images:
+Handcuffed Hands - in the stack position [CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)]
 
 : Who has experience with event-sourcing; CQRS?
 : Who knows about event-sourcing; CQRS?
@@ -43,7 +45,7 @@ https://flowdev.github.io/
 
 * Downsides
 
-.image images/straight-jacket.jpg 600 _
+.image images/Handcuffed_Hands.png 600 _
 
 
 * Downsides
@@ -53,7 +55,7 @@ https://flowdev.github.io/
 
 * Downsides
 
-.image images/straight-jacket.jpg 600 _
+.image images/Handcuffed_Hands.png 600 _
 
 
 * Downsides
@@ -64,7 +66,7 @@ https://flowdev.github.io/
 
 * Downsides
 
-.image images/straight-jacket.jpg 600 _
+.image images/Handcuffed_Hands.png 600 _
 
 
 * Downsides
