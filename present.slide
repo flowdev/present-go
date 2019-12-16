@@ -38,14 +38,27 @@ Handcuffed Hands - in the stack position [CC BY-SA 4.0 (https://creativecommons.
 * Upsides
 
 - event store = DB + queue
+
+
+* Upsides
+
+- event store = DB + queue
+- Replayable
+
+
+* Upsides
+
+- event store = DB + queue
+- Replayable
+- Traceability
+
+
+* Upsides
+
+- event store = DB + queue
 - Replayable
 - Traceability
 - Deterministic error analysis
-
-
-* Downsides
-
-.image images/Handcuffed_Hands.png 600 _
 
 
 * Downsides
@@ -55,11 +68,6 @@ Handcuffed Hands - in the stack position [CC BY-SA 4.0 (https://creativecommons.
 
 * Downsides
 
-.image images/Handcuffed_Hands.png 600 _
-
-
-* Downsides
-
 - Lack of tooling
 - For Kafka: lack of hosting
 
@@ -74,11 +82,6 @@ Handcuffed Hands - in the stack position [CC BY-SA 4.0 (https://creativecommons.
 - Lack of tooling
 - For Kafka: lack of hosting
 - Technical changes (corrections for typos, ...) difficult
-
-
-* Downsides
-
-.image images/straight-jacket2.jpg 600 _
 
 
 * Downsides
@@ -87,11 +90,6 @@ Handcuffed Hands - in the stack position [CC BY-SA 4.0 (https://creativecommons.
 - For Kafka: lack of hosting
 - Technical changes (corrections for typos, ...) difficult
 - Pivoting can be very difficult
-
-
-* Downsides
-
-.image images/straight-jacket2.jpg 600 _
 
 
 * Downsides
