@@ -11,6 +11,7 @@ Attributions for images:
 Handcuffs: NATO Training Mission-Afghanistan [CC BY-SA 2.0 (https://creativecommons.org/licenses/by-sa/2.0)]
 Handcuffs and Thumbcuffs: © Raimond Spekking
 Straightjacket: Marc NL at English Wikipedia [Public domain]
+Event Sourcing and CQRS: Created myself [Public domain]
 Steve Jobs: MetalGearLiquid, based on File:Steve_Jobs_Headshot_2010-CROP.jpg made by Matt Yohe [CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0)]
 
 : Who has experience with event-sourcing; CQRS?
@@ -130,7 +131,7 @@ Steve Jobs: MetalGearLiquid, based on File:Steve_Jobs_Headshot_2010-CROP.jpg mad
 
 * 
 
-.background images/event-sourcing-and-cqrs.png
+.background images/EvSrc+CQRS.png
 
 : Split event store and message queue can be challenging to keep consistent
 : Extra processor (projector) for writing to the query store
