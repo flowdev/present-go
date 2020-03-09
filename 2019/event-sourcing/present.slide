@@ -112,7 +112,7 @@ Steve Jobs: MetalGearLiquid, based on File:Steve_Jobs_Headshot_2010-CROP.jpg mad
 
 * Downsides
 
-- Lack of tooling
+- Lack of tooling (especially if using queue)
 - For Kafka: lack of hosting
 - Technical changes (corrections for typos, ...) difficult
 - Pivoting can be very difficult
@@ -374,19 +374,16 @@ Steve Jobs: MetalGearLiquid, based on File:Steve_Jobs_Headshot_2010-CROP.jpg mad
 
 - Your company works like how most companies would like to
 
-
 * Biggest Upside: Developer Happiness
 
 - Your company works like how most companies would like to
 - This shows you are good enough for them
-
 
 * Biggest Upside: Developer Happiness
 
 - Your company works like how most companies would like to
 - This shows you are good enough for them
 - You can write good blog posts, too
-
 
 * Biggest Upside: Developer Happiness
 
@@ -394,7 +391,6 @@ Steve Jobs: MetalGearLiquid, based on File:Steve_Jobs_Headshot_2010-CROP.jpg mad
 - This shows you are good enough for them
 - You can write good blog posts, too
 - You can speak at conferences
-
 
 * Biggest Upside: Developer Happiness
 
@@ -403,7 +399,6 @@ Steve Jobs: MetalGearLiquid, based on File:Steve_Jobs_Headshot_2010-CROP.jpg mad
 - You can write good blog posts, too
 - You can speak at conferences
 - Your next employer (even FAANG) will value your experience
-
 
 * Biggest Upside: Developer Happiness
 
@@ -413,7 +408,6 @@ Steve Jobs: MetalGearLiquid, based on File:Steve_Jobs_Headshot_2010-CROP.jpg mad
 - You can speak at conferences
 - Your next employer (even FAANG) will value your experience
 - If your company has to scale: You know an adequate way
-
 
 * Biggest Upside: Developer Happiness
 
@@ -424,7 +418,6 @@ Steve Jobs: MetalGearLiquid, based on File:Steve_Jobs_Headshot_2010-CROP.jpg mad
 - Your next employer (even FAANG) will value your experience
 - If your company has to scale: You know an adequate way
 - Your OpenSource know-how will be handy if problems with the project show up
-
 
 * Biggest Upside: Developer Happiness
 
@@ -436,3 +429,4 @@ Steve Jobs: MetalGearLiquid, based on File:Steve_Jobs_Headshot_2010-CROP.jpg mad
 - If your company has to scale: You know an adequate way
 - Your OpenSource know-how will be handy if problems with the project show up
 - If you help others to go this way you can be promoted
+

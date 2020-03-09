@@ -1,0 +1,166 @@
+Tales from Event Sourcing Pastures
+
+27 Nov 2019
+Tags: architecture, event-sourcing, CQRS, Golang
+
+Ole Bulbuk
+Senior Go Engineer, solarisBank AG
+https://flowdev.github.io/
+@flowdev_org
+Attributions for images:
+Handcuffs: NATO Training Mission-Afghanistan [CC BY-SA 2.0 (https://creativecommons.org/licenses/by-sa/2.0)]
+Handcuffs and Thumbcuffs: © Raimond Spekking
+Straightjacket: Marc NL at English Wikipedia [Public domain]
+Event Sourcing and CQRS: Created myself [Public domain]
+Steve Jobs: MetalGearLiquid, based on File:Steve_Jobs_Headshot_2010-CROP.jpg made by Matt Yohe [CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0)]
+
+: Who has experience with event-sourcing; CQRS?
+: Who knows about event-sourcing; CQRS?
+: Who is working for FAANG?
+: Who is working for a startup?
+: Who wants to move fast (and break things)?
+: Who works in a regulated environment?
+
+* Event Sourcing - What is it?
+
+- Events instead of application state (as entities) |
+- Events as from the real world (i.e. open account) |
+- Events are history (you shouldn't rewrite it) |
+
+
+* Upsides
+
+- event store = DB + queue |
+- Replayable |
+- Traceability |
+- Deterministic error analysis |
+
+
+* Downsides
+
+- Lack of tooling (especially if using queue) |
+- For Kafka: lack of hosting |
+
+
+* Downsides
+
+.image images/handcuffs.jpg 600 _
+
+
+* Downsides
+
+- Lack of tooling (especially if using queue)
+- For Kafka: lack of hosting
+- Technical changes (corrections for typos, ...) difficult |
+- Pivoting can be very difficult |
+- Cutting events in a different way is almost a rewrite of the whole system |
+
+
+* Downsides
+
+.image images/handcuffs+thumbcuffs.jpg 600 _
+
+
+* Downsides
+
+- Lack of tooling (especially if using queue)
+- For Kafka: lack of hosting
+- Technical changes (corrections for typos, ...) difficult
+- Pivoting can be very difficult
+- Cutting events in a different way is almost a rewrite of the whole system
+- GDPR (General Data Protection Regulation)
+
+
+* Downsides
+
+.image images/straitjacket-full.jpg 600 _
+
+: More serious infringements go against the very principles of the right to privacy and the right to be forgotten that are at the heart of the GDPR.
+: Fine of up to €20 million, or 4% of the firm’s worldwide annual revenue from the preceding financial year, whichever amount is higher.
+: All really one downside that can be mitigated with enough tooling.
+
+
+* 
+
+.background images/EvSrc+CQRS.png
+
+: Split event store and message queue can be challenging to keep consistent
+: Extra processor (projector) for writing to the query store
+
+
+* Upsides
+
+- Clear specification how to cut micro-services |
+- New query stores can be invented later |
+- Endless scalebility (for reads) |
+- Even writes can be made fast (without full validation) |
+- Perfect for FAANG |
+
+
+* Downsides
+
+- Requires a lot hard to get or create tooling |
+- Next to `command` and `query` services also `projector` and `reactor` services |
+- Not one `query` service but many |
+- Quite a lot of complexity (easily many 100 services; or 3 to 10 times more than reasonable) |
+
+
+* Biggest Upside: Developer Happiness
+
+
+* Biggest Upside: Developer Happiness
+
+- You work like for FAANG |
+- This clearly shows: You are good enough for them |
+- You can write famous blog posts, too |
+- You will be invited to big conferences and become a star |
+- Your next employer (most likely FAANG) will value your experience |
+- If your company really has to scale like crazy: You saved them! |
+
+
+* You Will Be The Next Steve Jobs!
+
+.image images/steve-jobs.jpg 800 _
+
+
+* Reality: Big Ego Trip
+
+
+* Reality: Big Ego Trip
+
+- Your company will blame you for the complexity |
+- You will never write that cool blog post |
+- You will never get invited to any conference |
+- Future employers see your big ego |
+
+
+* What To Do Instead
+
+- Understand CQRS |
+- Prevent *anti-CQRS* |
+- Use many status |
+- Subscribe to DB changes |
+- Use extra tables if necessary (mini CQRS) |
+- Use history tables (e.g. filled by triggers) |
+
+
+* Upsides
+
+- As simple as reasonable |
+- Upgrade path towards CQRS |
+- At least 90% of CQRS scaleability (multiple 100 million users) |
+- More junior developers possible |
+- Manager still needs tech know how (if shit hits the fan) |
+- Manager might let you work on OpenSource |
+
+
+* Biggest Upside: Developer Happiness
+
+- Your company works like how most companies would like to |
+- This shows you are good enough for them |
+- You can write good blog posts, too |
+- You can speak at conferences |
+- Your next employer (even FAANG) will value your experience |
+- If your company has to scale: You know an adequate way |
+- Your OpenSource know-how will be handy if problems with the project show up |
+- If you help others to go this way you can be promoted |

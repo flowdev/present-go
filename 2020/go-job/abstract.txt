@@ -1,0 +1,18 @@
+= How to Land a Good Go Job
+
+Junior developers often struggle to gain the experience necessary to land their
+first job. Companies, on the other hand, desperately look for senior
+developers, but are often afraid to hire juniors.
+
+How can we find a middle ground?
+
+In this talk, we'll explore the current market situation, and discuss the types
+of knowledge that potential employers value. By dispelling myths and revealing
+some oddities, we arrive at an extensive but narrow set of topics, helpful for
+companies and developers alike.
+
+Developers will know where to focus to land their first job. Companies will
+have a better set of criteria to sharpen their hiring process.
+
+Either way, this talk shows you what really matters—and how to steer clear of
+what doesn't.
