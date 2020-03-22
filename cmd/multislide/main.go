@@ -22,10 +22,14 @@ type presentLine struct {
 	text string
 }
 
-var titleLine = regexp.MustCompile(`^\*+\s+`)
+var titleLine = regexp.MustCompile(`^(\*+|##+)\s+`)
 var stepLine = regexp.MustCompile(`\s+\|\s*$`)
 
 func main() {
+	if len(os.Args) > 1 && (os.Args[1] == "-h" || os.Args[1] == "--help") {
+		fmt.Printf("Usage: %s < input.mslide > output.slide\n", os.Args[0])
+		os.Exit(0)
+	}
 	lines, err := readLines(os.Stdin)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "ERROR: Unable to read input slides: %v\n", err)

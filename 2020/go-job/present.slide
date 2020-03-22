@@ -1,4 +1,4 @@
-How to Land a Good Go Job
+# How to Land a Good Go Job
 or what to watch out for so your new team member won't break the service
 28 Mar 2020
 Tags: job, back-end, web-API, Golang
@@ -14,91 +14,51 @@ Attributions for images:
 : Leaning more towards looking for a job
 
 
-* What is Go used for?
-
-- Advertisement bidding
+## What is Go used for?
 
 : Roughly in chronological order
 : What segment do hiring engineers come from?
 
 
-* What is Go used for?
-
-- Advertisement bidding
-- Cloud technologies
-
-: Roughly in chronological order
-: What segment do hiring engineers come from?
-
-
-* What is Go used for?
-
-- Advertisement bidding
-- Cloud technologies
-- Fintech
-
-: Roughly in chronological order
-: What segment do hiring engineers come from?
-
-
-* What is Go used for?
-
-- Advertisement bidding
-- Cloud technologies
-- Fintech
-- Blockchain technology
-
-: Roughly in chronological order
-: What segment do hiring engineers come from?
-
-
-* What is Go used for?
-
-- Advertisement bidding
-- Cloud technologies
-- Fintech
-- Blockchain technology
-- Diverse companies building services
-
-: Roughly in chronological order
-: What segment do hiring engineers come from?
-
-
-* Advertisement bidding
+## Advertisement bidding
 
 - Low latency (ca. 50ms) request handling
 
-: Only somewhat interesting for juniors
+: In the old days they were very prominent in the community, not anymore
+: Only somewhat interesting
 
 
-* Advertisement bidding
+## Advertisement bidding
 
 - Low latency (ca. 50ms) request handling
 - High concurrency
 
-: Only somewhat interesting for juniors
+: In the old days they were very prominent in the community, not anymore
+: Only somewhat interesting
 
 
-* Advertisement bidding
+## Advertisement bidding
 
 - Low latency (ca. 50ms) request handling
 - High concurrency
 - Scalability matters
 
-: Only somewhat interesting for juniors
+: In the old days they were very prominent in the community, not anymore
+: Only somewhat interesting
 
 
-* Advertisement bidding
+## Advertisement bidding
 
 - Low latency (ca. 50ms) request handling
 - High concurrency
 - Scalability matters
 - Knowledge about the world held in RAM
 
-: Only somewhat interesting for juniors
+: In the old days they were very prominent in the community, not anymore
+: Only somewhat interesting
 
 
-* Advertisement bidding
+## Advertisement bidding
 
 - Low latency (ca. 50ms) request handling
 - High concurrency
@@ -106,10 +66,11 @@ Attributions for images:
 - Knowledge about the world held in RAM
 - Web API
 
-: Only somewhat interesting for juniors
+: In the old days they were very prominent in the community, not anymore
+: Only somewhat interesting
 
 
-* Advertisement bidding
+## Advertisement bidding
 
 - Low latency (ca. 50ms) request handling
 - High concurrency
@@ -118,10 +79,11 @@ Attributions for images:
 - Web API
 - Performance critical stuff behind interfaces
 
-: Only somewhat interesting for juniors
+: In the old days they were very prominent in the community, not anymore
+: Only somewhat interesting
 
 
-* Advertisement bidding
+## Advertisement bidding
 
 - Low latency (ca. 50ms) request handling
 - High concurrency
@@ -131,24 +93,11 @@ Attributions for images:
 - Performance critical stuff behind interfaces
 - Many engineers love high performance stuff
 
-: Only somewhat interesting for juniors
+: In the old days they were very prominent in the community, not anymore
+: Only somewhat interesting
 
 
-* Advertisement bidding
-
-- Low latency (ca. 50ms) request handling
-- High concurrency
-- Scalability matters
-- Knowledge about the world held in RAM
-- Web API
-- Performance critical stuff behind interfaces
-- Many engineers love high performance stuff
-- Enough rooms for juniors
-
-: Only somewhat interesting for juniors
-
-
-* Advertisement bidding
+## Advertisement bidding
 
 - Low latency (ca. 50ms) request handling
 - High concurrency
@@ -157,414 +106,578 @@ Attributions for images:
 - Web API
 - Performance critical stuff behind interfaces
 - Many engineers love high performance stuff
-- Enough rooms for juniors
+- Enough rooms for normal devs
+
+: In the old days they were very prominent in the community, not anymore
+: Only somewhat interesting
+
+
+## Advertisement bidding
+
+- Low latency (ca. 50ms) request handling
+- High concurrency
+- Scalability matters
+- Knowledge about the world held in RAM
+- Web API
+- Performance critical stuff behind interfaces
+- Many engineers love high performance stuff
+- Enough rooms for normal devs
 - Few, small companies
 
-: Only somewhat interesting for juniors
+: In the old days they were very prominent in the community, not anymore
+: Only somewhat interesting
 
 
-* Cloud technologies
+## Cloud technologies
 
+- Go for system programming
+
+: You will need to show some knowledge about cloud tech
+: Blog posts, talks, etc.
+
+
+## Cloud technologies
+
+- Go for system programming
 - Command line tools
 
-: Don't try to go here
+: You will need to show some knowledge about cloud tech
+: Blog posts, talks, etc.
 
 
-* Cloud technologies
+## Cloud technologies
 
+- Go for system programming
 - Command line tools
 - Low level programming
 
-: Don't try to go here
+: You will need to show some knowledge about cloud tech
+: Blog posts, talks, etc.
 
 
-* Cloud technologies
+## Cloud technologies
 
+- Go for system programming
 - Command line tools
 - Low level programming
 - Low latency services
 
-: Don't try to go here
+: You will need to show some knowledge about cloud tech
+: Blog posts, talks, etc.
 
 
-* Cloud technologies
+## Cloud technologies
 
+- Go for system programming
 - Command line tools
 - Low level programming
 - Low latency services
 - Highly skilled engineers
 
-: Don't try to go here
+: You will need to show some knowledge about cloud tech
+: Blog posts, talks, etc.
 
 
-* Cloud technologies
+## Cloud technologies
 
+- Go for system programming
 - Command line tools
 - Low level programming
 - Low latency services
 - Highly skilled engineers
 - Few, small companies
 
-: Don't try to go here
+: You will need to show some knowledge about cloud tech
+: Blog posts, talks, etc.
 
 
-* Fintech
+## FinTech
 
+- Use Go as modern Java
+
+: Can be good start
+
+
+## FinTech
+
+- Use Go as modern Java
 - Mistakes can cost a lot of money
 
 : Can be good start
 
 
-* Fintech
+## FinTech
 
+- Use Go as modern Java
 - Mistakes can cost a lot of money
 - Web APIs
 
 : Can be good start
 
 
-* Fintech
+## FinTech
 
+- Use Go as modern Java
 - Mistakes can cost a lot of money
 - Web APIs
-- Rooms for junior devs who test carefully
+- Rooms for devs who test carefully
 
 : Can be good start
 
 
-* Fintech
+## FinTech
 
+- Use Go as modern Java
 - Mistakes can cost a lot of money
 - Web APIs
-- Rooms for junior devs who test carefully
+- Rooms for devs who test carefully
 - Quite some companies from small to medium
 
 : Can be good start
 
 
-* Blockchain technologiy
+## Blockchain technologiy
 
 - Distributed services
 
-: Don't try to go here
+: You should show some block chain knowledge to land job
+: Blog posts, talks, etc.
 
 
-* Blockchain technologiy
+## Blockchain technologiy
 
 - Distributed services
+- Very abstract stuff
+
+: You should show some block chain knowledge to land job
+: Blog posts, talks, etc.
+
+
+## Blockchain technologiy
+
+- Distributed services
+- Very abstract stuff
 - Highly skilled engineers
 
-: Don't try to go here
+: You should show some block chain knowledge to land job
+: Blog posts, talks, etc.
 
 
-* Blockchain technologiy
+## Blockchain technologiy
 
 - Distributed services
+- Very abstract stuff
 - Highly skilled engineers
 - Few, small companies
 
-: Don't try to go here
+: You should show some block chain knowledge to land job
+: Blog posts, talks, etc.
 
 
-* Diverse companies building services
+## Diverse companies building services
 
-- Web APIs
+- Use Go as modern Java
 
+: Almost any backgound can be interesting for some company
+: Biggest part of the job market
 : Easiest start
 
 
-* Diverse companies building services
+## Diverse companies building services
 
+- Use Go as modern Java
 - Web APIs
-- Lots of room for junior devs
 
+: Almost any backgound can be interesting for some company
+: Biggest part of the job market
 : Easiest start
 
 
-* Diverse companies building services
+## Diverse companies building services
 
+- Use Go as modern Java
 - Web APIs
-- Lots of room for junior devs
+- Lots of room for devs with diverse backgrounds
+
+: Almost any backgound can be interesting for some company
+: Biggest part of the job market
+: Easiest start
+
+
+## Diverse companies building services
+
+- Use Go as modern Java
+- Web APIs
+- Lots of room for devs with diverse backgrounds
 - Many companies from small to huge
 
+: Almost any backgound can be interesting for some company
+: Biggest part of the job market
 : Easiest start
 
 
-* Job market take away
+## Diverse companies building services
+
+- Use Go as modern Java
+- Web APIs
+- Lots of room for devs with diverse backgrounds
+- Many companies from small to huge
+- Fastest growing segment
+
+: Almost any backgound can be interesting for some company
+: Biggest part of the job market
+: Easiest start
+
+
+## Job market take away
 
 - Web APIs
 
 
-* Job market take away
+## Job market take away
 
 - Web APIs
 - Business software
 
 
-* Job market take away
+## Job market take away
 
 - Web APIs
 - Business software
 - Growing with more adoption of Go
 
 
-* Typical job interviews
+## Typical job interviews
 
 - Coding test
 
-: over-engineering
-: old, shitty code base
+: over-engineering; old, shitty code base
+: the top x% wouldn't stay here anyway
+: if you go here you might not be part of the top x%
+: but you can be useful for 99% of companies
 
 
-* Typical job interviews
+## Typical job interviews
 
 - Coding test
 - Brain teasers
 
-: over-engineering
-: old, shitty code base
+: over-engineering; old, shitty code base
+: the top x% wouldn't stay here anyway
+: if you go here you might not be part of the top x%
+: but you can be useful for 99% of companies
 
 
-* Typical job interviews
+## Typical job interviews
 
 - Coding test
 - Brain teasers
 - Algorithms and data structures
 
-: over-engineering
-: old, shitty code base
+: over-engineering; old, shitty code base
+: the top x% wouldn't stay here anyway
+: if you go here you might not be part of the top x%
+: but you can be useful for 99% of companies
 
 
-* Typical job interviews
+## Typical job interviews
 
 - Coding test
 - Brain teasers
 - Algorithms and data structures
 - Only the top x% of engineers work for us
 
-: over-engineering
-: old, shitty code base
+: over-engineering; old, shitty code base
+: the top x% wouldn't stay here anyway
+: if you go here you might not be part of the top x%
+: but you can be useful for 99% of companies
 
 
-* What do I need to know for Web APIs???
+## What to know about Web APIs???
+
+: search terms at the top of each page
+: please ecosia them later
 
 
-* HTTP (aka "Web")
+## HTTP
 
-- HTTP is stateless (!)
+**Search terms:** \
+stateless HTTP, REST (REpresentational State Transfer), \
+HTTP methods (GET, POST, DELETE, PUT, PATCH), \
+**idempotence**, gRPC, GraphQL (nice to know)
 
-: No Web without HTTP
-
-
-* HTTP (aka "Web")
-
-- HTTP is stateless (!)
-- REST (REpresentational State Transfer) (!)
-
-: No Web without HTTP
+- No Web without HTTP
 
 
-* HTTP (aka "Web")
+## HTTP
 
-- HTTP is stateless (!)
-- REST (REpresentational State Transfer) (!)
-- Interesting HTTP methods: GET, POST, DELETE, PUT, PATCH
+**Search terms:** \
+stateless HTTP, REST (REpresentational State Transfer), \
+HTTP methods (GET, POST, DELETE, PUT, PATCH), \
+**idempotence**, gRPC, GraphQL (nice to know)
 
-: No Web without HTTP
-
-
-* HTTP (aka "Web")
-
-- HTTP is stateless (!)
-- REST (REpresentational State Transfer) (!)
-- Interesting HTTP methods: GET, POST, DELETE, PUT, PATCH
-- Request can come multiple times: Idempotency (!)
-
-: No Web without HTTP
+- No Web without HTTP
+- If the client doesn't get the response back it will try again: idempotence
 
 
-* HTTP (aka "Web")
+## Authentication
 
-- HTTP is stateless (!)
-- REST (REpresentational State Transfer) (!)
-- Interesting HTTP methods: GET, POST, DELETE, PUT, PATCH
-- Request can come multiple times: Idempotency (!)
-- Nice to know: GraphQL
+**Search terms:** \
+Cookie + server side session, **JWT (JSON Web Token)**, OAuth 2.0
 
-: No Web without HTTP
+- Authentication: **Who** is it?
 
-
-* Authentication & authorization
-
-- Authentication: Who is it?
-
-: Gateway / bouncer
+: If everybody can claim to be the admin your service is broken
+: Usually handled in central library or proxy
 
 
-* Authentication & authorization
+## Authentication
 
-- Authentication: Who is it?
-- Authorization: What is allowed?
+**Search terms:** \
+Cookie + server side session, **JWT (JSON Web Token)**, OAuth 2.0
 
-: Gateway / bouncer
+- Authentication: **Who** is it?
+- You really need to know about JWT
 
-
-* Authentication & authorization
-
-- Authentication: Who is it?
-- Authorization: What is allowed?
-- Role based authorization (!)
-
-: Gateway / bouncer
+: If everybody can claim to be the admin your service is broken
+: Usually handled in central library or proxy
 
 
-* Authentication & authorization
+## Authentication
 
-- Authentication: Who is it?
-- Authorization: What is allowed?
-- Role based authorization (!)
-- Cookie (from middleware or framework) + server side session
+**Search terms:** \
+Cookie + server side session, **JWT (JSON Web Token)**, OAuth 2.0
 
-: Gateway / bouncer
-
-
-* Authentication & Authorization 2
-
-- JWT (JSON Web Token) can be used with or without server side session (!)
-
-
-* Authentication & Authorization 2
-
-- JWT (JSON Web Token) can be used with or without server side session (!)
+- Authentication: **Who** is it?
+- You really need to know about JWT
 - Offer only 1 good cipher for JWT
 
+: If everybody can claim to be the admin your service is broken
+: Usually handled in central library or proxy
 
-* Authentication & Authorization 2
 
-- JWT (JSON Web Token) can be used with or without server side session (!)
+## Authentication
+
+**Search terms:** \
+Cookie + server side session, **JWT (JSON Web Token)**, OAuth 2.0
+
+- Authentication: **Who** is it?
+- You really need to know about JWT
 - Offer only 1 good cipher for JWT
-- Nice to know: OAuth 2.0
+- OAuth 2.0 is nice to know
+
+: If everybody can claim to be the admin your service is broken
+: Usually handled in central library or proxy
 
 
-* Authentication & Authorization 2
+## Authorization
 
-- JWT (JSON Web Token) can be used with or without server side session (!)
-- Offer only 1 good cipher for JWT
-- Nice to know: OAuth 2.0
-- Security is important here
+**Search terms:** \
+Role based authorization (RBAC)
 
+- Authorization: **What** is allowed?
 
-* Database
-
-- Types: relational, document-oriented, key-value, graph
-
-: Heart of every business software
-: Long term storage -> hard to change
+: If everybody gets admin permission your service is broken
+: Usually handled in central library or proxy
 
 
-* Database
+## Authorization
 
-- Types: relational, document-oriented, key-value, graph
+**Search terms:** \
+Role based authorization (RBAC)
+
+- Authorization: **What** is allowed?
+- RBAC is king and many companies use some derivative
+
+: If everybody gets admin permission your service is broken
+: Usually handled in central library or proxy
+
+
+## Database
+
+**Search terms:** \
+SQL, RDBMS (Relational DataBase Management System), SQL injection, \
+DB migration, DB transactions, DB lock levels
+
+- Heart of every business software
+
+
+## Database
+
+**Search terms:** \
+SQL, RDBMS (Relational DataBase Management System), SQL injection, \
+DB migration, DB transactions, DB lock levels
+
+- Heart of every business software
+- Long term storage -> hard to change
+
+
+## Database
+
+**Search terms:** \
+SQL, RDBMS (Relational DataBase Management System), SQL injection, \
+DB migration, DB transactions, DB lock levels
+
+- Heart of every business software
+- Long term storage -> hard to change
+- Types: relational, document, key-value, graph
+
+
+## Database
+
+**Search terms:** \
+SQL, RDBMS (Relational DataBase Management System), SQL injection, \
+DB migration, DB transactions, DB lock levels
+
+- Heart of every business software
+- Long term storage -> hard to change
+- Types: relational, document, key-value, graph
 - Use cases: business data, archiving, caching, ...
 
-: Heart of every business software
-: Long term storage -> hard to change
 
+## Database
 
-* Database
+**Search terms:** \
+SQL, RDBMS (Relational DataBase Management System), SQL injection, \
+DB migration, DB transactions, DB lock levels
 
-- Types: relational, document-oriented, key-value, graph
+- Heart of every business software
+- Long term storage -> hard to change
+- Types: relational, document, key-value, graph
 - Use cases: business data, archiving, caching, ...
-- RDBMS (Relational DataBase Management System) (!)
-
-: Heart of every business software
-: Long term storage -> hard to change
+- RDBMS (Relational DataBase Management System) is still the most important
 
 
-* Database
+## 3rd Party API
 
-- Types: relational, document-oriented, key-value, graph
-- Use cases: business data, archiving, caching, ...
-- RDBMS (Relational DataBase Management System) (!)
-- DB schema: design, evolution
+**Search terms:** \
+service resilience, time-out, circuit breaker, \
+retry with randomized exponential back-off
 
-: Heart of every business software
-: Long term storage -> hard to change
+- No direct influence on third party!
 
 
-* Database
+## 3rd Party API
 
-- Types: relational, document-oriented, key-value, graph
-- Use cases: business data, archiving, caching, ...
-- RDBMS (Relational DataBase Management System) (!)
-- DB schema: design, evolution
-- DB transactions: how do they work, why and when to use them, locking & lock levels
+**Search terms:** \
+service resilience, time-out, circuit breaker, \
+retry with randomized exponential back-off
 
-: Heart of every business software
-: Long term storage -> hard to change
+- No direct influence on third party!
+- Can stop the whole system
 
 
-* Database
+## 3rd Party API
 
-- Types: relational, document-oriented, key-value, graph
-- Use cases: business data, archiving, caching, ...
-- RDBMS (Relational DataBase Management System) (!)
-- DB schema: design, evolution
-- DB transactions: how do they work, why and when to use them, locking & lock levels
-- How to prevent SQL injection (!)
+**Search terms:** \
+service resilience, time-out, circuit breaker, \
+retry with randomized exponential back-off
 
-: Heart of every business software
-: Long term storage -> hard to change
+- No direct influence on third party!
+- Can stop the whole system
+- Error handling is paramount
 
 
-* 3rd Party API
+## 3rd Party API
 
-- Error handling
+**Search terms:** \
+service resilience, time-out, circuit breaker, \
+retry with randomized exponential back-off
 
-: No direct influence on third party!
-: Can stop the whole system
-
-
-* 3rd Party API
-
-- Error handling
-- Resilience (!) against down-times
-
-: No direct influence on third party!
-: Can stop the whole system
-
-
-* 3rd Party API
-
-- Error handling
-- Resilience (!) against down-times
+- No direct influence on third party!
+- Can stop the whole system
+- Error handling is paramount
 - Call to 3rd party in the context of a transaction
 
-: No direct influence on third party!
-: Can stop the whole system
+
+## Testing 
+
+**Search terms:** \
+test pyramid, test funnel, stress tests
+
+- Deployment with confidence
+
+: Testing is a big topic esp. for FinTechs
 
 
-* Testing / Code Quality
+## Testing 
 
-- Test pyramid (!):
+**Search terms:** \
+test pyramid, test funnel, stress tests
 
-: Maintainability
-: Test pyramid: unit tests >> integration tests > end-to-end tests
+- Deployment with confidence
+- A good test suite is the basis for every refactoring
 
-* Testing / Code Quality
+: Testing is a big topic esp. for FinTechs
 
-- Test pyramid (!):
-- Surviving Software Dependencies (!)
 
-: Maintainability
-: Test pyramid: unit tests >> integration tests > end-to-end tests
+## Testing 
 
-* Testing / Code Quality
+**Search terms:** \
+test pyramid, test funnel, stress tests
 
-- Test pyramid (!):
-- Surviving Software Dependencies (!)
-- Clean code (!)
+- Deployment with confidence
+- A good test suite is the basis for every refactoring
+- Good tests enable and support changes
 
-: Maintainability
-: Test pyramid: unit tests >> integration tests > end-to-end tests
+: Testing is a big topic esp. for FinTechs
+
+
+## Code Quality
+
+**Search terms:** \
+surviving software dependencies, clean code
+
+- Maintainability
+
+: Clean code can be endless topic
+
+
+## Code Quality
+
+**Search terms:** \
+surviving software dependencies, clean code
+
+- Maintainability
+- Simplicity counts
+
+: Clean code can be endless topic
+
+
+## Code Quality
+
+**Search terms:** \
+surviving software dependencies, clean code
+
+- Maintainability
+- Simplicity counts
+- Effects can be seen only long-term
+
+: Clean code can be endless topic
+
+
+## DevOps
+
+**Search terms:** \
+Docker, Kubernetes, Observability/Telemetry, \
+Prometheus (monitoring), Jaeger (tracing)
+
+- Many problems today arise between systems
+
+: Good DevOps people can currently earn more money than pure Go engineers
+: Some codebases have more complexity in their YAML files than in their Go files
+: The power of micro services...
+
+## DevOps
+
+**Search terms:** \
+Docker, Kubernetes, Observability/Telemetry, \
+Prometheus (monitoring), Jaeger (tracing)
+
+- Many problems today arise between systems
+- Being able to debug inter service problems is very important skill
+
+: Good DevOps people can currently earn more money than pure Go engineers
+: Some codebases have more complexity in their YAML files than in their Go files
+: The power of micro services...
 
