@@ -4,10 +4,11 @@ or what to watch out for so your new team member won't break the service
 Tags: job, back-end, web-API, Golang
 
 Ole Bulbuk
-Senior Go Engineer, solarisBank AG
+Senior Go Engineer, solarisBank AG; co-organizer of Berlin Go meetup
 https://flowdev.github.io/
 @flowdev_org
 Attributions for images:
+All logos are copyrighted by the respective companies and have been assembled into pictures by me.
 
 : Who is looking for job?
 : Who is hiring?
@@ -29,7 +30,7 @@ Attributions for images:
 - Web API |
 - Performance critical stuff behind interfaces |
 - Many engineers love high performance stuff |
-- Enough rooms for normal devs |
+- Enough room for normal devs |
 - Few, small companies |
 
 : In the old days they were very prominent in the community, not anymore
@@ -54,7 +55,7 @@ Attributions for images:
 - Use Go as modern Java |
 - Mistakes can cost a lot of money |
 - Web APIs |
-- Rooms for devs who test carefully |
+- Room for devs who test carefully |
 - Quite some companies from small to medium |
 
 : Can be good start
@@ -208,3 +209,13 @@ Prometheus (monitoring), Jaeger (tracing)
 : Good DevOps people can currently earn more money than pure Go engineers
 : Some codebases have more complexity in their YAML files than in their Go files
 : The power of micro services...
+
+
+## Remote Jobs
+
+- Currently we all do remote jobs |
+- Full remote companies have figured it out |
+- This is currently getting better |
+- It really is a matter of trust |
+- Make the employer believe that you perform well when remote |
+
