@@ -4,12 +4,15 @@ or what to watch out for so your new team member won't break the service
 Tags: job, back-end, web-API, Golang
 
 Ole Bulbuk
-Senior Go Engineer, solarisBank AG; co-organizer of Berlin Go meetup
+Senior Go Engineer, solarisBank AG; co-organizer of Berlin Go meetup; involved in hiring decisions for 20 years
 https://flowdev.github.io/
 @flowdev_org
 Attributions for images:
 All Gophers have been taken from Maria Letta's excellent 'free-gophers-pack'.
 All logos are copyrighted by the respective companies.
+Passport photo by: Jovianeye / Public domain
+Stop sign by: United Nations / Public domain
+Spider web by: I, Luc Viatour / CC BY-SA
 
 
 ## What to expect?
@@ -24,7 +27,7 @@ All logos are copyrighted by the respective companies.
 ## What to expect?
 
 - Where to find (remote) jobs
-- Salaries (in Berlin)
+- Peculiarities about remote jobs
 
 : Leaning more towards looking for a job
 : Focusing on technical interviews
@@ -34,7 +37,19 @@ All logos are copyrighted by the respective companies.
 ## What to expect?
 
 - Where to find (remote) jobs
-- Salaries (in Berlin)
+- Peculiarities about remote jobs
+- Job situation in Berlin
+
+: Leaning more towards looking for a job
+: Focusing on technical interviews
+: For everything else you find a lot of good resources on the internet
+
+
+## What to expect?
+
+- Where to find (remote) jobs
+- Peculiarities about remote jobs
+- Job situation in Berlin
 - Hiring process
 
 : Leaning more towards looking for a job
@@ -45,21 +60,9 @@ All logos are copyrighted by the respective companies.
 ## What to expect?
 
 - Where to find (remote) jobs
-- Salaries (in Berlin)
+- Peculiarities about remote jobs
+- Job situation in Berlin
 - Hiring process
-- Remote Jobs
-
-: Leaning more towards looking for a job
-: Focusing on technical interviews
-: For everything else you find a lot of good resources on the internet
-
-
-## What to expect?
-
-- Where to find (remote) jobs
-- Salaries (in Berlin)
-- Hiring process
-- Remote Jobs
 - Technical interviews
 
 : Leaning more towards looking for a job
@@ -67,14 +70,243 @@ All logos are copyrighted by the respective companies.
 : For everything else you find a lot of good resources on the internet
 
 
-## What is Go used for?
+## Where to find (remote) jobs
+.background images/search.png
+Use image: characters #49 or #50
+
+
+- Gopher Slack: #jobs
+- Newsletter: [https://golangweekly.com/](https://golangweekly.com/)
+- Work with Go: [https://workwithgo.com/](https://workwithgo.com/)
+- Golang projects: [https://www.golangprojects.com/](https://www.golangprojects.com/)
+- We work remotely: [https://weworkremotely.com/](https://weworkremotely.com/)
+- Remote OK Go jobs: [https://remoteok.io/remote-golang-jobs](https://remoteok.io/remote-golang-jobs)
+- Indeed remote Go jobs: [https://www.indeed.com/q-golang-l-remote-jobs.html](https://www.indeed.com/q-golang-l-remote-jobs.html)
+
+
+## Peculiarities About Remote Jobs
+.background images/remote.png
+Use image: goroutines #15
+
+- Big experiment: currently we all do remote jobs
+
+
+## Peculiarities About Remote Jobs
+.background images/remote.png
+Use image: goroutines #15
+
+- Big experiment: currently we all do remote jobs
+- Full remote companies have figured things out
+
+
+## Peculiarities About Remote Jobs
+.background images/remote.png
+Use image: goroutines #15
+
+- Big experiment: currently we all do remote jobs
+- Full remote companies have figured things out
+- This is currently getting better
+
+
+## Peculiarities About Remote Jobs
+.background images/remote.png
+Use image: goroutines #15
+
+- Big experiment: currently we all do remote jobs
+- Full remote companies have figured things out
+- This is currently getting better
+- It really is a matter of trust
+
+
+## Peculiarities About Remote Jobs
+.background images/remote.png
+Use image: goroutines #15
+
+- Big experiment: currently we all do remote jobs
+- Full remote companies have figured things out
+- This is currently getting better
+- It really is a matter of trust
+- Make the employer believe that you perform well when remote
+
+
+## Peculiarities About Remote Jobs
+.background images/remote.png
+Use image: goroutines #15
+
+- Big experiment: currently we all do remote jobs
+- Full remote companies have figured things out
+- This is currently getting better
+- It really is a matter of trust
+- Make the employer believe that you perform well when remote
+- It often helps to accept lower pay during probation period
+
+
+## Job Situation in Berlin
+.background images/money.png
+Use image: characters #61
+
+- Language for almost all Go positions: English
+
+
+## Job Situation in Berlin
+.background images/money.png
+Use image: characters #61
+
+- Language for almost all Go positions: English
+- By far biggest market for Go positions in Germany.
+
+
+## Job Situation in Berlin
+.background images/money.png
+Use image: characters #61
+
+- Language for almost all Go positions: English
+- By far biggest market for Go positions in Germany.
+- Salaries are highly dependent on the location of the company.
+
+
+## Job Situation in Berlin
+.background images/money.png
+Use image: characters #61
+
+- Language for almost all Go positions: English
+- By far biggest market for Go positions in Germany.
+- Salaries are highly dependent on the location of the company.
+- Junior developers earn around 50K.
+
+
+## Job Situation in Berlin
+.background images/money.png
+Use image: characters #61
+
+- Language for almost all Go positions: English
+- By far biggest market for Go positions in Germany.
+- Salaries are highly dependent on the location of the company.
+- Junior developers earn around 50K.
+- Senior developers earn around 80K.
+
+
+## Job Situation in Berlin
+.background images/money.png
+Use image: characters #61
+
+- Language for almost all Go positions: English
+- By far biggest market for Go positions in Germany.
+- Salaries are highly dependent on the location of the company.
+- Junior developers earn around 50K.
+- Senior developers earn around 80K.
+- Most jobs are for mid- to senior developers.
+
+
+## Job Situation in Berlin
+.background images/money.png
+Use image: characters #61
+
+- Language for almost all Go positions: English
+- By far biggest market for Go positions in Germany.
+- Salaries are highly dependent on the location of the company.
+- Junior developers earn around 50K.
+- Senior developers earn around 80K.
+- Most jobs are for mid- to senior developers.
+- Rare lead developers earn more.
+
+
+## Hiring Process
+.background images/calendar.png
+Use image: illustrations #21
+
+- Screening interview with HR person
+
+: Will talk about algorithms, data structures and brain teasers later
+
+
+## Hiring Process
+.background images/calendar.png
+Use image: illustrations #21
+
+- Screening interview with HR person
+- Coding challenge
+
+: Will talk about algorithms, data structures and brain teasers later
+
+
+## Hiring Process
+.background images/calendar.png
+Use image: illustrations #21
+
+- Screening interview with HR person
+- Coding challenge
+- Technical interviews
+
+: Will talk about algorithms, data structures and brain teasers later
+
+
+## Hiring Process
+.background images/calendar.png
+Use image: illustrations #21
+
+- Screening interview with HR person
+- Coding challenge
+- Technical interviews
+- Algorithms and data structures?
+
+: Will talk about algorithms, data structures and brain teasers later
+
+
+## Hiring Process
+.background images/calendar.png
+Use image: illustrations #21
+
+- Screening interview with HR person
+- Coding challenge
+- Technical interviews
+- Algorithms and data structures?
+- Brain teasers?
+
+: Will talk about algorithms, data structures and brain teasers later
+
+
+## Hiring Process
+.background images/calendar.png
+Use image: illustrations #21
+
+- Screening interview with HR person
+- Coding challenge
+- Technical interviews
+- Algorithms and data structures?
+- Brain teasers?
+- Cultural fit
+
+: Will talk about algorithms, data structures and brain teasers later
+
+
+## Hiring Process
+.background images/calendar.png
+Use image: illustrations #21
+
+- Screening interview with HR person
+- Coding challenge
+- Technical interviews
+- Algorithms and data structures?
+- Brain teasers?
+- Cultural fit
+- CTO or other boss
+
+: Will talk about algorithms, data structures and brain teasers later
+
+
+## Technical Interviews
 .background images/usages.png
+
+### What is Go used for?
 
 : Roughly in chronological order
 : What segment do hiring engineers come from?
 
 
 ## Advertisement bidding
+.background images/adbidding.png
+Use image: Google + remerge + adjust
 
 - Low latency (ca. 50ms) request handling
 
@@ -83,6 +315,8 @@ All logos are copyrighted by the respective companies.
 
 
 ## Advertisement bidding
+.background images/adbidding.png
+Use image: Google + remerge + adjust
 
 - Low latency (ca. 50ms) request handling
 - High concurrency
@@ -92,6 +326,8 @@ All logos are copyrighted by the respective companies.
 
 
 ## Advertisement bidding
+.background images/adbidding.png
+Use image: Google + remerge + adjust
 
 - Low latency (ca. 50ms) request handling
 - High concurrency
@@ -102,6 +338,8 @@ All logos are copyrighted by the respective companies.
 
 
 ## Advertisement bidding
+.background images/adbidding.png
+Use image: Google + remerge + adjust
 
 - Low latency (ca. 50ms) request handling
 - High concurrency
@@ -113,6 +351,8 @@ All logos are copyrighted by the respective companies.
 
 
 ## Advertisement bidding
+.background images/adbidding.png
+Use image: Google + remerge + adjust
 
 - Low latency (ca. 50ms) request handling
 - High concurrency
@@ -125,6 +365,8 @@ All logos are copyrighted by the respective companies.
 
 
 ## Advertisement bidding
+.background images/adbidding.png
+Use image: Google + remerge + adjust
 
 - Low latency (ca. 50ms) request handling
 - High concurrency
@@ -138,6 +380,8 @@ All logos are copyrighted by the respective companies.
 
 
 ## Advertisement bidding
+.background images/adbidding.png
+Use image: Google + remerge + adjust
 
 - Low latency (ca. 50ms) request handling
 - High concurrency
@@ -152,6 +396,8 @@ All logos are copyrighted by the respective companies.
 
 
 ## Advertisement bidding
+.background images/adbidding.png
+Use image: Google + remerge + adjust
 
 - Low latency (ca. 50ms) request handling
 - High concurrency
@@ -167,6 +413,8 @@ All logos are copyrighted by the respective companies.
 
 
 ## Advertisement bidding
+.background images/adbidding.png
+Use image: Google + remerge + adjust
 
 - Low latency (ca. 50ms) request handling
 - High concurrency
@@ -183,6 +431,7 @@ All logos are copyrighted by the respective companies.
 
 
 ## Cloud technologies
+Use image: Weaveworks + RedHat + Microsoft
 
 - Go for system programming
 
@@ -191,6 +440,7 @@ All logos are copyrighted by the respective companies.
 
 
 ## Cloud technologies
+Use image: Weaveworks + RedHat + Microsoft
 
 - Go for system programming
 - Command line tools
@@ -200,6 +450,7 @@ All logos are copyrighted by the respective companies.
 
 
 ## Cloud technologies
+Use image: Weaveworks + RedHat + Microsoft
 
 - Go for system programming
 - Command line tools
@@ -210,6 +461,7 @@ All logos are copyrighted by the respective companies.
 
 
 ## Cloud technologies
+Use image: Weaveworks + RedHat + Microsoft
 
 - Go for system programming
 - Command line tools
@@ -221,6 +473,7 @@ All logos are copyrighted by the respective companies.
 
 
 ## Cloud technologies
+Use image: Weaveworks + RedHat + Microsoft
 
 - Go for system programming
 - Command line tools
@@ -233,6 +486,7 @@ All logos are copyrighted by the respective companies.
 
 
 ## Cloud technologies
+Use image: Weaveworks + RedHat + Microsoft
 
 - Go for system programming
 - Command line tools
@@ -246,6 +500,7 @@ All logos are copyrighted by the respective companies.
 
 
 ## FinTech
+Use image: solarisBank + OptioPay + sumUp
 
 - Use Go as modern Java
 
@@ -253,6 +508,7 @@ All logos are copyrighted by the respective companies.
 
 
 ## FinTech
+Use image: solarisBank + OptioPay + sumUp
 
 - Use Go as modern Java
 - Mistakes can cost a lot of money
@@ -261,6 +517,7 @@ All logos are copyrighted by the respective companies.
 
 
 ## FinTech
+Use image: solarisBank + OptioPay + sumUp
 
 - Use Go as modern Java
 - Mistakes can cost a lot of money
@@ -270,6 +527,7 @@ All logos are copyrighted by the respective companies.
 
 
 ## FinTech
+Use image: solarisBank + OptioPay + sumUp
 
 - Use Go as modern Java
 - Mistakes can cost a lot of money
@@ -280,6 +538,7 @@ All logos are copyrighted by the respective companies.
 
 
 ## FinTech
+Use image: solarisBank + OptioPay + sumUp
 
 - Use Go as modern Java
 - Mistakes can cost a lot of money
@@ -291,6 +550,7 @@ All logos are copyrighted by the respective companies.
 
 
 ## Blockchain technologiy
+Use image: tendermint + ...
 
 - Distributed services
 
@@ -299,6 +559,7 @@ All logos are copyrighted by the respective companies.
 
 
 ## Blockchain technologiy
+Use image: tendermint + ...
 
 - Distributed services
 - Very abstract stuff
@@ -308,6 +569,7 @@ All logos are copyrighted by the respective companies.
 
 
 ## Blockchain technologiy
+Use image: tendermint + ...
 
 - Distributed services
 - Very abstract stuff
@@ -318,6 +580,7 @@ All logos are copyrighted by the respective companies.
 
 
 ## Blockchain technologiy
+Use image: tendermint + ...
 
 - Distributed services
 - Very abstract stuff
@@ -329,6 +592,7 @@ All logos are copyrighted by the respective companies.
 
 
 ## Diverse companies building services
+Use image: Delivery Hero + Zalando + Blacklane
 
 - Use Go as modern Java
 
@@ -338,6 +602,7 @@ All logos are copyrighted by the respective companies.
 
 
 ## Diverse companies building services
+Use image: Delivery Hero + Zalando + Blacklane
 
 - Use Go as modern Java
 - Web APIs
@@ -348,6 +613,7 @@ All logos are copyrighted by the respective companies.
 
 
 ## Diverse companies building services
+Use image: Delivery Hero + Zalando + Blacklane
 
 - Use Go as modern Java
 - Web APIs
@@ -359,6 +625,7 @@ All logos are copyrighted by the respective companies.
 
 
 ## Diverse companies building services
+Use image: Delivery Hero + Zalando + Blacklane
 
 - Use Go as modern Java
 - Web APIs
@@ -371,6 +638,7 @@ All logos are copyrighted by the respective companies.
 
 
 ## Diverse companies building services
+Use image: Delivery Hero + Zalando + Blacklane
 
 - Use Go as modern Java
 - Web APIs
@@ -401,59 +669,15 @@ All logos are copyrighted by the respective companies.
 - Growing with more adoption of Go
 
 
-## Typical job interviews
-
-- Coding test
-
-: over-engineering; old, shitty code base
-: the top x% wouldn't stay here anyway
-: if you go here you might not be part of the top x%
-: but you can be useful for 99% of companies
-
-
-## Typical job interviews
-
-- Coding test
-- Brain teasers
-
-: over-engineering; old, shitty code base
-: the top x% wouldn't stay here anyway
-: if you go here you might not be part of the top x%
-: but you can be useful for 99% of companies
-
-
-## Typical job interviews
-
-- Coding test
-- Brain teasers
-- Algorithms and data structures
-
-: over-engineering; old, shitty code base
-: the top x% wouldn't stay here anyway
-: if you go here you might not be part of the top x%
-: but you can be useful for 99% of companies
-
-
-## Typical job interviews
-
-- Coding test
-- Brain teasers
-- Algorithms and data structures
-- Only the top x% of engineers work for us
-
-: over-engineering; old, shitty code base
-: the top x% wouldn't stay here anyway
-: if you go here you might not be part of the top x%
-: but you can be useful for 99% of companies
-
-
 ## What to know about Web APIs???
+.background images/question_marks.png
 
 : search terms at the top of each page
 : please ecosia them later
 
 
 ## HTTP
+.background images/web.png
 
 **Search terms:** \
 stateless HTTP, REST (REpresentational State Transfer), \
@@ -464,6 +688,7 @@ HTTP methods (GET, POST, DELETE, PUT, PATCH), \
 
 
 ## HTTP
+.background images/web.png
 
 **Search terms:** \
 stateless HTTP, REST (REpresentational State Transfer), \
@@ -475,6 +700,7 @@ HTTP methods (GET, POST, DELETE, PUT, PATCH), \
 
 
 ## Authentication
+.background images/passport.jpg
 
 **Search terms:** \
 Cookie + server side session, **JWT (JSON Web Token)**, OAuth 2.0
@@ -486,6 +712,7 @@ Cookie + server side session, **JWT (JSON Web Token)**, OAuth 2.0
 
 
 ## Authentication
+.background images/passport.jpg
 
 **Search terms:** \
 Cookie + server side session, **JWT (JSON Web Token)**, OAuth 2.0
@@ -498,6 +725,7 @@ Cookie + server side session, **JWT (JSON Web Token)**, OAuth 2.0
 
 
 ## Authentication
+.background images/passport.jpg
 
 **Search terms:** \
 Cookie + server side session, **JWT (JSON Web Token)**, OAuth 2.0
@@ -511,6 +739,7 @@ Cookie + server side session, **JWT (JSON Web Token)**, OAuth 2.0
 
 
 ## Authentication
+.background images/passport.jpg
 
 **Search terms:** \
 Cookie + server side session, **JWT (JSON Web Token)**, OAuth 2.0
@@ -525,6 +754,7 @@ Cookie + server side session, **JWT (JSON Web Token)**, OAuth 2.0
 
 
 ## Authorization
+.background images/stop.png
 
 **Search terms:** \
 Role based authorization (RBAC)
@@ -536,6 +766,7 @@ Role based authorization (RBAC)
 
 
 ## Authorization
+.background images/stop.png
 
 **Search terms:** \
 Role based authorization (RBAC)
@@ -548,6 +779,7 @@ Role based authorization (RBAC)
 
 
 ## Database
+.background images/table.png
 
 **Search terms:** \
 SQL, RDBMS (Relational DataBase Management System), SQL injection, \
@@ -557,6 +789,7 @@ DB migration, DB transactions, DB lock levels
 
 
 ## Database
+.background images/table.png
 
 **Search terms:** \
 SQL, RDBMS (Relational DataBase Management System), SQL injection, \
@@ -567,6 +800,7 @@ DB migration, DB transactions, DB lock levels
 
 
 ## Database
+.background images/table.png
 
 **Search terms:** \
 SQL, RDBMS (Relational DataBase Management System), SQL injection, \
@@ -578,6 +812,7 @@ DB migration, DB transactions, DB lock levels
 
 
 ## Database
+.background images/table.png
 
 **Search terms:** \
 SQL, RDBMS (Relational DataBase Management System), SQL injection, \
@@ -590,6 +825,7 @@ DB migration, DB transactions, DB lock levels
 
 
 ## Database
+.background images/table.png
 
 **Search terms:** \
 SQL, RDBMS (Relational DataBase Management System), SQL injection, \
@@ -603,6 +839,8 @@ DB migration, DB transactions, DB lock levels
 
 
 ## 3rd Party API
+.background images/crazy.png
+Use image: illustrations #15
 
 **Search terms:** \
 service resilience, time-out, circuit breaker, \
@@ -612,6 +850,8 @@ retry with randomized exponential back-off
 
 
 ## 3rd Party API
+.background images/crazy.png
+Use image: illustrations #15
 
 **Search terms:** \
 service resilience, time-out, circuit breaker, \
@@ -622,6 +862,8 @@ retry with randomized exponential back-off
 
 
 ## 3rd Party API
+.background images/crazy.png
+Use image: illustrations #15
 
 **Search terms:** \
 service resilience, time-out, circuit breaker, \
@@ -633,6 +875,8 @@ retry with randomized exponential back-off
 
 
 ## 3rd Party API
+.background images/crazy.png
+Use image: illustrations #15
 
 **Search terms:** \
 service resilience, time-out, circuit breaker, \
@@ -645,6 +889,7 @@ retry with randomized exponential back-off
 
 
 ## Testing 
+.background images/test_pyramid.png
 
 **Search terms:** \
 test pyramid, test funnel, stress tests
@@ -655,6 +900,7 @@ test pyramid, test funnel, stress tests
 
 
 ## Testing 
+.background images/test_pyramid.png
 
 **Search terms:** \
 test pyramid, test funnel, stress tests
@@ -666,6 +912,7 @@ test pyramid, test funnel, stress tests
 
 
 ## Testing 
+.background images/test_pyramid.png
 
 **Search terms:** \
 test pyramid, test funnel, stress tests
@@ -678,6 +925,8 @@ test pyramid, test funnel, stress tests
 
 
 ## Code Quality
+.background images/clean_code.png
+Use image: illustrations #22
 
 **Search terms:** \
 surviving software dependencies, clean code
@@ -688,6 +937,8 @@ surviving software dependencies, clean code
 
 
 ## Code Quality
+.background images/clean_code.png
+Use image: illustrations #22
 
 **Search terms:** \
 surviving software dependencies, clean code
@@ -699,6 +950,8 @@ surviving software dependencies, clean code
 
 
 ## Code Quality
+.background images/clean_code.png
+Use image: illustrations #22
 
 **Search terms:** \
 surviving software dependencies, clean code
@@ -711,6 +964,8 @@ surviving software dependencies, clean code
 
 
 ## DevOps
+.background images/alarm.png
+Use image: characters #53
 
 **Search terms:** \
 Docker, Kubernetes, Observability/Telemetry, \
@@ -724,6 +979,8 @@ Prometheus (monitoring), Jaeger (tracing)
 
 
 ## DevOps
+.background images/alarm.png
+Use image: characters #53
 
 **Search terms:** \
 Docker, Kubernetes, Observability/Telemetry, \
@@ -737,33 +994,82 @@ Prometheus (monitoring), Jaeger (tracing)
 : The power of micro services...
 
 
-## Remote Jobs
+## Bad Job Interviews
+.background images/fire_is_fine.png
+Use image: illustrations #2
 
-- Currently we all do remote jobs
+- Brain teasers
 
-## Remote Jobs
+: over-engineering; old, shitty code base
+: the top x% wouldn't stay here anyway
+: if you go here you might not be part of the top x%
+: but you can be useful for 99% of companies
 
-- Currently we all do remote jobs
-- Full remote companies have figured it out
 
-## Remote Jobs
+## Bad Job Interviews
+.background images/fire_is_fine.png
+Use image: illustrations #2
 
-- Currently we all do remote jobs
-- Full remote companies have figured it out
-- This is currently getting better
+- Brain teasers
+- Algorithms and data structures
 
-## Remote Jobs
+: over-engineering; old, shitty code base
+: the top x% wouldn't stay here anyway
+: if you go here you might not be part of the top x%
+: but you can be useful for 99% of companies
 
-- Currently we all do remote jobs
-- Full remote companies have figured it out
-- This is currently getting better
-- It really is a matter of trust
 
-## Remote Jobs
+## Bad Job Interviews
+.background images/fire_is_fine.png
+Use image: illustrations #2
 
-- Currently we all do remote jobs
-- Full remote companies have figured it out
-- This is currently getting better
-- It really is a matter of trust
-- Make the employer believe that you perform well when remote
+- Brain teasers
+- Algorithms and data structures
+- Only the top x% of engineers work for us
+
+: over-engineering; old, shitty code base
+: the top x% wouldn't stay here anyway
+: if you go here you might not be part of the top x%
+: but you can be useful for 99% of companies
+
+
+## Wrap Up
+.background images/love.png
+Use image: characters #23
+
+- Talked about all parts of the hiring process
+
+## Wrap Up
+.background images/love.png
+Use image: characters #23
+
+- Talked about all parts of the hiring process
+- From how to find jobs
+
+## Wrap Up
+.background images/love.png
+Use image: characters #23
+
+- Talked about all parts of the hiring process
+- From how to find jobs
+- To salary negotiation
+
+## Wrap Up
+.background images/love.png
+Use image: characters #23
+
+- Talked about all parts of the hiring process
+- From how to find jobs
+- To salary negotiation
+- Focus on technical interviews
+
+## Wrap Up
+.background images/love.png
+Use image: characters #23
+
+- Talked about all parts of the hiring process
+- From how to find jobs
+- To salary negotiation
+- Focus on technical interviews
+- Happy applying!
 
