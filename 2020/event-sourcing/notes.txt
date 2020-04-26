@@ -1,0 +1,43 @@
+Title
+=====
+I am open for projects.
+
+
+CQRS
+====
+- Split event store and message queue can be challenging to keep consistent.
+- Extra processor (projector) for writing to the query store.
+
+
+GDPR
+====
+- More serious infringements go against the very principles of the right to
+  privacy and the right to be forgotten that are at the heart of the GDPR.
+- Fine of up to €20 million, or 4% of the firm’s worldwide annual revenue from
+  the preceding financial year, whichever amount is higher.
+- If your annual worldwide revenue is more than €500M and you are always
+  dwarfing your revenue from last year that is fine. :)
+
+
+straight-jacket-full
+====================
+All really one downside that can be mitigated with enough tooling.
+Don't use an event store that doesn't let you update or delete events.
+
+
+event-sourcing-and-cqrs
+=======================
+- Split event store and message queue can be challenging to keep consistent
+- Extra processor (projector) for writing to the query store
+
+
+Upsides
+=======
+- The scalability of CQRS is no magic built into the acronym.
+- It simply comes from the possiblilty to use simpler, more scalable stores.
+
+
+Last slide
+==========
+If you are interested in pragmatic software design and architecture and hands on coding in Go:
+Let's stay in touch.

@@ -1,0 +1,510 @@
+Tales from Event Sourcing Pastures
+
+26 Apr 2020
+Tags: architecture, event-sourcing, CQRS, Golang
+
+Ole Bulbuk
+Senior Go Engineer, solarisBank AG; starting consulting mid of May
+https://flowdev.github.io/static/present/2020/event-sourcing/present.html
+@flowdev_org (Twitter)
+@ole108 (Gopher Slack)
+Attributions for images:
+All Gophers have been taken from Maria Letta's excellent 'free-gophers-pack'.
+Handcuffs: NATO Training Mission-Afghanistan [CC BY-SA 2.0]
+Handcuffs and Thumbcuffs: © Raimond Spekking
+Straightjacket: Marc NL at English Wikipedia [Public domain]
+Event Sourcing and CQRS: Created myself [Public domain]
+Steve Jobs: MetalGearLiquid, based on File:Steve_Jobs_Headshot_2010-CROP.jpg made by Matt Yohe [CC BY-SA 3.0]
+
+
+* Event Sourcing - What is it?
+
+- Events instead of entities as application state
+
+
+* Event Sourcing - What is it?
+
+- Events instead of entities as application state
+- Events as from the real world (i.e. open account)
+
+
+* Event Sourcing - What is it?
+
+- Events instead of entities as application state
+- Events as from the real world (i.e. open account)
+- Events are history (you shouldn't rewrite them)
+
+
+* Event Sourcing - What is it?
+
+- Events instead of entities as application state
+- Events as from the real world (i.e. open account)
+- Events are history (you shouldn't rewrite them)
+- Events can be fetched efficiently: everything newer than X
+
+
+* Upsides of Event Sourcing
+
+- event store = DB + queue
+
+
+* Upsides of Event Sourcing
+
+- event store = DB + queue
+- Replayable
+
+
+* Upsides of Event Sourcing
+
+- event store = DB + queue
+- Replayable
+- Traceability
+
+
+* Upsides of Event Sourcing
+
+- event store = DB + queue
+- Replayable
+- Traceability
+- Deterministic error analysis
+
+
+* 
+
+.background images/EvSrc+CQRS.png
+
+: Split event store and message queue can be challenging to keep consistent
+: Extra processor (projector) for writing to the query store
+
+
+* Upsides of CQRS
+
+- Clear specification how to cut micro-services
+
+
+* Upsides of CQRS
+
+- Clear specification how to cut micro-services
+- New query stores can be invented later
+
+
+* Upsides of CQRS
+
+- Clear specification how to cut micro-services
+- New query stores can be invented later
+- Endless scalebility (for reads)
+
+
+* Upsides of CQRS
+
+- Clear specification how to cut micro-services
+- New query stores can be invented later
+- Endless scalebility (for reads)
+- Even writes can be made fast (without full validation)
+
+
+* Upsides of CQRS
+
+- Clear specification how to cut micro-services
+- New query stores can be invented later
+- Endless scalebility (for reads)
+- Even writes can be made fast (without full validation)
+- Perfect for FAANG
+
+
+* Biggest Upside: Developer Happiness
+
+.background images/love.png
+
+
+* Biggest Upside: Developer Happiness
+.background images/medal.png
+
+- I will work like for FAANG
+
+
+* Biggest Upside: Developer Happiness
+.background images/medal.png
+
+- I will work like for FAANG
+- This clearly shows: I am good enough for them
+
+
+* Biggest Upside: Developer Happiness
+.background images/medal.png
+
+- I will work like for FAANG
+- This clearly shows: I am good enough for them
+- I will write famous blog posts, too
+
+
+* Biggest Upside: Developer Happiness
+.background images/medal.png
+
+- I will work like for FAANG
+- This clearly shows: I am good enough for them
+- I will write famous blog posts, too
+- I will be invited to big conferences and become a star
+
+
+* Biggest Upside: Developer Happiness
+.background images/medal.png
+
+- I will work like for FAANG
+- This clearly shows: I am good enough for them
+- I will write famous blog posts, too
+- I will be invited to big conferences and become a star
+- My next employer (most likely FAANG) will value my experience
+
+
+* Biggest Upside: Developer Happiness
+.background images/medal.png
+
+- I will work like for FAANG
+- This clearly shows: I am good enough for them
+- I will write famous blog posts, too
+- I will be invited to big conferences and become a star
+- My next employer (most likely FAANG) will value my experience
+- If my current company really has to scale like crazy: I saved them!
+
+
+* I Will Be The Next Steve Jobs!
+
+.image images/steve-jobs.jpg 800 _
+
+
+* Reality: Big Ego Trip
+.background images/no.png
+
+
+* Reality: Big Ego Trip
+.background images/no.png
+
+- My company never really did CQRS
+
+
+* Reality: Big Ego Trip
+.background images/no.png
+
+- My company never really did CQRS
+- I never wrote that cool blog post
+
+
+* Reality: Big Ego Trip
+.background images/no.png
+
+- My company never really did CQRS
+- I never wrote that cool blog post
+- I never got invited to any conference
+
+
+* Reality: Big Ego Trip
+.background images/no.png
+
+- My company never really did CQRS
+- I never wrote that cool blog post
+- I never got invited to any conference
+- Future employers sensed my big ego
+
+
+* Event Sourcing With Kafka And Without CQRS
+
+
+* Technical Downsides Of Event Sourcing
+
+- Lack of tooling (especially if using store without delete/update operation)
+
+
+* Technical Downsides Of Event Sourcing
+
+- Lack of tooling (especially if using store without delete/update operation)
+- For Kafka: lack of hosting
+
+
+* Technical Downsides Of Event Sourcing
+
+- Lack of tooling (especially if using store without delete/update operation)
+- For Kafka: lack of hosting
+- Technical changes (corrections for typos, ...) difficult
+
+
+* Technical Downsides Of Event Sourcing
+
+.image images/handcuffs.jpg 600 _
+
+
+* Technical Downsides Of Event Sourcing
+
+- Lack of tooling (especially if using queue)
+- For Kafka: lack of hosting
+- Technical changes (corrections for typos, ...) difficult
+- Pivoting can be very difficult
+
+
+* Technical Downsides Of Event Sourcing
+
+- Lack of tooling (especially if using queue)
+- For Kafka: lack of hosting
+- Technical changes (corrections for typos, ...) difficult
+- Pivoting can be very difficult
+- Cutting events in a different way is almost a rewrite of the whole system
+
+
+* Technical Downsides Of Event Sourcing
+
+.image images/handcuffs+thumbcuffs.jpg 600 _
+
+
+* Technical Downsides Of Event Sourcing
+
+- Lack of tooling (especially if using queue)
+- For Kafka: lack of hosting
+- Technical changes (corrections for typos, ...) difficult
+- Pivoting can be very difficult
+- Cutting events in a different way is almost a rewrite of the whole system
+- GDPR (General Data Protection Regulation)
+
+: More serious infringements go against the very principles of the right to privacy and the right to be forgotten that are at the heart of the GDPR.
+: Fine of up to €20 million, or 4% of the firm’s worldwide annual revenue from the preceding financial year, whichever amount is higher.
+: If your annual worldwide revenue is more than €500M and you are always dwarfing your revenue from last year that is fine. :)
+
+
+* Technical Downsides Of Event Sourcing
+
+.image images/straitjacket-full.jpg 600 _
+
+: All really one downside that can be mitigated with enough tooling.
+: Don't use an event store that doesn't let you update or delete events.
+
+
+* Event Sourcing With Postgres and CQRS
+
+
+* Technical Downsides Of CQRS
+
+- Requires hard to get or create tooling
+
+
+* Technical Downsides Of CQRS
+
+- Requires hard to get or create tooling
+- Many `command` and `query` services
+
+
+* 
+
+.background images/EvSrc+CQRS.png
+
+
+* Technical Downsides Of CQRS
+
+- Requires a lot hard to get or create tooling
+- Many `command` and `query` services
+- Often additional `projector` services
+
+
+* Technical Downsides Of CQRS
+
+- Requires a lot hard to get or create tooling
+- Many `command` and `query` services
+- Often additional `projector` services
+- ... and `reactor` services
+
+
+* Technical Downsides Of CQRS
+
+- Requires a lot hard to get or create tooling
+- Many `command` and `query` services
+- Often additional `projector` services
+- ... and `reactor` services
+- Quite a lot of complexity (easily over 100 services; or 3 to 10 times more than reasonable)
+
+
+* What To Do Instead
+.background images/go_learn.png
+
+- Understand CQRS
+
+
+* What To Do Instead
+.background images/go_learn.png
+
+- Understand CQRS
+- Prevent *anti-CQRS*
+
+
+* What To Do Instead
+.background images/go_learn.png
+
+- Understand CQRS
+- Prevent *anti-CQRS*
+- Use many status
+
+
+* What To Do Instead
+.background images/go_learn.png
+
+- Understand CQRS
+- Prevent *anti-CQRS*
+- Use many status
+- Subscribe to DB changes
+
+
+* What To Do Instead
+.background images/go_learn.png
+
+- Understand CQRS
+- Prevent *anti-CQRS*
+- Use many status
+- Subscribe to DB changes
+- Use extra tables if necessary (mini CQRS)
+
+
+* What To Do Instead
+.background images/go_learn.png
+
+- Understand CQRS
+- Prevent *anti-CQRS*
+- Use many status
+- Subscribe to DB changes
+- Use extra tables if necessary (mini CQRS)
+- Use history tables (e.g. filled by triggers)
+
+
+* Upsides
+.background images/yes.png
+
+- As simple as reasonable
+
+: The scalability of CQRS is no magic built into the acronym.
+: It simply comes from the possiblilty to use simpler, more scalable stores.
+
+
+* Upsides
+.background images/yes.png
+
+- As simple as reasonable
+- Upgrade path towards CQRS
+
+: The scalability of CQRS is no magic built into the acronym.
+: It simply comes from the possiblilty to use simpler, more scalable stores.
+
+
+* Upsides
+.background images/yes.png
+
+- As simple as reasonable
+- Upgrade path towards CQRS
+- At least 90% of CQRS scaleability (multiple 100 million users)
+
+: The scalability of CQRS is no magic built into the acronym.
+: It simply comes from the possiblilty to use simpler, more scalable stores.
+
+
+* Upsides
+.background images/yes.png
+
+- As simple as reasonable
+- Upgrade path towards CQRS
+- At least 90% of CQRS scaleability (multiple 100 million users)
+- More junior developers possible
+
+: The scalability of CQRS is no magic built into the acronym.
+: It simply comes from the possiblilty to use simpler, more scalable stores.
+
+
+* Upsides
+.background images/yes.png
+
+- As simple as reasonable
+- Upgrade path towards CQRS
+- At least 90% of CQRS scaleability (multiple 100 million users)
+- More junior developers possible
+- Manager still needs tech know how (if shit hits the fan)
+
+: The scalability of CQRS is no magic built into the acronym.
+: It simply comes from the possiblilty to use simpler, more scalable stores.
+
+
+* Upsides
+.background images/yes.png
+
+- As simple as reasonable
+- Upgrade path towards CQRS
+- At least 90% of CQRS scaleability (multiple 100 million users)
+- More junior developers possible
+- Manager still needs tech know how (if shit hits the fan)
+- Manager might let you work on OpenSource
+
+: The scalability of CQRS is no magic built into the acronym.
+: It simply comes from the possiblilty to use simpler, more scalable stores.
+
+
+* Biggest Upside: Developer Happiness
+.background images/happy.png
+
+- Your company works how most companies would like to
+
+* Biggest Upside: Developer Happiness
+.background images/happy.png
+
+- Your company works how most companies would like to
+- This shows you are good enough for them
+
+* Biggest Upside: Developer Happiness
+.background images/happy.png
+
+- Your company works how most companies would like to
+- This shows you are good enough for them
+- You can write good blog posts, too
+
+* Biggest Upside: Developer Happiness
+.background images/happy.png
+
+- Your company works how most companies would like to
+- This shows you are good enough for them
+- You can write good blog posts, too
+- You can speak at conferences
+
+* Biggest Upside: Developer Happiness
+.background images/happy.png
+
+- Your company works how most companies would like to
+- This shows you are good enough for them
+- You can write good blog posts, too
+- You can speak at conferences
+- Your next employer (even FAANG) will value your experience
+
+* Biggest Upside: Developer Happiness
+.background images/happy.png
+
+- Your company works how most companies would like to
+- This shows you are good enough for them
+- You can write good blog posts, too
+- You can speak at conferences
+- Your next employer (even FAANG) will value your experience
+- If your company has to scale: You know an adequate way
+
+* Biggest Upside: Developer Happiness
+.background images/happy.png
+
+- Your company works how most companies would like to
+- This shows you are good enough for them
+- You can write good blog posts, too
+- You can speak at conferences
+- Your next employer (even FAANG) will value your experience
+- If your company has to scale: You know an adequate way
+- Your OpenSource know-how will be handy if problems with the project show up
+
+* Biggest Upside: Developer Happiness
+.background images/happy.png
+
+- Your company works how most companies would like to
+- This shows you are good enough for them
+- You can write good blog posts, too
+- You can speak at conferences
+- Your next employer (even FAANG) will value your experience
+- If your company has to scale: You know an adequate way
+- Your OpenSource know-how will be handy if problems with the project show up
+- If you help others to go this way you can be promoted
+
