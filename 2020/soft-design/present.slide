@@ -1,0 +1,139 @@
+# Micro Services - the End of Software Design
+
+28 Jul 2020
+Tags: software-design, micro-services, Golang, spaghetti-cutter
+
+Ole Bulbuk
+IT consultant, engineeringangel.com (coming soon)
+https://flowdev.github.io/static/present/2020/soft-design/present.html
+@flowdev_org (Twitter)
+@ole108 (Gopher Slack)
+Attributions for images:
+All Gophers have been taken from Maria Letta's excellent 'free-gophers-pack'.
+Uber service graph: © Adam Gluck, Uber Engineering (from blog post: 'Introducing Domain-Oriented Microservice Architecture')
+Monzo service graph: © Tim Anderson, The Register (from blog post: 'How does Monzo keep 1,600 microservices spinning? Go, clean code, and a strong team')
+
+
+## The Old Days: The Monolith
+
+- 1 system - 1 deployable unit
+
+
+## The Old Days: The Monolith
+
+- 1 system - 1 deployable unit
+- Ops insisted on this
+
+
+## The Old Days: The Monolith
+
+- 1 system - 1 deployable unit
+- Ops insisted on this
+- Never questioned
+
+
+## The Old Days: The Monolith
+
+- 1 system - 1 deployable unit
+- Ops insisted on this
+- Never questioned
+- Systems grew unquestioned without bounds
+
+
+## Typical Class Diagram of Monolith
+
+.image images/uber-services.png 800 _
+
+## Typical Class Diagram of Monolith 2
+
+.image images/monzo-services.jpg 800 _
+
+
+## Software Design Tries to Keep the Mess at Bay
+
+> Software design ... "all the activity involved in
+> conceptualizing, framing, implementing, commissioning,
+> and ultimately modifying complex systems"
+
+Wikipedia
+
+
+## Software Design Has Been an Reputable Discipline
+
+.image images/cpp-soft-design.jpg 800 _
+
+
+## Tools for Software Design
+
+IDE's contain a lot of tools for code analysis and refactoring.
+
+
+## Now: Micro Services
+
+- 1 system - 1,000 deployable units
+
+
+## Now: Micro Services
+
+- 1 system - 1,000 deployable units
+- DevOps insists on this
+
+
+## Now: Micro Services
+
+- 1 system - 1,000 deployable units
+- DevOps insists on this
+- Never questioned?
+
+
+## Now: Micro Services
+
+- 1 system - 1,000 deployable units
+- DevOps insists on this
+- Never questioned?
+- Systems grow without bounds
+
+
+## Service Diagram from Uber
+
+.image images/uber-services.png 800 _
+
+
+## Service Diagram from Monzo
+
+.image images/monzo-services.jpg 800 _
+
+
+## Go is Great for Software Design
+
+- Go has been engineered with scalability in mind
+
+
+## Go is Great for Software Design
+
+- Go has been engineered with scalability in mind
+- Dependency cycles between packages aren't possible
+
+
+## Go is Great for Software Design
+
+- Go has been engineered with scalability in mind
+- Dependency cycles between packages aren't possible
+- Tooling for preventing other unwanted dependencies between packages is simple
+
+
+## spaghetti-cutter - Win The Fight Against Spaghetti Code
+
+- Command line tool for CI/CD pipelines (and dev machines)
+
+
+## spaghetti-cutter - Win The Fight Against Spaghetti Code
+
+- Command line tool for CI/CD pipelines (and dev machines)
+- prevents Go spaghetti code with error messages and return code
+
+
+## spaghetti-cutter - Win The Fight Against Spaghetti Code
+
+.image images/spaghetti-cutter.jpg 800 _
+
