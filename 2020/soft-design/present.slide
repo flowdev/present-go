@@ -44,9 +44,16 @@ Monzo service graph: © Tim Anderson, The Register (from blog post: 'How does Mo
 
 .image images/uber-services.png 800 _
 
+Some nice parts at the outer edges.
+Crazy mess in the middle.
+
+
 ## Typical Class Diagram of Monolith 2
 
 .image images/monzo-services.jpg 800 _
+
+Still nice parts at the outer edges.
+Even more crazy mess in the middle.
 
 
 ## Software Design Tries to Keep the Mess at Bay
@@ -58,7 +65,7 @@ Monzo service graph: © Tim Anderson, The Register (from blog post: 'How does Mo
 Wikipedia
 
 
-## Software Design Has Been an Reputable Discipline
+## Software Design Has Been a Reputable Discipline
 
 .image images/cpp-soft-design.jpg 800 _
 
@@ -67,29 +74,31 @@ Wikipedia
 
 IDE's contain a lot of tools for code analysis and refactoring.
 
-
-## Now: Micro Services
-
-- 1 system - 1,000 deployable units
+Sometimes companies have got specialized tools.
 
 
 ## Now: Micro Services
 
 - 1 system - 1,000 deployable units
-- DevOps insists on this
 
 
 ## Now: Micro Services
 
 - 1 system - 1,000 deployable units
-- DevOps insists on this
+- DevOps + cloud insist on this
+
+
+## Now: Micro Services
+
+- 1 system - 1,000 deployable units
+- DevOps + cloud insist on this
 - Never questioned?
 
 
 ## Now: Micro Services
 
 - 1 system - 1,000 deployable units
-- DevOps insists on this
+- DevOps + cloud insist on this
 - Never questioned?
 - Systems grow without bounds
 
@@ -112,12 +121,20 @@ IDE's contain a lot of tools for code analysis and refactoring.
 ## Go is Great for Software Design
 
 - Go has been engineered with scalability in mind
+- Packages are made for encapsulating functionality
+
+
+## Go is Great for Software Design
+
+- Go has been engineered with scalability in mind
+- Packages are made for encapsulating functionality
 - Dependency cycles between packages aren't possible
 
 
 ## Go is Great for Software Design
 
 - Go has been engineered with scalability in mind
+- Packages are made for encapsulating functionality
 - Dependency cycles between packages aren't possible
 - Tooling for preventing other unwanted dependencies between packages is simple
 

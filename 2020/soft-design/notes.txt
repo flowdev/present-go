@@ -1,0 +1,10 @@
+## Typical Class Diagram of Monolith
+
+Some nice parts at the outer edges.
+Crazy mess in the middle.
+
+
+## Typical Class Diagram of Monolith 2
+
+Still nice parts at the outer edges.
+Even more crazy mess in the middle.
