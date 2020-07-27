@@ -15,6 +15,7 @@ const (
 	kindText = lineKind(iota)
 	kindTitle
 	kindStep
+	kindNote
 )
 
 type presentLine struct {
@@ -22,29 +23,45 @@ type presentLine struct {
 	text string
 }
 
-var titleLine = regexp.MustCompile(`^(\*+|##+)\s+`)
+var titleLine = regexp.MustCompile(`^(\*|##)\s+`)
 var stepLine = regexp.MustCompile(`\s+\|\s*$`)
+var noteLine = regexp.MustCompile(`^:\s+`)
 
 func main() {
 	if len(os.Args) > 1 && (os.Args[1] == "-h" || os.Args[1] == "--help") {
-		fmt.Printf("Usage: %s < input.mslide > output.slide\n", os.Args[0])
+		fmt.Println("Usage: " + os.Args[0])
+		fmt.Println("")
+		fmt.Println("This command reads:  present.mslide")
+		fmt.Println("This command writes: present.slide")
+		fmt.Println("                     notes.txt")
 		os.Exit(0)
 	}
-	lines, err := readLines(os.Stdin)
+
+	f, err := os.Open("present.mslide")
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "ERROR: Unable to open file 'present.mslide': %v\n", err)
+		os.Exit(1)
+	}
+	defer f.Close()
+
+	lines, err := readLines(f)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "ERROR: Unable to read input slides: %v\n", err)
-		os.Exit(1)
+		os.Exit(2)
 	}
 	fmt.Fprintf(os.Stderr, "INFO: Found %d lines of input.\n", len(lines))
 
 	plines := parseLines(lines)
-	fmt.Fprintf(os.Stderr, "INFO: Parsed into %d plines.\n", len(plines))
+	if err = writeNotes(plines); err != nil {
+		fmt.Fprintf(os.Stderr, "ERROR: %v\n", err)
+		os.Exit(3)
+	}
 	lines = handleSteps(plines)
 	fmt.Fprintf(os.Stderr, "INFO: Got %d lines of output.\n", len(lines))
 
 	if err = writeSlides(lines); err != nil {
 		fmt.Fprintf(os.Stderr, "ERROR: Unable to write slides: %v\n", err)
-		os.Exit(2)
+		os.Exit(4)
 	}
 }
 
@@ -69,6 +86,8 @@ func parseLines(lines []string) []presentLine {
 			hasTitle = true
 		} else if hasTitle && stepLine.MatchString(l) {
 			result[i] = presentLine{kind: kindStep, text: stepLine.ReplaceAllLiteralString(l, "")}
+		} else if noteLine.MatchString(l) {
+			result[i] = presentLine{kind: kindNote, text: noteLine.ReplaceAllLiteralString(l, "")}
 		} else {
 			result[i] = presentLine{kind: kindText, text: l}
 		}
@@ -142,9 +161,65 @@ func copyNonSteps(result []string, page []presentLine, i int) ([]string, bool) {
 	return result, more
 }
 
-func writeSlides(lines []string) error {
-	for _, l := range lines {
-		fmt.Println(l)
+func writeSlides(lines []string) (err error) {
+	f, err := os.Create("present.slide")
+	if err != nil {
+		return fmt.Errorf("unable to create file 'present.slide': %w", err)
 	}
-	return nil
+	defer func() { err = f.Close() }()
+
+	for _, l := range lines {
+		_, err := fmt.Fprintln(f, l)
+		if err != nil {
+			return fmt.Errorf("unable to write to 'present.slide': %w", err)
+		}
+	}
+	return
+}
+
+func writeNotes(lines []presentLine) (err error) {
+	var f *os.File
+
+	f, err = os.Create("notes.txt")
+	if err != nil {
+		return fmt.Errorf("unable to create file 'notes.txt': %w", err)
+	}
+	defer func() { err = f.Close() }()
+
+	first := true
+	title := ""
+	for _, l := range lines {
+		if l.kind == kindTitle {
+			title = l.text
+		}
+		if l.kind == kindNote {
+			if title != "" {
+				if !first {
+					_, err := fmt.Fprintln(f, "")
+					if err != nil {
+						return fmt.Errorf("unable to write to 'notes.txt': %w", err)
+					}
+					_, err = fmt.Fprintln(f, "")
+					if err != nil {
+						return fmt.Errorf("unable to write to 'notes.txt': %w", err)
+					}
+				}
+				_, err := fmt.Fprintln(f, title)
+				if err != nil {
+					return fmt.Errorf("unable to write to 'notes.txt': %w", err)
+				}
+				_, err = fmt.Fprintln(f, "")
+				if err != nil {
+					return fmt.Errorf("unable to write to 'notes.txt': %w", err)
+				}
+				title = ""
+			}
+			_, err := fmt.Fprintln(f, l.text)
+			if err != nil {
+				return fmt.Errorf("unable to write to 'notes.txt': %w", err)
+			}
+			first = false
+		}
+	}
+	return
 }
