@@ -8,3 +8,19 @@ Crazy mess in the middle.
 
 Still nice parts at the outer edges.
 Even more crazy mess in the middle.
+
+
+## Software Design Has Been a Reputable Discipline
+
+I owned a copy of this book many years ago and liked it very much.
+
+
+## Service Diagram from Uber
+
+Anything not resembling a strict hierarchy adds complexity and is hard to understand.
+
+
+## spaghetti-cutter - Path Configuration
+
+`**` only allowed at the end.
+Technically possible: `**` like `*` but matches `/`, too.

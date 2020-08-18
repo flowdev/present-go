@@ -1,17 +1,25 @@
-# Micro Services - the End of Software Design
+# Micro Services - The End of Software Design
 
-28 Jul 2020
+20 Aug 2020
 Tags: software-design, micro-services, Golang, spaghetti-cutter
 
-Ole Bulbuk
-IT consultant, engineeringangel.com (coming soon)
+Ole Bulbuk, available
 https://flowdev.github.io/static/present/2020/soft-design/present.html
 @flowdev_org (Twitter)
 @ole108 (Gopher Slack)
+https://github.com/flowdev/spaghetti-cutter
 Attributions for images:
 All Gophers have been taken from Maria Letta's excellent 'free-gophers-pack'.
 Uber service graph: © Adam Gluck, Uber Engineering (from blog post: 'Introducing Domain-Oriented Microservice Architecture')
 Monzo service graph: © Tim Anderson, The Register (from blog post: 'How does Monzo keep 1,600 microservices spinning? Go, clean code, and a strong team')
+
+## Who's Ole?
+
+- 25 years of professional sofware development |
+- Almost 20 years of Java |
+- 5 Years of Go |
+- Often worked as software architect or similar |
+- Looking for lead developer position |
 
 
 ## The Old Days: The Monolith
@@ -19,7 +27,8 @@ Monzo service graph: © Tim Anderson, The Register (from blog post: 'How does Mo
 - 1 system - 1 deployable unit |
 - Ops insisted on this |
 - Never questioned |
-- Systems grew unquestioned without bounds |
+- Systems grew without bounds |
+- Usually becoming a big ball of mud |
 
 
 ## Typical Class Diagram of Monolith
@@ -51,12 +60,18 @@ Wikipedia
 
 .image images/cpp-soft-design.jpg 800 _
 
+: I owned a copy of this book many years ago and liked it very much.
+
 
 ## Tools for Software Design
 
-IDE's contain a lot of tools for code analysis and refactoring.
+IDE's contain a lot of tools for code analysis and refactoring:
 
-Sometimes companies have got specialized tools.
+- Structural analysis |
+- Renaming classes, methods, variables... |
+- Moving classes, methods |
+- Extract methods, split up classes |
+- Big companies build their own specialized tools |
 
 
 ## Now: Micro Services
@@ -65,16 +80,22 @@ Sometimes companies have got specialized tools.
 - DevOps + cloud insist on this |
 - Never questioned? |
 - Systems grow without bounds |
+- Usually becoming a spaghetti architecture |
 
 
 ## Service Diagram from Uber
 
 .image images/uber-services.png 800 _
 
+.caption © Adam Gluck, Uber Engineering (from blog post: 'Introducing Domain-Oriented Microservice Architecture')
+: Anything not resembling a strict hierarchy adds complexity and is hard to understand.
+
 
 ## Service Diagram from Monzo
 
 .image images/monzo-services.jpg 800 _
+
+.caption © Tim Anderson, The Register (from blog post: 'How does Monzo keep 1,600 microservices spinning? Go, clean code, and a strong team')
 
 
 ## Go is Great for Software Design
@@ -87,10 +108,59 @@ Sometimes companies have got specialized tools.
 
 ## spaghetti-cutter - Win The Fight Against Spaghetti Code
 
+.image images/spaghetti-cutter.jpg 800 _
+
+
+## spaghetti-cutter - What To Expect
+
+[https://github.com/flowdev/spaghetti-cutter](https://github.com/flowdev/spaghetti-cutter)
+
 - Command line tool for CI/CD pipelines (and dev machines) |
 - prevents Go spaghetti code with error messages and return code |
 
 
-## spaghetti-cutter - Win The Fight Against Spaghetti Code
+## spaghetti-cutter - Options And Arguments
 
-.image images/spaghetti-cutter.jpg 800 _
+.code code/spaghetti-cutter_help.txt
+
+
+## spaghetti-cutter - General Configuration
+
+.code code/config-general.hjson
+
+
+## spaghetti-cutter - Path Configuration
+
+- Simple path: 'db' |
+- Nested path: 'x/tool' |
+- Simple star: 'x/\*', '\*/db', '\*/special/\*' |
+- Double star: 'db/**' |
+
+: `**` only allowed at the end.
+: Technically possible: `**` like `*` but matches `/`, too.
+
+
+## spaghetti-cutter - Allow Configuration
+
+.code code/config-allow.hjson
+
+
+## spaghetti-cutter - Restrict Configuration
+
+.code code/config-deny.hjson
+
+
+## spaghetti-cutter - Output
+
+.code code/spaghetti-cutter_log.txt
+
+
+## Conclusions
+
+- Software design is dead in micro service land |
+- But you pay a very high price for it |
+- Reasonably sized services could be a great compromise |
+- Tools like the 'spaghetti-cutter' help preventing spaghetti code |
+
+
+## Please Enjoy Your Pasta In Nice Bits

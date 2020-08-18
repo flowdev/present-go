@@ -1,0 +1,8 @@
+{
+	allowAdditionally: {
+		// read: allow "superdomain" to additionally import ...
+
+		"superdomain": ["domainx/subdomain1", "domainy/subdomain2"]
+		"x/supertool": ["x/tool1", "db/*", "domainx"]
+	}
+}

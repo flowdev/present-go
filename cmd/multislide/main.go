@@ -138,7 +138,7 @@ func handlePage(result []string, page []presentLine) []string {
 func copyLinesUntilFirstStep(result []string, page []presentLine) ([]string, int) {
 	i := 0
 	for ; i < len(page) && page[i].kind != kindStep; i++ {
-		result = append(result, page[i].text)
+		result = copyLine(result, page[i])
 	}
 	return result, i
 }
@@ -153,12 +153,19 @@ func copyNonSteps(result []string, page []presentLine, i int) ([]string, bool) {
 	more := false
 	for ; i < len(page); i++ {
 		if page[i].kind != kindStep {
-			result = append(result, page[i].text)
+			result = copyLine(result, page[i])
 		} else {
 			more = true
 		}
 	}
 	return result, more
+}
+
+func copyLine(result []string, line presentLine) []string {
+	if line.kind == kindNote {
+		return append(result, ": "+line.text)
+	}
+	return append(result, line.text)
 }
 
 func writeSlides(lines []string) (err error) {

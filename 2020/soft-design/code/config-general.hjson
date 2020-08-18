@@ -1,0 +1,14 @@
+{
+	tool: ["x/*"]
+
+	db: ["db/*", "/"]
+
+	// not necessary as any 'main' package is a god package by default
+	god: ["cmd/*"]
+
+	// rarely useful but you can forbid default god package 'main'
+	noGod: true
+
+	// default size (in minimal lines of code):
+	size: 2048
+}
