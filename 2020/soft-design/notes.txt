@@ -1,23 +1,52 @@
+## Who's Ole?
+
+NEXT: Background: The Monolith
+
+
+## The Old Days: The Monolith
+
+NEXT: Example class diagrams
+
+
 ## Typical Class Diagram of Monolith
 
 Some nice parts at the outer edges.
 Crazy mess in the middle.
+It is just too simple to reuse something quickly.
 
 
 ## Typical Class Diagram of Monolith 2
 
 Still nice parts at the outer edges.
 Even more crazy mess in the middle.
+NEXT: Software Design
 
 
 ## Software Design Has Been a Reputable Discipline
 
 I owned a copy of this book many years ago and liked it very much.
+NEXT: Java!
+
+
+## Java is Bad for Software Design
+
+NEXT: Tools for Software Design
+
+
+## Tools for Software Design
+
+NEXT: Micro Services
 
 
 ## Service Diagram from Uber
 
 Anything not resembling a strict hierarchy adds complexity and is hard to understand.
+It is just too simple to listen to another topic.
+
+
+## spaghetti-cutter - Options And Arguments
+
+NEXT: Path config
 
 
 ## spaghetti-cutter - Path Configuration

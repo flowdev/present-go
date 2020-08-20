@@ -12,23 +12,32 @@ Attributions for images:
 All Gophers have been taken from Maria Letta's excellent 'free-gophers-pack'.
 Uber service graph: © Adam Gluck, Uber Engineering (from blog post: 'Introducing Domain-Oriented Microservice Architecture')
 Monzo service graph: © Tim Anderson, The Register (from blog post: 'How does Monzo keep 1,600 microservices spinning? Go, clean code, and a strong team')
+Broken cup: © Abd Basith | Flickr (CC BY 2.0)
+
 
 ## Who's Ole?
+.background images/go.png
 
 - 25 years of professional sofware development |
 - Almost 20 years of Java |
-- 5 Years of Go |
+- 5 years of Go |
+- 3 years co-organizer of Berlin Go meetup |
 - Often worked as software architect or similar |
 - Looking for lead developer position |
 
+: NEXT: Background: The Monolith
+
 
 ## The Old Days: The Monolith
+.background images/old.png
 
 - 1 system - 1 deployable unit |
 - Ops insisted on this |
 - Never questioned |
 - Systems grew without bounds |
 - Usually becoming a big ball of mud |
+
+: NEXT: Example class diagrams
 
 
 ## Typical Class Diagram of Monolith
@@ -37,6 +46,7 @@ Monzo service graph: © Tim Anderson, The Register (from blog post: 'How does Mo
 
 : Some nice parts at the outer edges.
 : Crazy mess in the middle.
+: It is just too simple to reuse something quickly.
 
 
 ## Typical Class Diagram of Monolith 2
@@ -45,6 +55,7 @@ Monzo service graph: © Tim Anderson, The Register (from blog post: 'How does Mo
 
 : Still nice parts at the outer edges.
 : Even more crazy mess in the middle.
+: NEXT: Software Design
 
 
 ## Software Design Tries to Keep the Mess at Bay
@@ -62,8 +73,21 @@ Wikipedia
 
 : I owned a copy of this book many years ago and liked it very much.
 
+: NEXT: Java!
+
+
+## Java is Bad for Software Design
+.background images/java.png
+
+- Java allows circular dependencies between classes |
+- Java allows circular dependencies between packages |
+- Java neither encourages nor prevents circular dependencies between projects |
+
+: NEXT: Tools for Software Design
+
 
 ## Tools for Software Design
+.background images/tool.png
 
 IDE's contain a lot of tools for code analysis and refactoring:
 
@@ -73,8 +97,11 @@ IDE's contain a lot of tools for code analysis and refactoring:
 - Extract methods, split up classes |
 - Big companies build their own specialized tools |
 
+: NEXT: Micro Services
+
 
 ## Now: Micro Services
+.background images/baby.png
 
 - 1 system - 1,000 deployable units |
 - DevOps + cloud insist on this |
@@ -89,6 +116,7 @@ IDE's contain a lot of tools for code analysis and refactoring:
 
 .caption © Adam Gluck, Uber Engineering (from blog post: 'Introducing Domain-Oriented Microservice Architecture')
 : Anything not resembling a strict hierarchy adds complexity and is hard to understand.
+: It is just too simple to listen to another topic.
 
 
 ## Service Diagram from Monzo
@@ -98,7 +126,16 @@ IDE's contain a lot of tools for code analysis and refactoring:
 .caption © Tim Anderson, The Register (from blog post: 'How does Monzo keep 1,600 microservices spinning? Go, clean code, and a strong team')
 
 
+## Downsides of Spaghetti Architecture
+.background images/cry.png
+
+- Updating a dependency for 1,000 microservices is hard |
+- Moving functionality to other services is tedious |
+- Cutting services in a different way is almost impossible |
+
+
 ## Go is Great for Software Design
+.background images/go.png
 
 - Go has been engineered with scalability in mind |
 - Packages are made for encapsulating functionality |
@@ -108,25 +145,25 @@ IDE's contain a lot of tools for code analysis and refactoring:
 
 ## spaghetti-cutter - Win The Fight Against Spaghetti Code
 
-.image images/spaghetti-cutter.jpg 800 _
+.image images/spaghetti-cutter.jpg 600 _
 
 
 ## spaghetti-cutter - What To Expect
+.background images/alarm.png
 
 [https://github.com/flowdev/spaghetti-cutter](https://github.com/flowdev/spaghetti-cutter)
 
+- Open source, documented and ready to use |
 - Command line tool for CI/CD pipelines (and dev machines) |
-- prevents Go spaghetti code with error messages and return code |
+- Prevents Go spaghetti code with error messages and return code |
+- Configuration gives good overview of project: documentation |
 
 
 ## spaghetti-cutter - Options And Arguments
 
 .code code/spaghetti-cutter_help.txt
 
-
-## spaghetti-cutter - General Configuration
-
-.code code/config-general.hjson
+: NEXT: Path config
 
 
 ## spaghetti-cutter - Path Configuration
@@ -134,10 +171,16 @@ IDE's contain a lot of tools for code analysis and refactoring:
 - Simple path: 'db' |
 - Nested path: 'x/tool' |
 - Simple star: 'x/\*', '\*/db', '\*/special/\*' |
+- Simple star for test packages: 'domain*' includes "domain_test" |
 - Double star: 'db/**' |
 
 : `**` only allowed at the end.
 : Technically possible: `**` like `*` but matches `/`, too.
+
+
+## spaghetti-cutter - General Configuration
+
+.code code/config-general.hjson
 
 
 ## spaghetti-cutter - Allow Configuration
@@ -156,6 +199,7 @@ IDE's contain a lot of tools for code analysis and refactoring:
 
 
 ## Conclusions
+.background images/learned.png
 
 - Software design is dead in micro service land |
 - But you pay a very high price for it |
@@ -163,4 +207,6 @@ IDE's contain a lot of tools for code analysis and refactoring:
 - Tools like the 'spaghetti-cutter' help preventing spaghetti code |
 
 
-## Please Enjoy Your Pasta In Nice Bits
+## Please Enjoy Your Pasta In Nice Bites
+
+.image images/spaghetti-cutter.jpg 600 _

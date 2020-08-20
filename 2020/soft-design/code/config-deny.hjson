@@ -1,8 +1,12 @@
 {
+	tool: [ ... ]
+	db: [ ... ]
+	size: 1024
+
+	allowAdditionally: { ... }
+
 	allowOnlyIn: {
 		// read: allow "domainx/subdomain1" only to be imported in ...
-
-		// adding a '*' to "domain" includes "domain_test"
 		"domainx/subdomain1": ["domainx*", "superdomain"]
 
 		// the only config key that can be used for external packages
