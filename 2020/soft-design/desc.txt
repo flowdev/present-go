@@ -1,0 +1,6 @@
+Microservices - The End of Software Design
+
+This talk will give you a positive outlook to the architectural development of future software systems. Including:
+
+An insight to the world of Microservices &
+Is software design still useful?
