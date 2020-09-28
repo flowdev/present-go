@@ -10,6 +10,7 @@
 		"domainx/subdomain1": ["domainx*", "superdomain"]
 
 		// the only config key that can be used for external packages
-		"github.com/lib/pq": ["db/**"]
+		"github.com/lib/pq": ["main"]
+		"github.com/jmoiron/sqlx": ["db/**"]
 	}
 }
