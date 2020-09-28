@@ -1,6 +1,6 @@
 # Micro Services - The End of Software Design
 
-20 Aug 2020
+28 Sep 2020
 Tags: software-design, micro-services, Golang, spaghetti-cutter
 
 Ole Bulbuk, available
@@ -171,7 +171,7 @@ IDE's contain a lot of tools for code analysis and refactoring:
 - Simple path: 'db' |
 - Nested path: 'x/tool' |
 - Simple star: 'x/\*', '\*/db', '\*/special/\*' |
-- Simple star for test packages: 'domain*' includes "domain_test" |
+- Simple star for test packages: 'domain*' includes 'domain_test' |
 - Double star: 'db/**' |
 
 : `**` only allowed at the end.
