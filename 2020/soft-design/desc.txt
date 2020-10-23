@@ -4,3 +4,16 @@ This talk will give you a positive outlook to the architectural development of f
 
 An insight to the world of Microservices &
 Is software design still useful?
+
+
+==================================
+LONG VERSION:
+==================================
+
+Microservices - The End of Software Design
+
+In the old days we had only monoliths and the internal structure could vary.
+That was the domain of software design but it often failed us and we got spaghetti code.
+Modern microservices often contain only around 100 lines of business functionality and so software design is irrelevant.
+Unfortunately the price for this is spaghetti architecture that is even harder to fight than spaghetti code.
+This talks shows a middleway that avoids both pitfalls and introduces a tool for the Go programming language that helps to prevent spaghetti code.
