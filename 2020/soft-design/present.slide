@@ -1,9 +1,9 @@
 # Micro Services - The End of Software Design
 
-28 Sep 2020
+26 Nov 2020
 Tags: software-design, micro-services, Golang, spaghetti-cutter
 
-Ole Bulbuk, available
+Ole Bulbuk, Ardan Labs
 https://flowdev.github.io/static/present/2020/soft-design/present.html
 @flowdev_org (Twitter)
 @ole108 (Gopher Slack)
@@ -61,19 +61,6 @@ Broken cup: © Abd Basith | Flickr (CC BY 2.0)
 - 5 years of Go
 - 3 years co-organizer of Berlin Go meetup
 - Often worked as software architect or similar
-
-: NEXT: Background: The Monolith
-
-
-## Who's Ole?
-.background images/go.png
-
-- 25 years of professional sofware development
-- Almost 20 years of Java
-- 5 years of Go
-- 3 years co-organizer of Berlin Go meetup
-- Often worked as software architect or similar
-- Looking for lead or principal engineer position
 
 : NEXT: Background: The Monolith
 

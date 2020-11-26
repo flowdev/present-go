@@ -1,6 +1,7 @@
 {
-	tool: ["x/*"]
+	tool: ["x/*"] // sub-packages of tools are NOT tools themself
 
+	// sub-packages of DB packages are NOT DB packages themself
 	db: ["db/*", "/"]
 
 	// not necessary as any 'main' package is a god package by default

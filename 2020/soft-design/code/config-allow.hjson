@@ -8,5 +8,8 @@
 
 		"superdomain": ["domainx/subdomain1", "domainy/subdomain2"]
 		"x/supertool": ["x/tool1", "db/*", "domainx"]
+
+		// allow tool packages to be big and have sup-packages
+		"x/$*": ["x/$1/**"]
 	}
 }
