@@ -1,0 +1,19 @@
+{
+	tool: [ ... ]
+	db: [ ... ]
+	size: 1024
+
+	allowAdditionally: { ... }
+
+	allowOnlyIn: {
+		// read: allow "domainx/subdomain1" only to be imported in ...
+		"domainx/subdomain1": ["domainx*", "superdomain"]
+
+		// allow big domain packages to have their own DB sub-packages
+		"$**/db/*": ["$1"]
+
+		// the only config key that can be used for external packages
+		"github.com/lib/pq": ["main"]
+		"github.com/jmoiron/sqlx": ["db/**"]
+	}
+}

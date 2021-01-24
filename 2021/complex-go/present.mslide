@@ -1,0 +1,257 @@
+# Why Is Go Becoming So Popular And How Does It Handle Complexity?
+
+24 January 2021
+Tags: Golang, cloud, monoliths, micro-services, monorepos, spaghetti-cutter
+
+Ole Bulbuk, Ardan Labs
+@flowdev_org (Twitter)
+@ole108 (Gopher Slack)
+https://github.com/flowdev/spaghetti-cutter
+Attributions for images:
+All Gophers have been taken from Maria Letta's excellent 'free-gophers-pack'.
+Uber service graph: © Adam Gluck, Uber Engineering (from blog post: 'Introducing Domain-Oriented Microservice Architecture')
+Monzo service graph: © Tim Anderson, The Register (from blog post: 'How does Monzo keep 1,600 microservices spinning? Go, clean code, and a strong team')
+Broken cup: © Abd Basith | Flickr (CC BY 2.0)
+
+
+## Who's Ole?
+.background images/go.png
+
+- 25 years of professional sofware development |
+- Almost 20 years of Java |
+- 5 years of Go |
+- 3 years co-organizer of Berlin Go meetup |
+- Often worked as software architect or similar |
+
+: NEXT: Golang: Read A File
+
+
+## Let's Read A File
+
+.code code/read_file.go
+
+: NEXT: Can be done in any language
+
+
+## That Is Boring
+.background images/sleepy.png
+
+- You can read a file in a similar way in almost any programming language |
+- JavaScript is an exception because it only offers asynchronous IO |
+- It looks like between a scripting and a traditional compiled language |
+
+
+## What Would Be Cool
+.background images/cool.png
+
+- Asynchronous IO is needed for high scalability |
+- Performing other tasks while waiting for IO |
+- No long (multiple milliseconds) garbage collection breaks |
+- And Go does this automatically behing the scenes |
+- Without any callbacks or reactive libs |
+- The same goes for network IO, of course |
+- This enables high thoughput and low latency services |
+- In this way Go is very simple |
+
+: NEXT: Golang: Google search
+
+
+## Implementing "Google Search"
+
+.code code/google.go
+
+
+## More Resilience Patterns
+
+- Timeouts are handled with help of the standard library |
+- Other resilience patterns are implemented in OpenSource libs |
+- They use the same simple approach |
+
+
+## Other Features
+
+- Layers of abstraction are frowned upon |
+- Most of the standard library is only 1 to 3 calls deep |
+- I never had to debug more than 5 calls into any dependency |
+- Most functions fit on a screen |
+- Even the heart of the runtime system is quite simple |
+- Bugs in dependencies can be easily discovered and fixed |
+- That is a good tradition in the Go world and really doable |
+
+: NEXT: Complexity
+
+
+## There Is No Silver Bullet
+
+- Complexity is the ultimate enemy |
+- No neat code in the small can safe you |
+- Simplicity is north star in Go |
+- Proverb: Do less - enable more |
+- How does this scale? |
+
+: NEXT: Monolith
+
+
+## The Old Days: The Monolith
+.background images/old.png
+
+- 1 system - 1 deployable unit |
+- Ops insisted on this |
+- Never questioned |
+- Systems grew without bounds |
+- Usually becoming a big ball of mud |
+
+: NEXT: Example class diagrams
+
+
+## Typical Class Diagram of Monolith
+
+.image images/uber-services.png 800 _
+
+: Some nice parts at the outer edges.
+: Crazy mess in the middle.
+: It is just too simple to reuse something quickly.
+
+
+## Typical Class Diagram of Monolith 2
+
+.image images/monzo-services.jpg 800 _
+
+: Still nice parts at the outer edges.
+: Even more crazy mess in the middle.
+: NEXT: Java!
+
+
+## Java Is Bad At Handling Complexity
+.background images/java.png
+
+- Java allows circular dependencies between classes |
+- Java allows circular dependencies between packages |
+- Java doesn't prevent circular dependencies between projects |
+
+: NEXT: Tools for Software Design
+
+
+## Tools For Handling Complexity
+.background images/tool.png
+
+IDE's contain a lot of tools for code analysis and refactoring:
+
+- Structural analysis |
+- Renaming classes, methods, variables... |
+- Moving classes, methods |
+- Extract methods, split up classes |
+- Big companies build their own specialized tools |
+
+: NEXT: Micro Services
+
+
+## Now: Micro Services
+.background images/baby.png
+
+- 1 system - 1,000 deployable units |
+- DevOps + cloud insist on this |
+- Never questioned? |
+- Systems grow without bounds |
+- Usually becoming a spaghetti architecture |
+
+
+## Reasons For Spliting Services
+
+- One part mustn't take down another one |
+- Parts have to scale differently |
+- Parts are really independent |
+- To prevent spaghetti code |
+- Because it is so cool |
+
+
+## Example
+
+- Let's use the latest cool stuff |
+- We implement the services with CQRS pattern |
+- Look at the terminal
+
+
+## Service Diagram From Uber
+
+.image images/uber-services.png 800 _
+
+.caption © Adam Gluck, Uber Engineering (from blog post: 'Introducing Domain-Oriented Microservice Architecture')
+: Anything not resembling a hierarchy adds complexity and is hard to understand.
+: It is just too simple to listen to another topic.
+
+
+## Service Diagram From Monzo
+
+.image images/monzo-services.jpg 800 _
+
+.caption © Tim Anderson, The Register (from blog post: 'How does Monzo keep 1,600 microservices spinning? Go, clean code, and a strong team')
+
+
+## Downsides Of Spaghetti Architecture
+.background images/cry.png
+
+- Finding providers and especially users of data is hard |
+- Updating a dependency for 1,000 microservices is harder |
+- Moving functionality to other services is tedious |
+- Cutting services in a different way is almost impossible |
+
+
+## Future? Monorepo With Services
+
+- 1 system - some deployable units |
+- Multiple services only for resilience, scalability or independent parts |
+- DevOps + cloud are great for this |
+- Systems grow without bounds |
+- How to prevent a big ball of mud? |
+
+
+## Go Is Great For Complex Systems
+.background images/go.png
+
+- Go has been engineered with scalability in mind |
+- Packages are made for encapsulating functionality |
+- Dependency cycles between packages aren't possible |
+- Tooling for preventing other unwanted dependencies between packages is simple |
+
+
+## Example
+
+Look at terminal session.
+
+
+## spaghetti-cutter - Win The Fight Against Spaghetti Code
+
+.image images/spaghetti-cutter.jpg 600 _
+
+
+## spaghetti-cutter - What To Expect
+.background images/alarm.png
+
+[https://github.com/flowdev/spaghetti-cutter](https://github.com/flowdev/spaghetti-cutter)
+
+- Open source, documented and ready to use |
+- Version 1.0 will be released in February |
+- Command line tool for CI/CD pipelines (and dev machines) |
+- Prevents Go spaghetti code with error messages and return code |
+- Configuration gives good overview of project: documentation |
+- Dependency table is generated automatically |
+
+
+## Example
+
+Look at terminal session.
+
+
+## Conclusions
+.background images/learned.png
+
+- Go encourages simplicity wherever it can |
+- Microservices can cost a high price |
+- Reasonably sized services could be a great compromise |
+- Tools like the 'spaghetti-cutter' help preventing spaghetti code |
+
+
+## Please Enjoy Your Pasta In Nice Bites
+
+.image images/spaghetti-cutter.jpg 600 _

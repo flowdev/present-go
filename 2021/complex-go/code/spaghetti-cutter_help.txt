@@ -1,0 +1,6 @@
+$ ./spaghetti-cutter --help
+Usage of spaghetti-cutter:
+  -r string
+        root directory of the project (shorthand) (default ".")
+  -root string
+        root directory of the project (default ".")

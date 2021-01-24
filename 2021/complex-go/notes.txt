@@ -1,0 +1,58 @@
+## Who's Ole?
+
+NEXT: Golang: Read A File
+
+
+## Let's Read A File
+
+NEXT: Can be done in any language
+
+
+## What Would Be Cool
+
+NEXT: Golang: Google search
+
+
+## Other Features
+
+NEXT: Complexity
+
+
+## There Is No Silver Bullet
+
+NEXT: Monolith
+
+
+## The Old Days: The Monolith
+
+NEXT: Example class diagrams
+
+
+## Typical Class Diagram of Monolith
+
+Some nice parts at the outer edges.
+Crazy mess in the middle.
+It is just too simple to reuse something quickly.
+
+
+## Typical Class Diagram of Monolith 2
+
+Still nice parts at the outer edges.
+Even more crazy mess in the middle.
+NEXT: Java!
+
+
+## Java Is Bad At Handling Complexity
+
+NEXT: Tools for Software Design
+
+
+## Tools For Handling Complexity
+
+NEXT: Micro Services
+
+
+## Service Diagram From Uber
+
+Anything not resembling a hierarchy adds complexity and is hard to understand.
+It is just too simple to listen to another topic.
