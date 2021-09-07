@@ -1,0 +1,13 @@
+## Who's Ole?
+
+NEXT: Golang: Read A File
+
+
+## Let's Read A File
+
+NEXT: Can be done in any language
+
+
+## What Would Be Cool
+
+NEXT: Golang: Google search

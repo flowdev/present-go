@@ -1,0 +1,32 @@
+Ways to conquer complexity in the Go world: Monoliths, Microservices, Monorepos and Tools
+
+How do different software architectures influence complexity in a Go project?
+In which way do monorepos have influence?
+Do tools help to conquer complexity?
+How does this all relate to each other?
+By the end of the talk you will have a good idea how to answer these questions.
+
+
+==================================
+LONG VERSION:
+==================================
+
+Conquering complexity in the Go world: Monoliths, Microservices, Monorepos and Tools
+
+Monoliths often grow in complexity until they are an unbearable mess of spaghetti code.
+Modern microservices are a simple and radical alternative.
+Unfortunately they often lead to spaghetti architecture and inflexible overall systems.
+Monorepos for microservices have their own quirks.
+This talk sheds light on how all of this influences complexity and what helps in practice.
+
+
+==================================
+INTRODUCTORY VERSION:
+==================================
+
+Why is Go becoming so popular and how does it deal with complexity?
+
+An introduction to what sets Go apart from other programming languages and how
+it simplifies the handling of complexity.
+The influence of language features, monoliths, microservices and monorepos on
+complexity is shown and how tools can help to mitigate remaining problems.
