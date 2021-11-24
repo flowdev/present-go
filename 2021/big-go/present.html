@@ -1,0 +1,1056 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Micro Services - The End of Software Design</title>
+    <meta charset='utf-8'>
+    <script>
+      var notesEnabled =  false ;
+    </script>
+    <script src='/static/slides.js'></script>
+
+    
+  </head>
+
+  <body style='display: none'>
+
+    <section class='slides layout-widescreen'>
+
+      <article>
+        <h1>Micro Services - The End of Software Design</h1>
+        
+        
+        
+          <div class="presenter">
+            
+  
+  <p>
+    28 Sep 2020
+  </p>
+  
+
+  
+  <p>
+    Tags: software-design, micro-services, Golang, spaghetti-cutter
+  </p>
+  
+
+          </div>
+        
+          <div class="presenter">
+            
+  
+  <p>
+    Ole Bulbuk, available
+  </p>
+  
+
+          </div>
+        
+          <div class="presenter">
+            
+  
+  <p>
+    
+  </p>
+  
+
+          </div>
+        
+      </article>
+
+  
+  
+      <article class="background" style="background-image: url('images/go.png')">
+      
+        <h3>Who&#39;s Ole?</h3>
+        <ul>
+<li>25 years of professional sofware development</li>
+</ul>
+
+      
+      <span class="pagenumber">2</span>
+      </article>
+  
+  
+  
+      <article class="background" style="background-image: url('images/go.png')">
+      
+        <h3>Who&#39;s Ole?</h3>
+        <ul>
+<li>25 years of professional sofware development</li>
+<li>Almost 20 years of Java</li>
+</ul>
+
+      
+      <span class="pagenumber">3</span>
+      </article>
+  
+  
+  
+      <article class="background" style="background-image: url('images/go.png')">
+      
+        <h3>Who&#39;s Ole?</h3>
+        <ul>
+<li>25 years of professional sofware development</li>
+<li>Almost 20 years of Java</li>
+<li>5 years of Go</li>
+</ul>
+
+      
+      <span class="pagenumber">4</span>
+      </article>
+  
+  
+  
+      <article class="background" style="background-image: url('images/go.png')">
+      
+        <h3>Who&#39;s Ole?</h3>
+        <ul>
+<li>25 years of professional sofware development</li>
+<li>Almost 20 years of Java</li>
+<li>5 years of Go</li>
+<li>3 years co-organizer of Berlin Go meetup</li>
+</ul>
+
+      
+      <span class="pagenumber">5</span>
+      </article>
+  
+  
+  
+      <article class="background" style="background-image: url('images/go.png')">
+      
+        <h3>Who&#39;s Ole?</h3>
+        <ul>
+<li>25 years of professional sofware development</li>
+<li>Almost 20 years of Java</li>
+<li>5 years of Go</li>
+<li>3 years co-organizer of Berlin Go meetup</li>
+<li>Often worked as software architect or similar</li>
+</ul>
+
+      
+      <span class="pagenumber">6</span>
+      </article>
+  
+  
+  
+      <article class="background" style="background-image: url('images/go.png')">
+      
+        <h3>Who&#39;s Ole?</h3>
+        <ul>
+<li>25 years of professional sofware development</li>
+<li>Almost 20 years of Java</li>
+<li>5 years of Go</li>
+<li>3 years co-organizer of Berlin Go meetup</li>
+<li>Often worked as software architect or similar</li>
+<li>Looking for lead or principal engineer position</li>
+</ul>
+
+      
+      <span class="pagenumber">7</span>
+      </article>
+  
+  
+  
+      <article class="background" style="background-image: url('images/old.png')">
+      
+        <h3>The Old Days: The Monolith</h3>
+        <ul>
+<li>1 system - 1 deployable unit</li>
+</ul>
+
+      
+      <span class="pagenumber">8</span>
+      </article>
+  
+  
+  
+      <article class="background" style="background-image: url('images/old.png')">
+      
+        <h3>The Old Days: The Monolith</h3>
+        <ul>
+<li>1 system - 1 deployable unit</li>
+<li>Ops insisted on this</li>
+</ul>
+
+      
+      <span class="pagenumber">9</span>
+      </article>
+  
+  
+  
+      <article class="background" style="background-image: url('images/old.png')">
+      
+        <h3>The Old Days: The Monolith</h3>
+        <ul>
+<li>1 system - 1 deployable unit</li>
+<li>Ops insisted on this</li>
+<li>Never questioned</li>
+</ul>
+
+      
+      <span class="pagenumber">10</span>
+      </article>
+  
+  
+  
+      <article class="background" style="background-image: url('images/old.png')">
+      
+        <h3>The Old Days: The Monolith</h3>
+        <ul>
+<li>1 system - 1 deployable unit</li>
+<li>Ops insisted on this</li>
+<li>Never questioned</li>
+<li>Systems grew without bounds</li>
+</ul>
+
+      
+      <span class="pagenumber">11</span>
+      </article>
+  
+  
+  
+      <article class="background" style="background-image: url('images/old.png')">
+      
+        <h3>The Old Days: The Monolith</h3>
+        <ul>
+<li>1 system - 1 deployable unit</li>
+<li>Ops insisted on this</li>
+<li>Never questioned</li>
+<li>Systems grew without bounds</li>
+<li>Usually becoming a big ball of mud</li>
+</ul>
+
+      
+      <span class="pagenumber">12</span>
+      </article>
+  
+  
+  
+      <article >
+      
+        <h3>Typical Class Diagram of Monolith</h3>
+        
+<div class="image">
+  <img src="images/uber-services.png" height="800">
+</div>
+
+      
+      <span class="pagenumber">13</span>
+      </article>
+  
+  
+  
+      <article >
+      
+        <h3>Typical Class Diagram of Monolith 2</h3>
+        
+<div class="image">
+  <img src="images/monzo-services.jpg" height="800">
+</div>
+
+      
+      <span class="pagenumber">14</span>
+      </article>
+  
+  
+  
+      <article >
+      
+        <h3>Software Design Tries to Keep the Mess at Bay</h3>
+        <blockquote>
+<p>Software design ... &quot;all the activity involved in
+conceptualizing, framing, implementing, commissioning,
+and ultimately modifying complex systems&quot;</p>
+</blockquote>
+<p>Wikipedia</p>
+
+      
+      <span class="pagenumber">15</span>
+      </article>
+  
+  
+  
+      <article >
+      
+        <h3>Software Design Has Been a Reputable Discipline</h3>
+        
+<div class="image">
+  <img src="images/cpp-soft-design.jpg" height="800">
+</div>
+
+      
+      <span class="pagenumber">16</span>
+      </article>
+  
+  
+  
+      <article class="background" style="background-image: url('images/java.png')">
+      
+        <h3>Java is Bad for Software Design</h3>
+        <ul>
+<li>Java allows circular dependencies between classes</li>
+</ul>
+
+      
+      <span class="pagenumber">17</span>
+      </article>
+  
+  
+  
+      <article class="background" style="background-image: url('images/java.png')">
+      
+        <h3>Java is Bad for Software Design</h3>
+        <ul>
+<li>Java allows circular dependencies between classes</li>
+<li>Java allows circular dependencies between packages</li>
+</ul>
+
+      
+      <span class="pagenumber">18</span>
+      </article>
+  
+  
+  
+      <article class="background" style="background-image: url('images/java.png')">
+      
+        <h3>Java is Bad for Software Design</h3>
+        <ul>
+<li>Java allows circular dependencies between classes</li>
+<li>Java allows circular dependencies between packages</li>
+<li>Java neither encourages nor prevents circular dependencies between projects</li>
+</ul>
+
+      
+      <span class="pagenumber">19</span>
+      </article>
+  
+  
+  
+      <article class="background" style="background-image: url('images/tool.png')">
+      
+        <h3>Tools for Software Design</h3>
+        <p>IDE's contain a lot of tools for code analysis and refactoring:</p>
+<ul>
+<li>Structural analysis</li>
+</ul>
+
+      
+      <span class="pagenumber">20</span>
+      </article>
+  
+  
+  
+      <article class="background" style="background-image: url('images/tool.png')">
+      
+        <h3>Tools for Software Design</h3>
+        <p>IDE's contain a lot of tools for code analysis and refactoring:</p>
+<ul>
+<li>Structural analysis</li>
+<li>Renaming classes, methods, variables...</li>
+</ul>
+
+      
+      <span class="pagenumber">21</span>
+      </article>
+  
+  
+  
+      <article class="background" style="background-image: url('images/tool.png')">
+      
+        <h3>Tools for Software Design</h3>
+        <p>IDE's contain a lot of tools for code analysis and refactoring:</p>
+<ul>
+<li>Structural analysis</li>
+<li>Renaming classes, methods, variables...</li>
+<li>Moving classes, methods</li>
+</ul>
+
+      
+      <span class="pagenumber">22</span>
+      </article>
+  
+  
+  
+      <article class="background" style="background-image: url('images/tool.png')">
+      
+        <h3>Tools for Software Design</h3>
+        <p>IDE's contain a lot of tools for code analysis and refactoring:</p>
+<ul>
+<li>Structural analysis</li>
+<li>Renaming classes, methods, variables...</li>
+<li>Moving classes, methods</li>
+<li>Extract methods, split up classes</li>
+</ul>
+
+      
+      <span class="pagenumber">23</span>
+      </article>
+  
+  
+  
+      <article class="background" style="background-image: url('images/tool.png')">
+      
+        <h3>Tools for Software Design</h3>
+        <p>IDE's contain a lot of tools for code analysis and refactoring:</p>
+<ul>
+<li>Structural analysis</li>
+<li>Renaming classes, methods, variables...</li>
+<li>Moving classes, methods</li>
+<li>Extract methods, split up classes</li>
+<li>Big companies build their own specialized tools</li>
+</ul>
+
+      
+      <span class="pagenumber">24</span>
+      </article>
+  
+  
+  
+      <article class="background" style="background-image: url('images/baby.png')">
+      
+        <h3>Now: Micro Services</h3>
+        <ul>
+<li>1 system - 1,000 deployable units</li>
+</ul>
+
+      
+      <span class="pagenumber">25</span>
+      </article>
+  
+  
+  
+      <article class="background" style="background-image: url('images/baby.png')">
+      
+        <h3>Now: Micro Services</h3>
+        <ul>
+<li>1 system - 1,000 deployable units</li>
+<li>DevOps + cloud insist on this</li>
+</ul>
+
+      
+      <span class="pagenumber">26</span>
+      </article>
+  
+  
+  
+      <article class="background" style="background-image: url('images/baby.png')">
+      
+        <h3>Now: Micro Services</h3>
+        <ul>
+<li>1 system - 1,000 deployable units</li>
+<li>DevOps + cloud insist on this</li>
+<li>Never questioned?</li>
+</ul>
+
+      
+      <span class="pagenumber">27</span>
+      </article>
+  
+  
+  
+      <article class="background" style="background-image: url('images/baby.png')">
+      
+        <h3>Now: Micro Services</h3>
+        <ul>
+<li>1 system - 1,000 deployable units</li>
+<li>DevOps + cloud insist on this</li>
+<li>Never questioned?</li>
+<li>Systems grow without bounds</li>
+</ul>
+
+      
+      <span class="pagenumber">28</span>
+      </article>
+  
+  
+  
+      <article class="background" style="background-image: url('images/baby.png')">
+      
+        <h3>Now: Micro Services</h3>
+        <ul>
+<li>1 system - 1,000 deployable units</li>
+<li>DevOps + cloud insist on this</li>
+<li>Never questioned?</li>
+<li>Systems grow without bounds</li>
+<li>Usually becoming a spaghetti architecture</li>
+</ul>
+
+      
+      <span class="pagenumber">29</span>
+      </article>
+  
+  
+  
+      <article >
+      
+        <h3>Service Diagram from Uber</h3>
+        
+<div class="image">
+  <img src="images/uber-services.png" height="800">
+</div>
+<figcaption>© Adam Gluck, Uber Engineering (from blog post: &#39;Introducing Domain-Oriented Microservice Architecture&#39;)</figcaption>
+      
+      <span class="pagenumber">30</span>
+      </article>
+  
+  
+  
+      <article >
+      
+        <h3>Service Diagram from Monzo</h3>
+        
+<div class="image">
+  <img src="images/monzo-services.jpg" height="800">
+</div>
+<figcaption>© Tim Anderson, The Register (from blog post: &#39;How does Monzo keep 1,600 microservices spinning? Go, clean code, and a strong team&#39;)</figcaption>
+      
+      <span class="pagenumber">31</span>
+      </article>
+  
+  
+  
+      <article class="background" style="background-image: url('images/cry.png')">
+      
+        <h3>Downsides of Spaghetti Architecture</h3>
+        <ul>
+<li>Updating a dependency for 1,000 microservices is hard</li>
+</ul>
+
+      
+      <span class="pagenumber">32</span>
+      </article>
+  
+  
+  
+      <article class="background" style="background-image: url('images/cry.png')">
+      
+        <h3>Downsides of Spaghetti Architecture</h3>
+        <ul>
+<li>Updating a dependency for 1,000 microservices is hard</li>
+<li>Moving functionality to other services is tedious</li>
+</ul>
+
+      
+      <span class="pagenumber">33</span>
+      </article>
+  
+  
+  
+      <article class="background" style="background-image: url('images/cry.png')">
+      
+        <h3>Downsides of Spaghetti Architecture</h3>
+        <ul>
+<li>Updating a dependency for 1,000 microservices is hard</li>
+<li>Moving functionality to other services is tedious</li>
+<li>Cutting services in a different way is almost impossible</li>
+</ul>
+
+      
+      <span class="pagenumber">34</span>
+      </article>
+  
+  
+  
+      <article class="background" style="background-image: url('images/go.png')">
+      
+        <h3>Go is Great for Software Design</h3>
+        <ul>
+<li>Go has been engineered with scalability in mind</li>
+</ul>
+
+      
+      <span class="pagenumber">35</span>
+      </article>
+  
+  
+  
+      <article class="background" style="background-image: url('images/go.png')">
+      
+        <h3>Go is Great for Software Design</h3>
+        <ul>
+<li>Go has been engineered with scalability in mind</li>
+<li>Packages are made for encapsulating functionality</li>
+</ul>
+
+      
+      <span class="pagenumber">36</span>
+      </article>
+  
+  
+  
+      <article class="background" style="background-image: url('images/go.png')">
+      
+        <h3>Go is Great for Software Design</h3>
+        <ul>
+<li>Go has been engineered with scalability in mind</li>
+<li>Packages are made for encapsulating functionality</li>
+<li>Dependency cycles between packages aren't possible</li>
+</ul>
+
+      
+      <span class="pagenumber">37</span>
+      </article>
+  
+  
+  
+      <article class="background" style="background-image: url('images/go.png')">
+      
+        <h3>Go is Great for Software Design</h3>
+        <ul>
+<li>Go has been engineered with scalability in mind</li>
+<li>Packages are made for encapsulating functionality</li>
+<li>Dependency cycles between packages aren't possible</li>
+<li>Tooling for preventing other unwanted dependencies between packages is simple</li>
+</ul>
+
+      
+      <span class="pagenumber">38</span>
+      </article>
+  
+  
+  
+      <article >
+      
+        <h3>spaghetti-cutter - Win The Fight Against Spaghetti Code</h3>
+        
+<div class="image">
+  <img src="images/spaghetti-cutter.jpg" height="600">
+</div>
+
+      
+      <span class="pagenumber">39</span>
+      </article>
+  
+  
+  
+      <article class="background" style="background-image: url('images/alarm.png')">
+      
+        <h3>spaghetti-cutter - What To Expect</h3>
+        <p><a href="https://github.com/flowdev/spaghetti-cutter" target="_blank" rel="noopener">https://github.com/flowdev/spaghetti-cutter</a></p>
+<ul>
+<li>Open source, documented and ready to use</li>
+</ul>
+
+      
+      <span class="pagenumber">40</span>
+      </article>
+  
+  
+  
+      <article class="background" style="background-image: url('images/alarm.png')">
+      
+        <h3>spaghetti-cutter - What To Expect</h3>
+        <p><a href="https://github.com/flowdev/spaghetti-cutter" target="_blank" rel="noopener">https://github.com/flowdev/spaghetti-cutter</a></p>
+<ul>
+<li>Open source, documented and ready to use</li>
+<li>Command line tool for CI/CD pipelines (and dev machines)</li>
+</ul>
+
+      
+      <span class="pagenumber">41</span>
+      </article>
+  
+  
+  
+      <article class="background" style="background-image: url('images/alarm.png')">
+      
+        <h3>spaghetti-cutter - What To Expect</h3>
+        <p><a href="https://github.com/flowdev/spaghetti-cutter" target="_blank" rel="noopener">https://github.com/flowdev/spaghetti-cutter</a></p>
+<ul>
+<li>Open source, documented and ready to use</li>
+<li>Command line tool for CI/CD pipelines (and dev machines)</li>
+<li>Prevents Go spaghetti code with error messages and return code</li>
+</ul>
+
+      
+      <span class="pagenumber">42</span>
+      </article>
+  
+  
+  
+      <article class="background" style="background-image: url('images/alarm.png')">
+      
+        <h3>spaghetti-cutter - What To Expect</h3>
+        <p><a href="https://github.com/flowdev/spaghetti-cutter" target="_blank" rel="noopener">https://github.com/flowdev/spaghetti-cutter</a></p>
+<ul>
+<li>Open source, documented and ready to use</li>
+<li>Command line tool for CI/CD pipelines (and dev machines)</li>
+<li>Prevents Go spaghetti code with error messages and return code</li>
+<li>Configuration gives good overview of project: documentation</li>
+</ul>
+
+      
+      <span class="pagenumber">43</span>
+      </article>
+  
+  
+  
+      <article >
+      
+        <h3>spaghetti-cutter - Options And Arguments</h3>
+        
+  <div class="code" >
+<pre><span num="1">$ ./spaghetti-cutter --help</span>
+<span num="2">Usage of spaghetti-cutter:</span>
+<span num="3">  -r string</span>
+<span num="4">        root directory of the project (shorthand) (default &#34;.&#34;)</span>
+<span num="5">  -root string</span>
+<span num="6">        root directory of the project (default &#34;.&#34;)</span>
+</pre>
+</div>
+
+      
+      <span class="pagenumber">44</span>
+      </article>
+  
+  
+  
+      <article >
+      
+        <h3>spaghetti-cutter - Path Configuration</h3>
+        <ul>
+<li>Simple path: 'db'</li>
+</ul>
+
+      
+      <span class="pagenumber">45</span>
+      </article>
+  
+  
+  
+      <article >
+      
+        <h3>spaghetti-cutter - Path Configuration</h3>
+        <ul>
+<li>Simple path: 'db'</li>
+<li>Nested path: 'x/tool'</li>
+</ul>
+
+      
+      <span class="pagenumber">46</span>
+      </article>
+  
+  
+  
+      <article >
+      
+        <h3>spaghetti-cutter - Path Configuration</h3>
+        <ul>
+<li>Simple path: 'db'</li>
+<li>Nested path: 'x/tool'</li>
+<li>Simple star: 'x/*', '*/db', '*/special/*'</li>
+</ul>
+
+      
+      <span class="pagenumber">47</span>
+      </article>
+  
+  
+  
+      <article >
+      
+        <h3>spaghetti-cutter - Path Configuration</h3>
+        <ul>
+<li>Simple path: 'db'</li>
+<li>Nested path: 'x/tool'</li>
+<li>Simple star: 'x/*', '*/db', '*/special/*'</li>
+<li>Simple star for test packages: 'domain*' includes 'domain_test'</li>
+</ul>
+
+      
+      <span class="pagenumber">48</span>
+      </article>
+  
+  
+  
+      <article >
+      
+        <h3>spaghetti-cutter - Path Configuration</h3>
+        <ul>
+<li>Simple path: 'db'</li>
+<li>Nested path: 'x/tool'</li>
+<li>Simple star: 'x/*', '*/db', '*/special/*'</li>
+<li>Simple star for test packages: 'domain*' includes 'domain_test'</li>
+<li>Double star: 'db/**'</li>
+</ul>
+
+      
+      <span class="pagenumber">49</span>
+      </article>
+  
+  
+  
+      <article >
+      
+        <h3>spaghetti-cutter - General Configuration</h3>
+        
+  <div class="code" >
+<pre><span num="1">{</span>
+<span num="2">    tool: [&#34;x/*&#34;]</span>
+<span num="3"></span>
+<span num="4">    db: [&#34;db/*&#34;, &#34;/&#34;]</span>
+<span num="5"></span>
+<span num="6">    // not necessary as any &#39;main&#39; package is a god package by default</span>
+<span num="7">    god: [&#34;cmd/*&#34;]</span>
+<span num="8"></span>
+<span num="9">    // rarely useful but you can forbid default god package &#39;main&#39;</span>
+<span num="10">    noGod: true</span>
+<span num="11"></span>
+<span num="12">    // default size (in minimal lines of code):</span>
+<span num="13">    size: 2048</span>
+<span num="14">}</span>
+</pre>
+</div>
+
+      
+      <span class="pagenumber">50</span>
+      </article>
+  
+  
+  
+      <article >
+      
+        <h3>spaghetti-cutter - Allow Configuration</h3>
+        
+  <div class="code" >
+<pre><span num="1">{</span>
+<span num="2">    tool: [ ... ]</span>
+<span num="3">    db: [ ... ]</span>
+<span num="4">    size: 1024</span>
+<span num="5"></span>
+<span num="6">    allowAdditionally: {</span>
+<span num="7">        // read: allow &#34;superdomain&#34; to additionally import ...</span>
+<span num="8"></span>
+<span num="9">        &#34;superdomain&#34;: [&#34;domainx/subdomain1&#34;, &#34;domainy/subdomain2&#34;]</span>
+<span num="10">        &#34;x/supertool&#34;: [&#34;x/tool1&#34;, &#34;db/*&#34;, &#34;domainx&#34;]</span>
+<span num="11">    }</span>
+<span num="12">}</span>
+</pre>
+</div>
+
+      
+      <span class="pagenumber">51</span>
+      </article>
+  
+  
+  
+      <article >
+      
+        <h3>spaghetti-cutter - Restrict Configuration</h3>
+        
+  <div class="code" >
+<pre><span num="1">{</span>
+<span num="2">    tool: [ ... ]</span>
+<span num="3">    db: [ ... ]</span>
+<span num="4">    size: 1024</span>
+<span num="5"></span>
+<span num="6">    allowAdditionally: { ... }</span>
+<span num="7"></span>
+<span num="8">    allowOnlyIn: {</span>
+<span num="9">        // read: allow &#34;domainx/subdomain1&#34; only to be imported in ...</span>
+<span num="10">        &#34;domainx/subdomain1&#34;: [&#34;domainx*&#34;, &#34;superdomain&#34;]</span>
+<span num="11"></span>
+<span num="12">        // the only config key that can be used for external packages</span>
+<span num="13">        &#34;github.com/lib/pq&#34;: [&#34;main&#34;]</span>
+<span num="14">        &#34;github.com/jmoiron/sqlx&#34;: [&#34;db/**&#34;]</span>
+<span num="15">    }</span>
+<span num="16">}</span>
+</pre>
+</div>
+
+      
+      <span class="pagenumber">52</span>
+      </article>
+  
+  
+  
+      <article >
+      
+        <h3>spaghetti-cutter - Output</h3>
+        
+  <div class="code" >
+<pre><span num="1">$ ./spaghetti-cutter</span>
+<span num="2">2020/09/28 16:25:19 INFO - configuration &#39;allowOnlyIn&#39;: `github.com/hjson/**`: `x/config` ; `golang.org/x/tools**`: `parse*`, `x/pkgs*`</span>
+<span num="3">2020/09/28 16:25:19 INFO - configuration &#39;allowAdditionally&#39;: `*_test`: `parse`</span>
+<span num="4">2020/09/28 16:25:19 INFO - configuration &#39;god&#39;: `main`</span>
+<span num="5">2020/09/28 16:25:19 INFO - configuration &#39;tool&#39;: `x/*`</span>
+<span num="6">2020/09/28 16:25:19 INFO - configuration &#39;db&#39;: ...</span>
+<span num="7">2020/09/28 16:25:19 INFO - configuration &#39;size&#39;: 1024</span>
+<span num="8">2020/09/28 16:25:19 INFO - configuration &#39;noGod&#39;: false</span>
+<span num="9">2020/09/28 16:25:20 INFO - root package: github.com/flowdev/spaghetti-cutter</span>
+<span num="10">2020/09/28 16:25:20 INFO - Size of package &#39;x/config&#39;: 699</span>
+<span num="11">2020/09/28 16:25:20 INFO - Size of package &#39;x/pkgs&#39;: 134</span>
+<span num="12">2020/09/28 16:25:20 INFO - Size of package &#39;deps&#39;: 401</span>
+<span num="13">2020/09/28 16:25:20 INFO - Size of package &#39;parse&#39;: 109</span>
+<span num="14">2020/09/28 16:25:20 INFO - Size of package &#39;size&#39;: 838</span>
+<span num="15">2020/09/28 16:25:20 INFO - Size of package &#39;x/dirs&#39;: 86</span>
+<span num="16">2020/09/28 16:25:20 INFO - Size of package &#39;/&#39;: 202</span>
+<span num="17">2020/09/28 16:25:20 INFO - No errors found.</span>
+</pre>
+</div>
+
+      
+      <span class="pagenumber">53</span>
+      </article>
+  
+  
+  
+      <article class="background" style="background-image: url('images/learned.png')">
+      
+        <h3>Conclusions</h3>
+        <ul>
+<li>Software design is dead in micro service land</li>
+</ul>
+
+      
+      <span class="pagenumber">54</span>
+      </article>
+  
+  
+  
+      <article class="background" style="background-image: url('images/learned.png')">
+      
+        <h3>Conclusions</h3>
+        <ul>
+<li>Software design is dead in micro service land</li>
+<li>But you pay a very high price for it</li>
+</ul>
+
+      
+      <span class="pagenumber">55</span>
+      </article>
+  
+  
+  
+      <article class="background" style="background-image: url('images/learned.png')">
+      
+        <h3>Conclusions</h3>
+        <ul>
+<li>Software design is dead in micro service land</li>
+<li>But you pay a very high price for it</li>
+<li>Reasonably sized services could be a great compromise</li>
+</ul>
+
+      
+      <span class="pagenumber">56</span>
+      </article>
+  
+  
+  
+      <article class="background" style="background-image: url('images/learned.png')">
+      
+        <h3>Conclusions</h3>
+        <ul>
+<li>Software design is dead in micro service land</li>
+<li>But you pay a very high price for it</li>
+<li>Reasonably sized services could be a great compromise</li>
+<li>Tools like the 'spaghetti-cutter' help preventing spaghetti code</li>
+</ul>
+
+      
+      <span class="pagenumber">57</span>
+      </article>
+  
+  
+  
+      <article >
+      
+        <h3>Please Enjoy Your Pasta In Nice Bites</h3>
+        
+<div class="image">
+  <img src="images/spaghetti-cutter.jpg" height="600">
+</div>
+
+      
+      <span class="pagenumber">58</span>
+      </article>
+  
+  
+
+      <article>
+        <h3>Thank you</h3>
+        
+          <div class="presenter">
+            
+  
+  <p>
+    28 Sep 2020
+  </p>
+  
+
+  
+  <p>
+    Tags: software-design, micro-services, Golang, spaghetti-cutter
+  </p>
+  
+
+          </div>
+        
+          <div class="presenter">
+            
+  
+  <p>
+    Ole Bulbuk, available
+  </p>
+  
+<p class="link"><a href="https://flowdev.github.io/static/present/2020/soft-design/present.html" target="_blank">https://flowdev.github.io/static/present/2020/soft-design/present.html</a></p><p class="link"><a href="http://twitter.com/flowdev_org%20%28Twitter%29" target="_blank">@flowdev_org (Twitter)</a></p><p class="link"><a href="http://twitter.com/ole108%20%28Gopher%20Slack%29" target="_blank">@ole108 (Gopher Slack)</a></p><p class="link"><a href="https://github.com/flowdev/spaghetti-cutter" target="_blank">https://github.com/flowdev/spaghetti-cutter</a></p>
+  
+  <p>
+    Attributions for images:
+  </p>
+  
+
+  
+  <p>
+    All Gophers have been taken from Maria Letta&#39;s excellent &#39;free-gophers-pack&#39;.
+  </p>
+  
+
+  
+  <p>
+    Uber service graph: © Adam Gluck, Uber Engineering (from blog post: &#39;Introducing Domain-Oriented Microservice Architecture&#39;)
+  </p>
+  
+
+  
+  <p>
+    Monzo service graph: © Tim Anderson, The Register (from blog post: &#39;How does Monzo keep 1,600 microservices spinning? Go, clean code, and a strong team&#39;)
+  </p>
+  
+
+  
+  <p>
+    Broken cup: © Abd Basith | Flickr (CC BY 2.0)
+  </p>
+  
+
+          </div>
+        
+          <div class="presenter">
+            
+  
+  <p>
+    
+  </p>
+  
+
+          </div>
+        
+      </article>
+
+    </section>
+
+    <div id="help">
+      Use the left and right arrow keys or click the left and right
+      edges of the page to navigate between slides.<br>
+      (Press 'H' or navigate to hide this message.)
+    </div>
+
+    
+    <script src='/play.js'></script>
+    
+  </body>
+</html>

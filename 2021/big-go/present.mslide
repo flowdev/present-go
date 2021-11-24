@@ -1,0 +1,82 @@
+# Big Code Bases And Go
+
+23 November 2021
+Tags: Golang scalability
+
+Ole Bulbuk, NewStore
+@flowdev_org (Twitter)
+@ole108 (Gopher Slack)
+Attributions for images:
+All Gophers have been taken from Maria Letta's excellent 'free-gophers-pack'.
+
+
+## Who's Ole?
+.background images/go.png
+
+- Over 25 years of professional sofware development |
+- Almost 20 years of Java |
+- 6 years of Go |
+- 4 years co-organizer of Berlin Go meetup |
+
+: NEXT: Golang: Read A File
+
+
+## Let's Read A File
+
+.code code/read_file.go
+
+: NEXT: Can be done in any language
+
+
+## That Is Boring
+.background images/sleepy.png
+
+- You can read a file in a similar way in almost any programming language |
+- JavaScript is an exception because it only offers asynchronous IO |
+- It looks like between a scripting and a traditional compiled language |
+
+
+## What Would Be Cool
+.background images/cool.png
+
+- Asynchronous IO is needed for high scalability |
+- Performing other tasks while waiting for IO |
+- No long (multiple milliseconds) garbage collection breaks |
+- And Go does this automatically behing the scenes |
+- Without any callbacks or reactive libs |
+- The same goes for network IO, of course |
+- This enables high throughput and low latency services |
+- In this way Go is very simple |
+
+: NEXT: Other Features
+
+
+## Other Features
+
+- Layers of abstraction are frowned upon |
+- Most of the standard library is only 1 to 3 calls deep |
+- I never had to debug more than 5 calls into a dependency |
+- Most functions fit on a screen |
+- Even the heart of the runtime system is quite simple |
+- Bugs in dependencies can be discovered and fixed |
+- That is a good tradition in the Go world and really doable |
+
+: NEXT: Go: Packages
+
+
+## Go Packages
+
+- Packages are **the** way to structure a Go code base |
+- All .go files in one directory belong to the same package |
+- Cyclic dependencies **between** packages are prevented by the compiler |
+- Cyclic dependencies **within** a single package are fine |
+- Packages shouldn't be too large |
+- The `spaghetti-cutter` tool can be used to measure and restrict the size of Go packages |
+
+
+## Analyze A Small Go Project
+
+
+
+## Analyze The Prometheus Project
+
