@@ -1,0 +1,117 @@
+# GDG Golang Berlin
+
+13 December 2021
+Tags: Golang community
+
+Ole Bulbuk, NewStore
+@flowdev_org (Twitter)
+@ole108 (Gopher, Slack)
+
+
+## What is Go?
+.background images/gopher-trans.png
+
+- Progamming language developed by Google, published November 2009 |
+- Simple syntax between C, Java and a scripting language with some simple extensions |
+- It has garbage collection |
+- It uses safe pointers (without pointer arithmetic) |
+- It is quite a mix of systems, scripting and object oriented language |
+
+
+## Why Go?
+.background images/gopher-brown-trans.png
+
+- Single static binary as result |
+- Java developers strive for a 10 minute build; Go developers get angry about a 10 second build |
+- Garbage collection blocks for less than 1 ms |
+- Builtin concurrency handling (Goroutines) |
+- Go is free of magic |
+- Everybody strives for simplicity |
+
+
+## What is Go used for?
+.background images/gopher-pilot-trans.png
+
+- Cloud technology (Docker, Kubernetes, Prometheus, ...) |
+- Advertisement technology (Adjust, Remerge, ...) |
+- FinTech (solarisBank, Barzahlen, Fraugster, OptioPay, ...) |
+- Web APIs for arbitrary business applications |
+
+
+## 3,111 Members
+.background images/friendly-gophers.jpeg
+
+
+## 
+.background images/onefootball-gophers.jpeg
+
+## 
+.background images/amazon-gophers.jpeg
+
+## 
+.background images/optiopay-venue.jpeg
+
+## 
+.background images/optiopay-view.jpeg
+
+## 
+.background images/kinvolk-gophers.jpeg
+
+## 
+.background images/new-adjust-gophers.jpeg
+
+
+## Networking
+.background images/chating-gophers.jpeg
+
+## ...With Drinks
+.background images/beer-gophers.jpeg
+
+## ...And Food
+.background images/pizza-gophers.jpeg
+
+
+## First Talk
+.background images/gopher-talk1-trans.png
+
+- GopherCon Recap! |
+- What 'happens before' means to a compiler |
+- A fast multi-threaded queue implementation in Go |
+- Utilizing (Linux-) eBPF from Go |
+- Consumer-Driven Contract Testing |
+- Or PowerPoint karaoke for a Go release party |
+- Experience using Go at a company |
+
+
+## 20 Seconds Open Mic
+.image images/employers.png
+
+
+## Break
+.background images/chating-gophers2.jpeg
+
+## ...With Drinks
+.background images/beer-gophers.jpeg
+
+## ...And Food
+.background images/pizza-gophers.jpeg
+
+
+## Second Talk
+.background images/gopher-talk2-trans.png
+
+
+## More Networking
+.background images/chating-gophers.jpeg
+
+## ...With Drinks
+.background images/beer-gophers.jpeg
+
+## ...And Food
+.background images/pizza-gophers.jpeg
+
+
+## Meetup (GDG Golang Berlin)
+.background images/meetup-trans.png
+
+Next meetup: Next Wednesday, 2022-01-12
