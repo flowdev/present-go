@@ -1,0 +1,291 @@
+# Big Code Bases And Go
+
+19 November 2022
+Tags: Golang scalability
+
+Ole Bulbuk, EngineeringAngel
+@flowdev_org (Twitter)
+@ole108 (Gopher Slack)
+Attributions for images:
+All Gophers have been taken from Maria Letta's excellent 'free-gophers-pack'.
+
+
+## Who's Ole?
+.background images/go.png
+
+- Over 25 years of professional sofware development
+
+: NEXT: Golang: Read A File
+
+
+## Who's Ole?
+.background images/go.png
+
+- Over 25 years of professional sofware development
+- Almost 20 years of Java
+
+: NEXT: Golang: Read A File
+
+
+## Who's Ole?
+.background images/go.png
+
+- Over 25 years of professional sofware development
+- Almost 20 years of Java
+- 7 years of Go
+
+: NEXT: Golang: Read A File
+
+
+## Who's Ole?
+.background images/go.png
+
+- Over 25 years of professional sofware development
+- Almost 20 years of Java
+- 7 years of Go
+- 5 years co-organizer of Berlin Go meetup
+
+: NEXT: Golang: Read A File
+
+
+## Let's Read A File
+
+.code code/read_file.go
+
+: NEXT: Can be done in any language
+
+
+## That Is Boring
+.background images/sleepy.png
+
+- You can read a file in a similar way in almost any programming language
+
+
+## That Is Boring
+.background images/sleepy.png
+
+- You can read a file in a similar way in almost any programming language
+- JavaScript is an exception because it only offers asynchronous IO
+
+
+## That Is Boring
+.background images/sleepy.png
+
+- You can read a file in a similar way in almost any programming language
+- JavaScript is an exception because it only offers asynchronous IO
+- It looks like between a scripting and a traditional compiled language
+
+
+## What Would Be Cool
+.background images/cool.png
+
+- Asynchronous IO is needed for high scalability
+
+: NEXT: Other Features
+
+
+## What Would Be Cool
+.background images/cool.png
+
+- Asynchronous IO is needed for high scalability
+- Performing other tasks while waiting for IO
+
+: NEXT: Other Features
+
+
+## What Would Be Cool
+.background images/cool.png
+
+- Asynchronous IO is needed for high scalability
+- Performing other tasks while waiting for IO
+- No long (multiple milliseconds) garbage collection breaks
+
+: NEXT: Other Features
+
+
+## What Would Be Cool
+.background images/cool.png
+
+- Asynchronous IO is needed for high scalability
+- Performing other tasks while waiting for IO
+- No long (multiple milliseconds) garbage collection breaks
+- And Go does this automatically behind the scenes
+
+: NEXT: Other Features
+
+
+## What Would Be Cool
+.background images/cool.png
+
+- Asynchronous IO is needed for high scalability
+- Performing other tasks while waiting for IO
+- No long (multiple milliseconds) garbage collection breaks
+- And Go does this automatically behind the scenes
+- Without any callbacks or reactive libs
+
+: NEXT: Other Features
+
+
+## What Would Be Cool
+.background images/cool.png
+
+- Asynchronous IO is needed for high scalability
+- Performing other tasks while waiting for IO
+- No long (multiple milliseconds) garbage collection breaks
+- And Go does this automatically behind the scenes
+- Without any callbacks or reactive libs
+- The same goes for network IO, of course
+
+: NEXT: Other Features
+
+
+## What Would Be Cool
+.background images/cool.png
+
+- Asynchronous IO is needed for high scalability
+- Performing other tasks while waiting for IO
+- No long (multiple milliseconds) garbage collection breaks
+- And Go does this automatically behind the scenes
+- Without any callbacks or reactive libs
+- The same goes for network IO, of course
+- This enables high throughput and low latency services
+
+: NEXT: Other Features
+
+
+## What Would Be Cool
+.background images/cool.png
+
+- Asynchronous IO is needed for high scalability
+- Performing other tasks while waiting for IO
+- No long (multiple milliseconds) garbage collection breaks
+- And Go does this automatically behind the scenes
+- Without any callbacks or reactive libs
+- The same goes for network IO, of course
+- This enables high throughput and low latency services
+- In this way Go is very simple
+
+: NEXT: Other Features
+
+
+## Other Features
+
+- Layers of abstraction are frowned upon
+
+: NEXT: Go: Packages
+
+
+## Other Features
+
+- Layers of abstraction are frowned upon
+- Most of the standard library is only 1 to 3 calls deep
+
+: NEXT: Go: Packages
+
+
+## Other Features
+
+- Layers of abstraction are frowned upon
+- Most of the standard library is only 1 to 3 calls deep
+- I never had to debug more than 5 calls into a dependency
+
+: NEXT: Go: Packages
+
+
+## Other Features
+
+- Layers of abstraction are frowned upon
+- Most of the standard library is only 1 to 3 calls deep
+- I never had to debug more than 5 calls into a dependency
+- Most functions fit on a screen
+
+: NEXT: Go: Packages
+
+
+## Other Features
+
+- Layers of abstraction are frowned upon
+- Most of the standard library is only 1 to 3 calls deep
+- I never had to debug more than 5 calls into a dependency
+- Most functions fit on a screen
+- Even the heart of the runtime system is quite simple
+
+: NEXT: Go: Packages
+
+
+## Other Features
+
+- Layers of abstraction are frowned upon
+- Most of the standard library is only 1 to 3 calls deep
+- I never had to debug more than 5 calls into a dependency
+- Most functions fit on a screen
+- Even the heart of the runtime system is quite simple
+- Bugs in dependencies can be discovered and fixed
+
+: NEXT: Go: Packages
+
+
+## Other Features
+
+- Layers of abstraction are frowned upon
+- Most of the standard library is only 1 to 3 calls deep
+- I never had to debug more than 5 calls into a dependency
+- Most functions fit on a screen
+- Even the heart of the runtime system is quite simple
+- Bugs in dependencies can be discovered and fixed
+- That is a good tradition in the Go world and really doable
+
+: NEXT: Go: Packages
+
+
+## Go Packages
+
+- Packages are **the** way to structure a Go code base
+
+
+## Go Packages
+
+- Packages are **the** way to structure a Go code base
+- All .go files in one directory belong to the same package
+
+
+## Go Packages
+
+- Packages are **the** way to structure a Go code base
+- All .go files in one directory belong to the same package
+- Cyclic dependencies **within** a single package are fine
+
+
+## Go Packages
+
+- Packages are **the** way to structure a Go code base
+- All .go files in one directory belong to the same package
+- Cyclic dependencies **within** a single package are fine
+- Cyclic dependencies **between** packages are prevented by the compiler
+
+
+## Go Packages
+
+- Packages are **the** way to structure a Go code base
+- All .go files in one directory belong to the same package
+- Cyclic dependencies **within** a single package are fine
+- Cyclic dependencies **between** packages are prevented by the compiler
+- Packages shouldn't be too large
+
+
+## Go Packages
+
+- Packages are **the** way to structure a Go code base
+- All .go files in one directory belong to the same package
+- Cyclic dependencies **within** a single package are fine
+- Cyclic dependencies **between** packages are prevented by the compiler
+- Packages shouldn't be too large
+- The `spaghetti-cutter` tool can be used to measure and restrict the size of Go packages
+
+
+## Analyze A Small Go Project
+
+
+
+## Analyze The Prometheus Project
+

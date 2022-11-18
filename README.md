@@ -4,7 +4,7 @@ The present tool can be found here: `go get golang.org/x/tools/present`
 
 Start presentation in this directory:
 ```sh
-present.$(go env GOOS) -base . -notes
+./bin/present.$(go env GOOS) -base . -notes
 ```
 
 Get rendered HTML of presentation:

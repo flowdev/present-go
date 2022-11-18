@@ -1,0 +1,10 @@
+Title:  Big Code Bases And Go
+
+Abstract:
+Big code bases have traditionally been monolithic applications full of spaghetti code.
+Now we have micro services everywhere and they usually lead to spaghetti architecture.
+The middle ground seems to be nice but hard to navigate.
+
+We start with a little introduction to Go and its feature to structure code bases.
+Next we see how dependencies between parts of the code base can be documented with a small open source tool.
+Finally we explore how big code bases can be analysed and understood.
