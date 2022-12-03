@@ -1,11 +1,12 @@
 # Big Code Bases And Go
 
-19 November 2022
+03 December 2022
 Tags: Golang scalability
 
 Ole Bulbuk, EngineeringAngel
 @flowdev_org (Twitter)
 @ole108 (Gopher Slack)
+spaghetti-analyzer: https://github.com/flowdev/spaghetti-analyzer
 Attributions for images:
 All Gophers have been taken from Maria Letta's excellent 'free-gophers-pack'.
 
