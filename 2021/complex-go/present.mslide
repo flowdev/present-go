@@ -169,7 +169,8 @@ IDE's contain a lot of tools for code analysis and refactoring:
 
 - Let's use the latest cool stuff |
 - We implement the services with CQRS pattern |
-- Look at the terminal
+
+: Look at the terminal
 
 
 ## Service Diagram From Uber
