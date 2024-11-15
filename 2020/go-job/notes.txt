@@ -1,0 +1,105 @@
+## What to expect?
+
+Leaning more towards looking for a job
+Focusing on technical interviews
+For everything else you find a lot of good resources on the internet
+
+
+## Where to find (remote) jobs
+
+The more expensive the job site the more desperate the company
+
+
+## Hiring Process
+
+The screening interview can be difficult for juniors
+Will talk about algorithms, data structures and brain teasers later
+
+
+## Technical Interviews
+
+Roughly in chronological order
+What segment do hiring engineers come from?
+
+
+## Advertisement bidding
+
+In the old days they were very prominent in the community, not anymore
+Berlin: remerge + adjust
+
+
+## Cloud technologies
+
+You will need to show some knowledge about cloud tech
+Blog posts, talks, etc.
+Berlin: Weaveworks + RedHat + Microsoft
+
+
+## FinTech
+
+Can be good start
+Berlin: solarisBank + OptioPay + sumUp
+
+
+## Blockchain technologiy
+
+You should show some block chain knowledge to land job
+Blog posts, talks, etc.
+Berlin: tendermint + IPFS project
+
+
+## Diverse companies building services
+
+Almost any backgound can be interesting for some company
+Biggest part of the job market
+Easiest start
+Berlin: Delivery Hero + Zalando + Blacklane
+
+
+## What to know about Web APIs?
+
+search terms at the top of each page
+please ecosia them later
+
+
+## Authentication
+
+If everybody can claim to be the admin your service is broken
+Usually handled in central library or proxy
+
+
+## Authorization
+
+If everybody gets permission of the admin your service is broken
+Usually handled in central library or proxy
+
+
+## Testing 
+
+Testing is a big topic esp. for FinTechs
+
+
+## Code Quality
+
+Clean code can be endless topic
+
+
+## DevOps
+
+Good DevOps people can currently earn more money than pure Go engineers
+Some codebases have more complexity in their YAML files than in their Go files
+The power of micro services...
+
+
+## Bad Job Interviews
+
+over-engineering; old, shitty code base
+the top x% wouldn't stay here anyway
+if you go here you might not be part of the top x%
+but you can be useful for 99% of companies
+
+
+## Wrap Up
+
+From how to find jobs to salary negotiation
+Tech interviews are the critical part
