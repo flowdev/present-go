@@ -1,0 +1,53 @@
+#!/usr/bin/env -S fdialog run --file
+uidl 1
+
+window main(title="Native GUIs For All", width=750, height=420) {
+    form form1 (submitText="Go On") {
+		item text(type="checkGroup", label="Who Am I",
+		    options=[
+			    "Long time back-end engineer",
+			    "Using Go since 2015",
+				"Co-organizer of GDG Berlin Golang meetup",
+				"Expert for user interfaces",
+			], initiallySelected=[
+			    "Long time back-end engineer",
+			    "Using Go since 2015",
+				"Co-organizer of GDG Berlin Golang meetup",
+			])
+
+        link submit(destination="dia2")
+        action cancel(type="exit", code=1)
+    }
+}
+
+dialog dia2(type="info", title="dialog", message="A terminal based solution for dialogs, messages, ...", buttonText="Next", width=750, height=420) {
+    link close(destination="dia3")
+}
+
+dialog dia3(type="confirmation", title="xdialog and gdialog",
+	message=`X-windows and/or GTK based solutions for dialogs, messages, ...`,
+	confirmText="Next", dismissText="Exit",
+	width=750, height=420,
+) {
+	link confirm(destination="win4")
+	action dismiss(type="exit", code=1)
+}
+
+window win4(title="Native GUIs For All", width=750, height=420) {
+    form form2 () {
+		item text(type="richText", label="", text=`## zenity
+
+A more modern version of **gdialog** and **xdialog**.
+
+But still doesn't support **wayland**.
+`)
+		link submit(destination="err5")
+        action cancel(type="exit", code=1)
+    }
+}
+
+dialog err5(type="error", message="They all work with command line arguments to describe the UI!",
+        buttonText="OK, what else?", width=750, height=420) {
+	action close(type="exit", code=0)
+}
+

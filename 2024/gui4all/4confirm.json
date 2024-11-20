@@ -1,0 +1,31 @@
+{
+   "main": {
+       ":keyword": "window",
+       "title": "Confirmation",
+       "width": 450,
+       "height": 200,
+       "exitCode": 1,
+       ":children": {
+           "confirm": {
+               ":keyword": "dialog",
+               "type": "confirmation",
+               "message": "Do you really want to suspend to RAM?",
+               "confirmText": "Yes, pleae.",
+               "dismissText": "Oh, no!",
+               "width": 450, "height": 200,
+               ":children": {
+                   "confirm": {
+                       ":keyword": "action",
+                       "type": "exit",
+                       "code": 0
+                   },
+                   "dismiss": {
+                       ":keyword": "action",
+                       "type": "exit",
+                       "code": 1
+                   }
+               }
+           }
+       }
+   }
+}

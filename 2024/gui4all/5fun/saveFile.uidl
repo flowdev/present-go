@@ -1,0 +1,18 @@
+#!/usr/bin/env -S fdialog run --file
+uidl 1
+
+window main(title="Save File", width=800, height=600, exitCode=1) {
+    dialog saveFile (
+        type="saveFile",
+        confirmText="Save",
+        dismissText="Cancel",
+        extensions=[".jpg", ".jpeg"],
+        width=800, height=600,
+    ) {
+        action choose(type="group") {
+            action write(type="write", fullName="main.saveFile", outputKey="file")
+            action exit(type="exit", code=0)
+        }
+        action cancel(type="exit", code=1)
+    }
+}

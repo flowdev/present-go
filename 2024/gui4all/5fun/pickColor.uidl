@@ -1,0 +1,19 @@
+#!/usr/bin/env -S fdialog run --file
+uidl 1
+
+window main(title="Pick Color", width=500, height=500, exitCode=1) {
+    dialog pickColor (
+        type="pickColor",
+        title="Pick Color",
+        buttonText="Cancel",
+        initialColor="#1f8f2f",
+        advanced=true,
+        width=500, height=500,
+    ) {
+        action choose(type="group") {
+            action write(type="write", fullName="main.pickColor", outputKey="color")
+            action exit(type="exit", code=0)
+        }
+        action cancel(type="exit", code=1)
+    }
+}

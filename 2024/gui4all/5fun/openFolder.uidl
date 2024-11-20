@@ -1,0 +1,17 @@
+#!/usr/bin/env -S fdialog run --file
+uidl 1
+
+window main(title="Open Folder", width=800, height=600, exitCode=1) {
+    dialog openFolder (
+        type="openFolder",
+        confirmText="Open",
+        dismissText="Cancel",
+        width=800, height=600,
+    ) {
+        action choose(type="group") {
+            action write(type="write", fullName="main.openFolder", outputKey="folder")
+            action exit(type="exit", code=0)
+        }
+        action cancel(type="exit", code=1)
+    }
+}
