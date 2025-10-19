@@ -1,0 +1,11 @@
+window main(title="Confirmation", width=450, height=200, exitCode=1) {
+    dialog confirm (
+        type="confirmation",
+        message=`Do you really want to suspend to RAM?`,
+        confirmText="Yes, please.",
+        dismissText="Oh, no!",
+        width=450, height=200,
+    ) {
+
+	}
+}

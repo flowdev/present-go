@@ -1,0 +1,50 @@
+## Who's Ole?
+
+NEXT: Golang: Read A File
+
+
+## Let's Read A File
+
+NEXT: Can be done in any language
+
+
+## What Would Be Cool
+
+NEXT: Other Features
+
+
+## Other Features
+
+NEXT: Go: Packages
+
+
+## Analyze A Small Go Project
+
+### The Directory Tree: Go doc of std lib
+spaghetti-analyzer -t
+
+### Package Dependencies a.k.a. Dependency Structure Matrix
+spaghetti-analyzer
+
+
+## Analyze The Prometheus Project
+
+### The Directory Tree
+spaghetti-analyzer -t
+
+### Package Dependencies
+spaghetti-analyzer -l -d 'cmd/prometheus'
+
+### Package Statistics
+spaghetti-analyzer -s
+
+### Package Dependencies With Links
+spaghetti-analyzer
+
+
+## Conclusion
+
+All 3 views help to establish and communicate a good code structure.
+* The directory view helps to find where is what.
+* The statistics help to find and establish relationships between the packages.
+* The dependency table documents the relationships in a way that is easy to understand.

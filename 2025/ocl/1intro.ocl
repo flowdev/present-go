@@ -1,0 +1,61 @@
+#!/usr/bin/env -S ocl-parser
+# RESERVED WORDS:
+#     uidl, (reserved as node name)
+#     string, ident, bool, int, float, list, object, (types)
+#     true, false, +inf, -inf, NaN, nil, null (values)
+# These words are NOT allowed as attribute names and not allowed as identifiers.
+uidl 1
+
+main window title="Native GUIs For All" geometry=(width=750 height=420) {
+    form1 form submitText="Go On" {
+		checkg item type="checkGroup" label="Who Am I",
+		  options=[
+			    "Long time back-end engineer",
+			    "Using Go since 2015",
+				"Co-organizer of GDG Berlin Golang meetup",
+				"Expert for user interfaces",
+		  ],
+		  initiallySelected=[
+			    "Long time back-end engineer",
+			    "Using Go since 2015",
+				"Co-organizer of GDG Berlin Golang meetup",
+		  ]
+
+        submit link destination="dia2"
+        cancel action type="exit" code=1
+    }
+}
+
+dia2 dialog type="info" title="dialog" message="A terminal based solution for dialogs, messages, ...",
+  buttonText="Next"  width=750  height=420 {
+    link close destination="dia3"
+}
+
+dia3 dialog type="confirmation" title="xdialog and gdialog",
+  message=`X-windows and/or GTK based solutions for dialogs, messages, ...`,
+  confirmText="Next" dismissText="Exit",
+  width=750 height=420 {
+	confirm link destination="win4"
+	dismiss action type="exit" code=1
+}
+
+win4 window title="Native GUIs For All" width=750 height=420 {
+    form2 form {
+		text item type="richText" text=`## zenity
+
+![Test image.](./img/flowdev.svg "FlowDev logo")
+
+A more modern version of **gdialog** and **xdialog**.
+
+But still doesn't support **wayland**.
+`
+		submit link destination="err5"
+        cancel action type="exit" code=1
+    }
+}
+
+err5 dialog type="error" message="They all work with command line arguments to describe the UI!",
+  buttonText="OK, what else?" width=750 height=420 {
+	close action type="exit" code=0
+}
+

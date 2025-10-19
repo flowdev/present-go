@@ -1,0 +1,60 @@
+# Big Code Bases And Go
+
+03 December 2022
+Tags: Golang scalability
+
+Ole Bulbuk, EngineeringAngel
+@flowdev_org (Twitter)
+@ole108 (Gopher Slack)
+spaghetti-analyzer: https://github.com/flowdev/spaghetti-analyzer
+Attributions for images:
+All Gophers have been taken from Maria Letta's excellent 'free-gophers-pack'.
+
+
+## Who's Ole?
+.background images/go.png
+
+- Over 25 years of professional sofware development
+- Almost 20 years of Java
+- 7 years of Go
+- 5 years co-organizer of Berlin Go meetup
+
+: NEXT: Golang: Read A File
+
+
+## Let's Read A File
+
+.code code/read_file.go
+
+: NEXT: Can be done in any language
+
+
+## Other Features
+
+- Layers of abstraction are frowned upon
+- Most of the standard library is only 1 to 3 calls deep
+- I never had to debug more than 5 calls into a dependency
+- Most functions fit on a screen
+- Even the heart of the runtime system is quite simple
+- Bugs in dependencies can be discovered and fixed
+- That is a good tradition in the Go world and really doable
+
+: NEXT: Go: Packages
+
+
+## Go Packages
+
+- Packages are **the** way to structure a Go code base
+- All .go files in one directory belong to the same package
+- Cyclic dependencies **within** a single package are fine
+- Cyclic dependencies **between** packages are prevented by the compiler
+- Packages shouldn't be too large
+- The `spaghetti-cutter` tool can be used to measure and restrict the size of Go packages
+
+
+## Analyze A Small Go Project
+
+
+
+## Analyze The Prometheus Project
+

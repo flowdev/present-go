@@ -35,7 +35,9 @@ dialog dia3(type="confirmation", title="xdialog and gdialog",
 
 window win4(title="Native GUIs For All", width=750, height=420) {
     form form2 () {
-		item text(type="richText", label="", text=`## zenity
+		item text(type="richText", text=`## zenity
+
+![Test image.](./img/flowdev.svg "FlowDev logo")
 
 A more modern version of **gdialog** and **xdialog**.
 

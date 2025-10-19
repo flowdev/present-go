@@ -1,0 +1,3 @@
+window main(title="Confirmation", width=450, height=200, exitCode=1) {
+
+}
