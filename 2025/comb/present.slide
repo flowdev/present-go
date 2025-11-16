@@ -1,60 +1,131 @@
-# Big Code Bases And Go
+# The Quest For The Ultimate Parser (Library)
 
-03 December 2022
-Tags: Golang scalability
+22 November 2025
+Tags: Parser, Parser Combinator, Golang
 
-Ole Bulbuk, EngineeringAngel
-@flowdev_org (Twitter)
+Ole Bulbuk, SEAL Systems AG
+@flowdev_org (X)
 @ole108 (Gopher Slack)
-spaghetti-analyzer: https://github.com/flowdev/spaghetti-analyzer
-Attributions for images:
+comb: https://github.com/flowdev/comb
 All Gophers have been taken from Maria Letta's excellent 'free-gophers-pack'.
 
 
 ## Who's Ole?
 .background images/go.png
 
-- Over 25 years of professional sofware development
+- Over 30 years of professional sofware development
 - Almost 20 years of Java
-- 7 years of Go
-- 5 years co-organizer of Berlin Go meetup
+- 10 years of Go
+- 8 years co-organizer of Berlin Go meetup
 
-: NEXT: Golang: Read A File
-
-
-## Let's Read A File
-
-.code code/read_file.go
-
-: NEXT: Can be done in any language
+: NEXT: What's A Parser?
 
 
-## Other Features
+## What's A Parser?
 
-- Layers of abstraction are frowned upon
-- Most of the standard library is only 1 to 3 calls deep
-- I never had to debug more than 5 calls into a dependency
-- Most functions fit on a screen
-- Even the heart of the runtime system is quite simple
-- Bugs in dependencies can be discovered and fixed
-- That is a good tradition in the Go world and really doable
+- Read and "understand" structured input
+- Code for a programming language: JavaScript, ...
+- Configuration files, ...
+- **Domain specific languages (DSL)**
 
-: NEXT: Go: Packages
+: NEXT: Examle
 
+## Small Example
 
-## Go Packages
+.play -edit ./code/example1.go /type/,/fmt/
 
-- Packages are **the** way to structure a Go code base
-- All .go files in one directory belong to the same package
-- Cyclic dependencies **within** a single package are fine
-- Cyclic dependencies **between** packages are prevented by the compiler
-- Packages shouldn't be too large
-- The `spaghetti-cutter` tool can be used to measure and restrict the size of Go packages
+: NEXT: Criteria
 
 
-## Analyze A Small Go Project
+## My Criteria For The Ultimate Parser
+
+- Maintainability of a normal library so I can do changes even years later.
+- Error reporting with line and column position and code snippet.
+- Reporting of **multiple** errors, so I can fix (all) errors at once.
+- Unicode support (working on UTF-8 encoded Unicode code points instead of bytes if requested).
+- Type safety (including filling arbitrary typed data) using generics.
+- Idiomatic Go code.
+- Support for binary input (including byte position and hex dump for errors).
+- Good performance (for the feature set).
+
+: NEXT: Starting The Quest
+
+## Starting The Quest
+
+- Some Go parser libraries or generators sport a really cool way of doing things.
+- All are hobby projects.
+- It's impossible to find something that can meet the more difficult criteria.
+- So I looked beyond the Go universe.
+
+
+: NEXT: Expectations
+
+## What The Code Should Look Like
+
+: NEXT: ANTLR
+
+## ANTLR: Overview
+
+- ANTLR is a well known parser generator 
+- It can generate parsers for many programming languages
+- It has a big and vibrant community
+
+## ANTLR: DSL Example
+
+## Expected Code
+
+What differences from the expected code do you see?
+
+## ANTLR: Generated Code
+
+: - A real programmer can write FORTRAN in any programming language.
+: NEXT Gomme
+
+## Gomme: Error messages
+
+Parser combinator libraries seemed to fit the requirement of maintainability best.
+So I ended up forking a Go parser combinator library and adding all the missing features.
+
+In this talk you will see how I had to do research normally done for a PhD thesis
+and had to completely change how the parser works multiple times.
+Furthermore you will learn what makes error recovery easier and what makes it harder.
+And how you can implement it under the hardest possible conditions (that of a parser combinator library).
+
+After one year of sweat, sleepless nights and tears the project finally has all the desired features.
+So now it is the ultimate Go parser combinator library for me.
+And of course you will learn in the talk how you can easily write a great parser with it
+(without sweat, sleepless nights or tears).
+
+
+## The Last Tough Decision
+
+<table>
+<thead><tr> <th>Topics</th> <th>1 subparser</th> <th>N subparsers</th> </tr></thead>
+<tbody>
+<tr> <th>children</th> <td>trivial</td> <td>lots of parsers but doable; prentheses???</td> </tr>
+<tr> <th># of children</th> <td>always 3</td> <td>N * M + 2 + parentheses</td> </tr>
+<tr> <th>who failed?</th> <td>remember err + op</td> <td>trivial: ID</td> </tr>
+<tr> <th>who recovered?</th> <td>remember err + op</td> <td>done automatically</td> </tr>
+<tr> <th>parents?</th> <td>remember err + ops + levels</td> <td>remember in result</td> </tr>
+<tr> <th>parsers</th> <td>just 2 to the outside</td> <td>facade parsers for ops + parentheses</td> </tr>
+</tbody>
+</table>
+
+## Compare Performance
+
+Run some code live in presentation?
+
+
+## Compare Performance
+
+Reveal table row by row?
+
+<table>
+<th> <td>Benchmark</td> <td>ANTLR</td> <td>Comb</td> <td>Gomme</td> </th>
+<tr> <td>Bench 1</td> <td>100</td> <td>200</td> <td>300</td> </tr>
+</table>
 
 
 
-## Analyze The Prometheus Project
+## Compare The Error Handling Performance
 
