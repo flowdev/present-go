@@ -11,6 +11,7 @@ All Gophers have been taken from Maria Letta's excellent 'free-gophers-pack'.
 
 
 ## Who's Ole?
+
 .background images/go.png
 
 - Over 30 years of professional sofware development
@@ -32,7 +33,7 @@ All Gophers have been taken from Maria Letta's excellent 'free-gophers-pack'.
 
 ## Small Example
 
-.play -edit ./code/example1.go /type/,/fmt/
+.play -edit ./code/example1/main.go /type/,/fmt/
 
 : NEXT: Criteria
 
@@ -41,7 +42,7 @@ All Gophers have been taken from Maria Letta's excellent 'free-gophers-pack'.
 
 - Maintainability of a normal library so I can do changes even years later.
 - Error reporting with line and column position and code snippet.
-- Reporting of **multiple** errors, so I can fix (all) errors at once.
+- Reporting of **multiple** errors, so I can fix all errors at once.
 - Unicode support (working on UTF-8 encoded Unicode code points instead of bytes if requested).
 - Type safety (including filling arbitrary typed data) using generics.
 - Idiomatic Go code.
@@ -50,82 +51,208 @@ All Gophers have been taken from Maria Letta's excellent 'free-gophers-pack'.
 
 : NEXT: Starting The Quest
 
+
 ## Starting The Quest
+
+.background images/hiking.png
 
 - Some Go parser libraries or generators sport a really cool way of doing things.
 - All are hobby projects.
 - It's impossible to find something that can meet the more difficult criteria.
+
+: NEXT: Own parser?
+
+
+## First Attempt At Own Parser
+
+.background images/rocket-man.png
+
+- Maintainability of a normal library: Taken from Gomme (Thanks!)
+- Type safety (including filling arbitrary typed data): Gomme!
+- Idiomatic Go code: Gomme!
+- Good performance: Gomme has lots of good looking benchmarks!
+- Unicode support: Fixed a bug in Gomme in less than a day.
+- Error reporting with line and column position and code snippet:
+  Taken from my old parser project and adapted in a weekend.
+- Support for binary input (including byte position and
+  hex dump for errors): Added on another weekend.
+- What's left?
+
+## Reporting Multiple Errors
+
+.background images/happy-work.png
+
+- I still have got this old parser project and
+- I remember it reporting multiple errors!
+
+
+## Reporting Multiple Errors
+
+.background images/hard-work.png
+
+- It turned out that the project returns multiple errors.
+- They are all about the same error in the input.
+- Just reporting from different levels (adding context).
+- Can't be so hard to change that...
+
+
+## Reporting Multiple Errors
+
+.background images/sleepless.png
+
+- It turned out that it's not a matter of "a loop in the right place".
+- I have to try harder in different ways.
+
+
+## Reporting Multiple Errors
+
+.background images/crying.png
+
+- I tried several intuitive / "naive" solutions.
+- All failed miserably.
 - So I looked beyond the Go universe.
 
 
-: NEXT: Expectations
-
-## What The Code Should Look Like
-
 : NEXT: ANTLR
 
+
 ## ANTLR: Overview
+
+.background images/cool.png
 
 - ANTLR is a well known parser generator 
 - It can generate parsers for many programming languages
 - It has a big and vibrant community
 
+
 ## ANTLR: DSL Example
 
-## Expected Code
+.code ./code/bench/antlrp/JSON.g4 /^grammar/,/1 OMIT$/
 
-What differences from the expected code do you see?
-
-## ANTLR: Generated Code
-
-: - A real programmer can write FORTRAN in any programming language.
-: NEXT Gomme
-
-## Gomme: Error messages
-
-Parser combinator libraries seemed to fit the requirement of maintainability best.
-So I ended up forking a Go parser combinator library and adding all the missing features.
-
-In this talk you will see how I had to do research normally done for a PhD thesis
-and had to completely change how the parser works multiple times.
-Furthermore you will learn what makes error recovery easier and what makes it harder.
-And how you can implement it under the hardest possible conditions (that of a parser combinator library).
-
-After one year of sweat, sleepless nights and tears the project finally has all the desired features.
-So now it is the ultimate Go parser combinator library for me.
-And of course you will learn in the talk how you can easily write a great parser with it
-(without sweat, sleepless nights or tears).
+: NEXT: What should the code look like?
 
 
-## The Last Tough Decision
+## What The Code Should Look Like
+
+.code ./code/bench/combp/json.go /1 OMIT$/,/2 OMIT$/
+.code ./code/bench/combp/json.go /3 OMIT$/,/4 OMIT$/
+
+
+## What The Code Really Looks Like
+
+complain, complain
+
+
+## My ANTLR Conclusion
+
+.background images/alarm.png
+
+- A real programmer can write Java in any programming language.
+- I got to find out how ANTLR and other parsers are recovering from errors.
+- Unfortunately ANTLR is very different from a parser combinator.
+
+
+## Error Handling: Reading Papers
+
+.background images/doctors-degree.png
+
+Look at paper: `~/work/ErrorRecoveryInPEG-Parsers.pdf`
+
+
+## Next Attempt At Error Recovery
+
+- Parser combinators are working with the call stack of the program.
+- So individual parsers can't be called without this context.
+- Go with the flow / call stack.
+
+## We Need Different Modes
+
+.background images/hard-work.png
+
+<table>
+<thead> <th>Mode</th> <th>Direction</th> <th>Description</th> </thead>
+<tbody>
+<tr> <th>happy</th> <td>forward</td> <td>normal parsing</td> </tr>
+<tr class="hideable hidden"> <th>error</th> <td>backward</td> <td>after potential error: going back searching for an alternative way</td> </tr>
+<tr class="hideable hidden"> <th>handle</th> <td>forward</td> <td>after confirming error: going forward to parser at error position</td> </tr>
+<tr class="hideable hidden"> <th>happy</th> <td>forward</td> <td>after handling error: normal parsing</td> </tr>
+<tr class="hideable hidden"> <th>rewind</th> <td>backward</td> <td>after normal parsing failed again: go back to handling error</td> </tr>
+<tr class="hideable hidden"> <th>escape</th> <td>forward</td> <td>after all handling failed: move to some safe spot and parser</td> </tr>
+</tbody>
+</table>
+
+## All Modes Have To Be Implemented For All Branch Parsers
+
+.background images/sleepless.png
+
+- MapN: Map a sequence of N successful parsers to some arbitrary output.
+- SeperatedMN: Use a parser many times and an optional separator parser inbetween.
+- Sequence: Apply a list of parsers (all producing the same kind of output) in sequence.
+- FirstSuccessful: Try a list of parsers until one succeeds.
+- Expression: Parse (mathematical) expressions.
+
+
+## The Complexity Of Branch Parsers Exploded
+
+.background images/crying.png
+
+- Back to the drawing board.
+- What is it really that makes error recovery possible?
+
+
+## The Solution For Error Recovery
+
+.background images/enlighten.png
+
+- It must be possible to call a parser directly.
+- Branch parsers must be able to run after some child parser.
+- So all parsers need an ID.
+- Use parser with least waste for recovery.
+- All parsers are kept in a slice of parsers by the orchestrator.
+- Need to remember the parent parser.
+- Parent parsers can be dynamic:
+- Parsers used in multiple places.
+- Expressions with parentheses.
+
+
+## The Last Tough Decision For Parsing Expressions
 
 <table>
 <thead><tr> <th>Topics</th> <th>1 subparser</th> <th>N subparsers</th> </tr></thead>
 <tbody>
 <tr> <th>children</th> <td>trivial</td> <td>lots of parsers but doable; prentheses???</td> </tr>
-<tr> <th># of children</th> <td>always 3</td> <td>N * M + 2 + parentheses</td> </tr>
-<tr> <th>who failed?</th> <td>remember err + op</td> <td>trivial: ID</td> </tr>
-<tr> <th>who recovered?</th> <td>remember err + op</td> <td>done automatically</td> </tr>
-<tr> <th>parents?</th> <td>remember err + ops + levels</td> <td>remember in result</td> </tr>
-<tr> <th>parsers</th> <td>just 2 to the outside</td> <td>facade parsers for ops + parentheses</td> </tr>
+<tr class="hideable hidden"> <th># of children</th> <td>always 3</td> <td>N * M + 2 + parentheses</td> </tr>
+<tr class="hideable hidden"> <th>who failed?</th> <td>remember err + op</td> <td>trivial: ID</td> </tr>
+<tr class="hideable hidden"> <th>who recovered?</th> <td>remember err + op</td> <td>done automatically</td> </tr>
+<tr class="hideable hidden"> <th>parents?</th> <td>remember err + ops + levels</td> <td>remember in result</td> </tr>
+<tr class="hideable hidden"> <th>parsers</th> <td>just 2 to the outside</td> <td>facade parsers for ops + parentheses</td> </tr>
 </tbody>
 </table>
 
+
+## More Complex Example
+
+.play -edit ./code/example2/main.go /type/,/fmt/
+
+
 ## Compare Performance
-
-Run some code live in presentation?
-
-
-## Compare Performance
-
-Reveal table row by row?
 
 <table>
-<th> <td>Benchmark</td> <td>ANTLR</td> <td>Comb</td> <td>Gomme</td> </th>
+<thead> <th>Benchmark</th> <th>ANTLR</th> <th>Comb</th> <th>Gomme</th> </thead>
+<tbody>
 <tr> <td>Bench 1</td> <td>100</td> <td>200</td> <td>300</td> </tr>
+<tr class="hideable hidden"> <td>Bench 2</td> <td>101</td> <td>201</td> <td>301</td> </tr>
+</tbody>
 </table>
 
 
+## My Conclusion
 
-## Compare The Error Handling Performance
+.background images/going-old.png
+
+### The Quest Still Goes On!
+
+- ANTLR still is a good solution.
+- ANTLR would have saved me lots of time.
+- Enough for fixing all ANTLR problems that I might encounter for the rest of my life.
 
