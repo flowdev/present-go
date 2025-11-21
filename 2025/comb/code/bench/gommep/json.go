@@ -45,7 +45,7 @@ func parseValue(input string) gomme.Result[JSONValue, string] {
 		parseObject,
 		parseArray,
 		parseString,
-		parseNumber,
+		ParseNumber,
 		parseTrue,
 		parseFalse,
 		parseNull,
@@ -109,8 +109,8 @@ func parseElement(input string) gomme.Result[JSONValue, string] {
 // Ensure parseElement is a Parser[string, JSONValue]
 var _ gomme.Parser[string, JSONValue] = parseElement
 
-// parseNumber parses a JSON number.
-func parseNumber(input string) gomme.Result[JSONValue, string] {
+// ParseNumber parses a JSON number.
+func ParseNumber(input string) gomme.Result[JSONValue, string] {
 	return gomme.Map[string](
 		gomme.Sequence(
 			gomme.Map(integer(), func(i int) (string, error) { return strconv.Itoa(i), nil }),
@@ -151,8 +151,8 @@ func parseNumber(input string) gomme.Result[JSONValue, string] {
 	)(input)
 }
 
-// Ensure parseNumber is a Parser[string, JSONValue]
-var _ gomme.Parser[string, JSONValue] = parseNumber
+// Ensure ParseNumber is a Parser[string, JSONValue]
+var _ gomme.Parser[string, JSONValue] = ParseNumber
 
 // parseString parses a JSON string.
 func parseString(input string) gomme.Result[JSONValue, string] {

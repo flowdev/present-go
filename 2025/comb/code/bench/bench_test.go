@@ -11,6 +11,7 @@ import (
 	"github.com/antlr4-go/antlr/v4"
 
 	"github.com/flowdev/comb"
+	"github.com/flowdev/comb/cmb"
 )
 
 //go:embed 1KB.json
@@ -28,6 +29,35 @@ var MB5 string
 //go:embed 64KBerr.json
 var KB64err string
 
+const Number = "123.4567e89"
+
+func BenchmarkNumGomme(b *testing.B) {
+	b.ResetTimer()
+	for i := 0; i < b.N; i++ {
+		_ = gommep.ParseNumber(Number)
+	}
+}
+
+func BenchmarkNumComb(b *testing.B) {
+	state := comb.NewFromString(Number, 10)
+	pp := comb.NewPreparedParser(cmb.Float64(false, 10, false))
+	b.ResetTimer()
+	for i := 0; i < b.N; i++ {
+		_, _ = comb.RunOnState(state, pp)
+	}
+}
+
+func BenchmarkNumANTLR(b *testing.B) {
+	b.ResetTimer()
+	for i := 0; i < b.N; i++ {
+		input := antlr.NewInputStream(Number)
+		lexer := antlrp.NewNumberLexer(input)
+		stream := antlr.NewCommonTokenStream(lexer, 0)
+		p := antlrp.NewNumberParser(stream)
+		p.AddErrorListener(antlr.NewDiagnosticErrorListener(true))
+		_ = p.Number()
+	}
+}
 
 func Benchmark1KBgomme(b *testing.B) {
 	b.ResetTimer()
@@ -45,14 +75,14 @@ func Benchmark1KBcomb(b *testing.B) {
 
 func Benchmark1KBantlr(b *testing.B) {
 	b.ResetTimer()
-	for i := 0; i < b.N; i++ {
+	for i := 0; i < b.N; i++ { // 1 OMIT
 		input := antlr.NewInputStream(KB1)
 		lexer := antlrp.NewJSONLexer(input)
 		stream := antlr.NewCommonTokenStream(lexer, 0)
 		p := antlrp.NewJSONParser(stream)
 		p.AddErrorListener(antlr.NewDiagnosticErrorListener(true))
 		_ = p.Json()
-	}
+	} // 2 OMIT
 }
 
 

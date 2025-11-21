@@ -138,9 +138,26 @@ All Gophers have been taken from Maria Letta's excellent 'free-gophers-pack'.
 .code ./code/bench/combp/json.go /3 OMIT$/,/4 OMIT$/
 
 
+## What The Generated Files  Really Look Like
+
+- Generated Go files: json_base_listener.go, json_lexer.go, json_listener.go and json_parser.go
+- To be fair: The listeners aren't always necessary.
+
+
 ## What The Code Really Looks Like
 
-complain, complain
+.code -edit ./code/bench/antlrp/json_parser.go /^func jsonParserInit/,/^}/
+
+
+## How To Use The Generated Code
+
+Call it like this:
+
+.code ./code/bench/bench_test.go /1 OMIT$/,/2 OMIT$/
+
+The result is:
+
+.code ./code/bench/antlrp/json_parser.go /^type IJsonContext/,/^}/
 
 
 ## My ANTLR Conclusion
@@ -232,16 +249,17 @@ Look at paper: `~/work/ErrorRecoveryInPEG-Parsers.pdf`
 
 ## More Complex Example
 
-.play -edit ./code/example2/main.go /type/,/fmt/
+.play -edit ./code/example2/main.go /1 OMIT/,/2 OMIT/
 
 
-## Compare Performance
+## Compare Performance (Microseconds Per Operation)
 
 <table>
 <thead> <th>Benchmark</th> <th>ANTLR</th> <th>Comb</th> <th>Gomme</th> </thead>
 <tbody>
-<tr> <td>Bench 1</td> <td>100</td> <td>200</td> <td>300</td> </tr>
-<tr class="hideable hidden"> <td>Bench 2</td> <td>101</td> <td>201</td> <td>301</td> </tr>
+<tr> <td>Number</td> <td>4.956</td> <td>0.504</td> <td>34.379</td> </tr>
+<tr class="hideable hidden"> <td>1KB JSON</td> <td>177.728</td> <td>1,256.949</td> <td>555.870</td> </tr>
+<tr class="hideable hidden"> <td>64KB JSON</td> <td>9,028.277</td> <td>278,520.751</td> <td>22,966.187</td> </tr>
 </tbody>
 </table>
 
@@ -255,4 +273,5 @@ Look at paper: `~/work/ErrorRecoveryInPEG-Parsers.pdf`
 - ANTLR still is a good solution.
 - ANTLR would have saved me lots of time.
 - Enough for fixing all ANTLR problems that I might encounter for the rest of my life.
+- But I didn't do it for myself. I did it for humanity! ;)
 
