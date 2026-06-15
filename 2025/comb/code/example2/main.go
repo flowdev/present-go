@@ -9,7 +9,7 @@ import (
 
 func main() {
 	// 1 OMIT
-	exprp := cmb.Expression(cmb.Int64(false, 10)).AddPrefixLevel(cmb.PrefixOp[int64]{
+	exprp := cmb.Expression(comb.SafeSpot(cmb.Int64(false, 10))).AddPrefixLevel(cmb.PrefixOp[int64]{
 		Op:       "-",
 		SafeSpot: false,
 		Fn: func(i int64) int64 { return -i },
@@ -31,8 +31,8 @@ func main() {
 		Fn: func(a, b int64) int64 { return a - b },
 	}).AddParentheses("(", ")", true).AddParentheses("[", "]", true).Parser()
 
-	eqp := cmb.Sequence(cmb.Whitespace0(), cmb.String("="), cmb.Whitespace0())
-	parser := cmb.Map4(cmb.Alpha1(), cmb.Alphanumeric0(), eqp, exprp,
+	eqp := cmb.Sequence(cmb.Whitespace0(), comb.SafeSpot(cmb.String("=")), cmb.Whitespace0())
+	parser := cmb.Map4(comb.SafeSpot(cmb.Alpha1()), cmb.Alphanumeric0(), eqp, exprp,
 		func(idStart, idEnd string, eq []string, num int64) (bool, error) {
 			fmt.Printf("Statement: %s = %d\n", idStart+idEnd, num)
 			return true, nil

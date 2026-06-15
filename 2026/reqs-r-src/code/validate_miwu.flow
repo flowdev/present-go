@@ -1,0 +1,10 @@
+import {
+    "github.com/flowdev/ai-requirements-demo/data"
+}
+
+flow validateMIWU {
+    in (miwu data.MIWU)-> [checkBasicMIWU] -> [checkMIWUFeaturesExist] -> [checkMIWUSetExists] -> out;
+                          [checkBasicMIWU] error (err error)-> error;
+                                              [checkMIWUFeaturesExist] error (err error)-> error;
+                                                                          [checkMIWUSetExists] error (err error)-> error;
+}

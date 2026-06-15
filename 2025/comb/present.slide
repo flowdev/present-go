@@ -7,7 +7,8 @@ Ole Bulbuk, SEAL Systems AG
 @flowdev_org (X)
 @ole108 (Gopher Slack)
 comb: https://github.com/flowdev/comb
-All Gophers have been taken from Maria Letta's excellent 'free-gophers-pack'.
+All Gophers have been taken from Maria Letta's excellent 'free-gophers-pack'
+except the hiking one from Egon Elbre.
 
 
 ## Who's Ole?
@@ -132,13 +133,15 @@ All Gophers have been taken from Maria Letta's excellent 'free-gophers-pack'.
 : NEXT: What should the code look like?
 
 
-## What The Code Should Look Like
+## What I Would Like The Code To Look Like
 
 .code ./code/bench/combp/json.go /1 OMIT$/,/2 OMIT$/
 .code ./code/bench/combp/json.go /3 OMIT$/,/4 OMIT$/
 
 
 ## What The Generated Files  Really Look Like
+
+.background images/oh.png
 
 - Generated Go files: json_base_listener.go, json_lexer.go, json_listener.go and json_parser.go
 - To be fair: The listeners aren't always necessary.
@@ -151,11 +154,14 @@ All Gophers have been taken from Maria Letta's excellent 'free-gophers-pack'.
 
 ## How To Use The Generated Code
 
-Call it like this:
+.background images/alien.png
 
 .code ./code/bench/bench_test.go /1 OMIT$/,/2 OMIT$/
 
-The result is:
+
+## What The Result Looks Like
+
+.background images/alien.png
 
 .code ./code/bench/antlrp/json_parser.go /^type IJsonContext/,/^}/
 
@@ -268,7 +274,7 @@ Look at paper: `~/work/ErrorRecoveryInPEG-Parsers.pdf`
 
 .background images/going-old.png
 
-### The Quest Still Goes On!
+The Quest Still Goes On!
 
 - ANTLR still is a good solution.
 - ANTLR would have saved me lots of time.

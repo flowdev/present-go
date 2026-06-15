@@ -1,0 +1,18 @@
+import {
+  "net/http";
+  "github.com/flowdev/ai-requirements-demo/data";
+}
+
+flow CreateMIWU {
+  in (req http.Request)-> [requestToData] (miwu data.MIWU)-> [checkMIWU] -> [miwuToDB] (dbMIWU db.MIWU)-> [insertMIWU] ------------> [dbMIWUToResponse] (res http.Response)-> out;
+                                                                                                          [insertMIWU] (err error)-> [errorToResponse] (res http.Response)-> out;
+                                                             [checkMIWU] (err error)-----------------------------------------------> [errorToResponse];
+                          [requestToData] (err error)------------------------------------------------------------------------------> [errorToResponse];
+}
+
+flow checkMIWU {
+    in (miwu data.MIWU)-> [checkBasicMIWU] -> [checkMIWUFeaturesExist] -> [checkMIWUSetExists] -> out;
+                                                                          [checkMIWUSetExists] (err error)-> error;
+                                              [checkMIWUFeaturesExist] (err error)-> error;
+                          [checkBasicMIWU] (err Error)-> error;
+}

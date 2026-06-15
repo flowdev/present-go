@@ -1,0 +1,62 @@
+# Requirements Are The New Source Code
+
+16 June 2026
+Tags: AI, requirements, enterprise
+
+Ole Bulbuk, SEAL Systems AG
+@flowdev_org (X)
+@ole108 (Gopher Slack)
+flow-dsl: https://github.com/flowdev/flow-dsl
+All Gophers have been taken from Maria Letta's excellent 'free-gophers-pack'.
+
+
+## Modern AI Supported Software Engineering
+
+.background images/rocket-man.png
+
+- Hand complex pieces of work over to the AI
+- Use 5 - 10 simulated experts in the field for reviews
+- Generate tests and documentation with AI
+- Many (more than 5) prompts run in parallel
+- Optimization and bugfixing with AI
+- This all costs a lot of token
+- Works well for technical and well known problems
+- Works badly for company specific problems
+
+
+## Alternative AI Supported Software Engineering
+
+.background images/astronaut.png
+
+- AI used for implementation of details with spec in MD
+- Glue details together with a DSL
+- DSLs are problem specific
+- DSL can be converted to code and docs with a tool
+- Example (slightly different focus): OpenAPI specification
+- Flows are a good fit for most business problems
+
+
+## Flow DSL
+
+.code ./code/create_miwu.flow
+
+
+## CreateMIWU - doc
+
+.image images/CreateMIWU.svg
+
+
+## validateMIWU - doc
+
+.image images/validateMIWU.svg
+
+
+## checkBasicMIWU
+
+.code ./code/checkBasicMIWU.md
+
+
+## CreateMIWU - code
+
+.code code/create_miwu.go
+
